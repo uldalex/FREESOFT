@@ -8,13 +8,15 @@ let config = {
     'no-js',
   ],
   'alwaysAddBlocks': [
-    // 'sprite-svg',
-    // 'sprite-png',
-    // 'object-fit-polyfill',
+     'sprite-svg',
+     'sprite-png',
+     'object-fit-polyfill',
   ],
   'addStyleBefore': [
     'src/scss/variables.scss',
     'src/scss/mixins.scss',
+  
+    
     // 'somePackage/dist/somePackage.css', // для 'node_modules/somePackage/dist/somePackage.css',
   ],
   'addStyleAfter': [
@@ -27,10 +29,8 @@ let config = {
     './script.js',
   ],
   'addAssets': {
-    'src/fonts/demo-empty-open-sans.woff2': 'fonts/',
-    'src/img/demo-*.{png,svg,jpg,jpeg}': 'img/',
-    // 'src/favicon/*.{png,ico,svg,xml,webmanifest}': 'img/favicon',
-    // 'node_modules/somePackage/images/*.{png,svg,jpg,jpeg}': 'img/',
+    "./src/img/*.{png,svg,jpg,jpeg}": "img/",
+     'node_modules/somePackage/images/*.{png,svg,jpg,jpeg}': 'img/',
   },
   'dir': {
     'src': 'src/',
@@ -40,4 +40,3 @@ let config = {
 };
 
 module.exports = config;
-

@@ -1,0 +1,35 @@
+//- Все примеси в этом файле должны начинаться c имени блока (top-block)
+
+mixin top-block(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +top-block('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' top-block--' + modsList[i].trim();
+      }
+    }
+
+  .top-block(class=allMods)&attributes(attributes)
+    .top-block__inner
+      .top-block__row 
+        .top-block__col-8
+          img(src='img/index-top-block.jpg', alt='Top', width='', height='')
+          .top-block__buttons-block
+            a.btn-big--square(href="#") обзоры
+            a.btn-big--square(href="#") Статьи
+            a.btn-big--square(href="#") Видео
+        .top-block__col-3
+          .top-block__content
+            .top-block__title Хочешь писать статьи?
+            .top-block__text Приглашаем в команду :)
+            a.btn-big--circle(href="#") Стать автором
+

@@ -12,6 +12,9 @@ mixin main-nav(selectedID)
   include main-nav.data.pug
 
   nav.main-nav#nav&attributes(attributes)
+    +logo('/')
+            img(src='img/logo-mob.svg', alt='Logo', width='67', height='14')
+    +search()
     +burger('Показать главное меню', 'nav', 'main-nav--open')(class='main-nav__toggler')
     ul.main-nav__list
       each menuItem in mainMenu

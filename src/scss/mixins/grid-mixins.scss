@@ -2,14 +2,14 @@ $screen-xs:                   0 !default;
 $screen-sm:                   480px !default;
 $screen-md:                   768px !default;
 $screen-lg:                   992px !default;
-$screen-xl:                   1200px !default;
-$screen-xxl:                  1800px !default;
+$screen-xlm:                   1200px !default;
+
 
 $container-sm:                100% !default;
 $container-md:                100% !default;
 $container-lg:                ($screen-lg - 30) !default;
-$container-xl:                ($screen-xl - 30) !default;
-$container-xxl:               ($screen-xxl - 30) !default;
+$container-xlm:                ($screen-xl - 30) !default;
+
 
 $grid-columns:                12 !default;
 $grid-gutter-width:           30px !default;
@@ -71,15 +71,6 @@ $grid-gutter-width:           30px !default;
     @if ($xl-grid-gutter != $lg-grid-gutter) {
       padding-left: ($xl-grid-gutter / 2);
       padding-right: ($xl-grid-gutter / 2);
-    }
-  }
-
-  @media (min-width: $screen-xxl) {
-    width: $container-xxl;
-
-    @if ($xxl-grid-gutter != $xl-grid-gutter) {
-      padding-left: ($xxl-grid-gutter / 2);
-      padding-right: ($xxl-grid-gutter / 2);
     }
   }
 }

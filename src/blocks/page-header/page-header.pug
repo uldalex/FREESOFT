@@ -19,4 +19,10 @@ mixin page-header(mods)
 
   header.page-header(class=allMods, role='banner')&attributes(attributes)
     .page-header__inner
-      block
+      .page-header__row
+         +logo('/')
+            img(src='img/logo-top.svg', alt='Logo', width='106', height='35')
+         +search()
+         +login()
+         +language()
+    
