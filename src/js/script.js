@@ -4,7 +4,8 @@
 //   console.log('DOM героически построен!');
 // });
 
- const $ = require('jquery');
+ const { css } = require('jquery');
+const $ = require('jquery');
  
  $( document ).ready(function() {
 // language panel
@@ -30,14 +31,71 @@
 			div.toggleClass('open'); // скрываем его
 		}
 	});
- });
- // slider plugin
- /*!
- * Splide.js
- * Version  : 2.4.20
- * License  : MIT
- * Copyright: 2020 Naotoshi Fujita
- */
+
+//orderby 
+
+ $('.orderby a').on('click', function(){
+	 $this = $(this);
+	if(!$($this).hasClass('current')){
+	$($this).parents('.orderby').find('a').removeClass('current')
+	 $($this).addClass('current');
+	}
+	else {
+	 $($this).toggleClass('down');
+	
+	}
+});
+
+//show-more
+ $('#show-more').on('click', function(){
+	 $('#paginate-loader').show();
+	 
+	 return false;
+ })
+ //mobile-menu-list
+ $('#mobile-menu__list li').on('click', function(){
+   $text = $(this).find('span').html();
+   $('#mobile-menu__list').toggleClass('open');
+   $('#mobile-menu__selected').text($text);	 
+ })
+ //mobile-menu-sort
+ $(".mobile-menu__orderby").on('click', function(){
+	 $('.orderby').toggleClass('open')
+ })
+
+ function MobileSort(){
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $("#orderby.open"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+			div.toggleClass('open'); // скрываем его
+		}
+	});
+}
+
+function MobileArticleMenu(){
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $(".mobile-menu__list.open"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+			div.toggleClass('open'); // скрываем его
+		}
+	});
+}
+
+if ($(window).width() < 960) {
+	MobileArticleMenu()
+	MobileSort()
+}
+
+$('.contents-list li a').on('click', function(){
+	$('.contents-list li a').removeClass('current');
+	$(this).addClass('current')	
+})
+});
+
+
+
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
@@ -6010,3 +6068,5 @@ new Splide( '#articles', {
 
 	}
 } ).mount();
+
+

@@ -1,0 +1,297 @@
+//- Стандартный шаблон страницы
+
+include mixins.pug
+
+doctype html
+html(class='page  no-js', lang='ru')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- Edge и ряд мобильных браузеров слишком умны. Отключим это.
+    meta(name='format-detection', content='telephone=no')
+    meta(name='format-detection', content='date=no')
+    meta(name='format-detection', content='address=no')
+    meta(name='format-detection', content='email=no')
+    meta(content='notranslate', name='google')
+    //- Фавиконки (https://realfavicongenerator.net)
+    //- link(rel='apple-touch-icon', sizes='180x180', href='/img/favicon/apple-touch-icon.png')
+    //- link(rel='icon', type='image/png', sizes='32x32', href='/img/favicon/favicon-32x32.png')
+    //- link(rel='icon', type='image/png', sizes='16x16', href='/img/favicon/favicon-16x16.png')
+    //- link(rel='manifest', href='/img/favicon/site.webmanifest')
+    //- link(rel='mask-icon', href='/img/favicon/safari-pinned-tab.svg', color='#5bbad5')
+    //- meta(name='msapplication-TileColor', content='#5bbad5')
+    //- meta(name='theme-color', content='#000')
+    //- meta(name='msapplication-navbutton-color', content='#000')
+    //- meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+
+    block meta
+      title listing-article
+
+    block head
+      link(rel='stylesheet', href='css/style.css')
+      script
+        include ../js/head-script.js
+
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+
+    .page__inner
+      .page__content
+        +page-header()
+        h1.no-visible Заголовок страницы для сео
+        +main-nav(90)
+        +mobile-menu()
+        .article__inner 
+            .article__row 
+              .article__sidebar.sidebar
+                .sidebar__title Категории
+                ul.sidebar__category 
+                    li
+                      a.current(href="#") Все статьи и обзоры
+                    li 
+                      a(href="#") Android
+                    li 
+                      a(href="#") iOS
+                    li 
+                      a(href="#") Linux
+                    li 
+                      a(href="#") Mac
+                    li 
+                      a(href="#") Windows
+                    li 
+                      a(href="#") Видео
+                    li 
+                      a(href="#") Приложения
+ 
+              .article__main 
+                +breadcrumbs('top')
+                  +breadcrumbs-item('Бесплатные программы', '/')
+                  +breadcrumbs-item('Windows', '/')
+                  +breadcrumbs-item('Microsoft')
+                h1 1 564 статьи и обзора
+                .article__orderby.orderby 
+                    span Сортировать по:
+                    ul 
+                        li 
+                          a(href="#") Дате 
+                        li 
+                          a.current(href="#") Популярности
+                            svg(class="icon-sort" width="12px" height="11px")
+                                use(xlink:href="img/sprite.svg#sort")
+                .article__list 
+                  .articles__card 
+                    .articles__img 
+                      img(src='img/article-3.png', alt='Logo', width='264', height='190')
+                      .articles__img-label.articles__img-label--top 
+                        a.btn-small--circle(href="#") Обзоры
+                      .articles__img-label.articles__img-label--bottom 
+                        a.btn-small--circle(href="#") Приложения
+                        a.btn-small--circle(href="#") IOS
+                    .articles__content 
+                        .articles__content-label Windows
+                        .articles__content-title 
+                          a(href="#") Где хранятся закладки в Mozilla Firefox
+                        .articles__content-footer 
+                          .articles__date 28 сентября 2018
+                          .articles__vue 
+                            svg.soft-menu__icon(width="17px" height="10px")
+                              use(xlink:href="img/sprite.svg#eye")
+                            span 4 589
+                  .articles__card 
+                    .articles__img 
+                      img(src='img/article-1.png', alt='Logo', width='264', height='190')
+                      .articles__img-label.articles__img-label--top 
+                        a.btn-small--circle(href="#") Обзоры
+                      .articles__img-label.articles__img-label--bottom 
+                        a.btn-small--circle(href="#") Приложения
+                        a.btn-small--circle(href="#") IOS
+                    .articles__content 
+                        .articles__content-label Windows
+                        .articles__content-title 
+                          a(href="#") Где хранятся закладки в Mozilla Firefox
+                        .articles__content-footer 
+                          .articles__date 28 сентября 2018
+                          .articles__vue 
+                            svg.soft-menu__icon(width="17px" height="10px")
+                              use(xlink:href="img/sprite.svg#eye")
+                            span 4 589
+                  .articles__card 
+                    .articles__img 
+                      img(src='img/article-2.png', alt='Logo', width='264', height='190')
+                      .articles__img-label.articles__img-label--top 
+                        a.btn-small--circle(href="#") Обзоры
+                      .articles__img-label.articles__img-label--bottom 
+                        a.btn-small--circle(href="#") Приложения
+                        a.btn-small--circle(href="#") IOS
+                    .articles__content 
+                        .articles__content-label Windows
+                        .articles__content-title 
+                          a(href="#") Где хранятся закладки в Mozilla Firefox
+                        .articles__content-footer 
+                          .articles__date 28 сентября 2018
+                          .articles__vue 
+                            svg.soft-menu__icon(width="17px" height="10px")
+                              use(xlink:href="img/sprite.svg#eye")
+                            span 4 589
+                  .articles__card 
+                    .articles__img 
+                      img(src='img/article-1.png', alt='Logo', width='264', height='190')
+                      .articles__img-label.articles__img-label--top 
+                        a.btn-small--circle(href="#") Обзоры
+                      .articles__img-label.articles__img-label--bottom 
+                        a.btn-small--circle(href="#") Приложения
+                        a.btn-small--circle(href="#") IOS
+                    .articles__content 
+                        .articles__content-label Windows
+                        .articles__content-title 
+                          a(href="#") Где хранятся закладки в Mozilla Firefox
+                        .articles__content-footer 
+                          .articles__date 28 сентября 2018
+                          .articles__vue 
+                            svg.soft-menu__icon(width="17px" height="10px")
+                              use(xlink:href="img/sprite.svg#eye")
+                            span 4 589
+                  .articles__card.articles__card--col-2 
+                    .articles__img.articles__img--col-2 
+                      img(src='img/article-3.png', alt='Logo', width='558', height='190')
+                      .articles__img-label.articles__img-label--top 
+                        a.btn-small--circle(href="#") Обзоры
+                      .articles__img-label.articles__img-label--bottom 
+                        a.btn-small--circle(href="#") Приложения
+                        a.btn-small--circle(href="#") IOS
+                    .articles__content 
+                        .articles__content-label Windows
+                        .articles__content-title 
+                          a(href="#") Где хранятся закладки в Mozilla Firefox
+                        .articles__content-footer 
+                          .articles__date 28 сентября 2018
+                          .articles__vue 
+                            svg.soft-menu__icon(width="17px" height="10px")
+                              use(xlink:href="img/sprite.svg#eye")
+                            span 4 589                            
+                  .articles__card 
+                    .articles__img 
+                      img(src='img/article-2.png', alt='Logo', width='264', height='190')
+                      .articles__img-label.articles__img-label--top 
+                        a.btn-small--circle(href="#") Обзоры
+                      .articles__img-label.articles__img-label--bottom 
+                        a.btn-small--circle(href="#") Приложения
+                        a.btn-small--circle(href="#") IOS
+                    .articles__content 
+                        .articles__content-label Windows
+                        .articles__content-title 
+                          a(href="#") Где хранятся закладки в Mozilla Firefox
+                        .articles__content-footer 
+                          .articles__date 28 сентября 2018
+                          .articles__vue 
+                            svg.soft-menu__icon(width="17px" height="10px")
+                              use(xlink:href="img/sprite.svg#eye")
+                            span 4 589
+                  .articles__card 
+                    .articles__img 
+                      img(src='img/article-1.png', alt='Logo', width='264', height='190')
+                      .articles__img-label.articles__img-label--top 
+                        a.btn-small--circle(href="#") Обзоры
+                      .articles__img-label.articles__img-label--bottom 
+                        a.btn-small--circle(href="#") Приложения
+                        a.btn-small--circle(href="#") IOS
+                    .articles__content 
+                        .articles__content-label Windows
+                        .articles__content-title 
+                          a(href="#") Где хранятся закладки в Mozilla Firefox
+                        .articles__content-footer 
+                          .articles__date 28 сентября 2018
+                          .articles__vue 
+                            svg.soft-menu__icon(width="17px" height="10px")
+                              use(xlink:href="img/sprite.svg#eye")
+                            span 4 589
+                  .articles__card 
+                    .articles__img 
+                      img(src='img/article-4.png', alt='Logo', width='264', height='190')
+                      .articles__img-label.articles__img-label--top 
+                        a.btn-small--circle(href="#") Обзоры
+                      .articles__img-label.articles__img-label--bottom 
+                        a.btn-small--circle(href="#") Приложения
+                        a.btn-small--circle(href="#") IOS
+                    .articles__content 
+                        .articles__content-label Windows
+                        .articles__content-title 
+                          a(href="#") Где хранятся закладки в Mozilla Firefox
+                        .articles__content-footer 
+                          .articles__date 28 сентября 2018
+                          .articles__vue 
+                            svg.soft-menu__icon(width="17px" height="10px")
+                              use(xlink:href="img/sprite.svg#eye")
+                            span 4 589
+                  .articles__card.articles__card--col-2 
+                    .articles__img.articles__img--col-2 
+                      img(src='img/article-4.png', alt='Logo', width='264', height='190')
+                      .articles__img-label.articles__img-label--top 
+                        a.btn-small--circle(href="#") Обзоры
+                      .articles__img-label.articles__img-label--bottom 
+                        a.btn-small--circle(href="#") Приложения
+                        a.btn-small--circle(href="#") IOS
+                    .articles__content 
+                        .articles__content-label Windows
+                        .articles__content-title 
+                          a(href="#") Где хранятся закладки в Mozilla Firefox
+                        .articles__content-footer 
+                          .articles__date 28 сентября 2018
+                          .articles__vue 
+                            svg.soft-menu__icon(width="17px" height="10px")
+                              use(xlink:href="img/sprite.svg#eye")
+                            span 4 589
+                  .articles__card 
+                    .articles__img 
+                      img(src='img/article-1.png', alt='Logo', width='264', height='190')
+                      .articles__img-label.articles__img-label--top 
+                        a.btn-small--circle(href="#") Обзоры
+                      .articles__img-label.articles__img-label--bottom 
+                        a.btn-small--circle(href="#") Приложения
+                        a.btn-small--circle(href="#") IOS
+                    .articles__content 
+                        .articles__content-label Windows
+                        .articles__content-title 
+                          a(href="#") Где хранятся закладки в Mozilla Firefox
+                        .articles__content-footer 
+                          .articles__date 28 сентября 2018
+                          .articles__vue 
+                            svg.soft-menu__icon(width="17px" height="10px")
+                              use(xlink:href="img/sprite.svg#eye")
+                            span 4 589
+                .paginate 
+                  a#show-more.paginate__show-more(href="#") Показать еще <span id="count">38</span>
+                    #paginate-loader.loader 
+                  ul.paginate__list
+                    li.no-visible 
+                      a.perw(href="#")
+                        svg.soft-menu__icon(width="7px" height="13px")
+                              use(xlink:href="img/sprite.svg#arrow") 
+
+                    li 
+                      a.current(href="#") 1
+                    li 
+                      a(href="#") 2 
+                    li 
+                      a(href="#") 3
+                    li 
+                      a(href="#") 4
+                    li 
+                      a(href="#") 5
+                    li 
+                      a.next(href="#") 
+                        svg.soft-menu__icon(width="7px" height="13px")
+                              use(xlink:href="img/sprite.svg#arrow")
+                +breadcrumbs('bottom')
+                  +breadcrumbs-item('Бесплатные программы', '/')
+                  +breadcrumbs-item('Windows', '/')
+                  +breadcrumbs-item('Microsoft')
+
+      .page__footer-wrapper
+        +page-footer()
+          block footer
+            
+
+    block page-bottom
+      script(src='js/bundle.js')

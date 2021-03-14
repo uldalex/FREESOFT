@@ -35,6 +35,9 @@
       }
 
     }
+    &--col-2 {
+      width:558px;
+    }
   }
 
   &__img{
@@ -46,6 +49,11 @@
       width:100%;
       height:100%;
       object-fit: cover;
+    }
+
+    &--col-2 {
+      width:558px; 
+      
     }
   }
 
@@ -111,6 +119,9 @@
   &__content {
     padding: 17px 25px 25px;
     min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__content-label {
@@ -176,6 +187,12 @@
 
     &__card {
       margin-bottom: 40px;
+      width: 264px;
+    }
+    &__img {
+        position: relative;
+        width: 264px;
+        height: 190px;
     }
   }
 }

@@ -1,0 +1,136 @@
+//- Стандартный шаблон страницы
+
+include mixins.pug
+
+doctype html
+html(class='page  no-js', lang='ru')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- Edge и ряд мобильных браузеров слишком умны. Отключим это.
+    meta(name='format-detection', content='telephone=no')
+    meta(name='format-detection', content='date=no')
+    meta(name='format-detection', content='address=no')
+    meta(name='format-detection', content='email=no')
+    meta(content='notranslate', name='google')
+    //- Фавиконки (https://realfavicongenerator.net)
+    //- link(rel='apple-touch-icon', sizes='180x180', href='/img/favicon/apple-touch-icon.png')
+    //- link(rel='icon', type='image/png', sizes='32x32', href='/img/favicon/favicon-32x32.png')
+    //- link(rel='icon', type='image/png', sizes='16x16', href='/img/favicon/favicon-16x16.png')
+    //- link(rel='manifest', href='/img/favicon/site.webmanifest')
+    //- link(rel='mask-icon', href='/img/favicon/safari-pinned-tab.svg', color='#5bbad5')
+    //- meta(name='msapplication-TileColor', content='#5bbad5')
+    //- meta(name='theme-color', content='#000')
+    //- meta(name='msapplication-navbutton-color', content='#000')
+    //- meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+
+    block meta
+      title listing-article
+
+    block head
+      link(rel='stylesheet', href='css/style.css')
+      script
+        include ../js/head-script.js
+
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+
+    .page__inner
+      .page__content
+        +page-header()
+        h1.no-visible Заголовок страницы для сео
+        +main-nav(90)
+        +mobile-menu()
+        .article__inner 
+            .article__row 
+              .article__sidebar.sidebar
+                .sidebar__timewrite
+                  .sidebar__timer <span>15</span> минут
+                    svg(class="timewrite" width="126px" height="126px")
+                        use(xlink:href="img/sprite.svg#timewrite")
+                  .sidebar__timewrite-description время чтения
+                .sidebar__contents
+                    .sidebar__contents-title Оглавление статьи
+                      svg(class="timewrite" width="17px" height="14px")
+                        use(xlink:href="img/sprite.svg#menu-article")
+                ul.sidebar__contents-list.contents-list
+                 li 
+                   a.current(href="#") Вступление
+                 li 
+                   a(href="#") Файл формата Png
+                 li 
+                   a(href="#") В чем преимущества и недостатки
+                 li 
+                   a(href="#") Mac
+                 li 
+                   a(href="#") Windows
+                 li 
+                   a(href="#") Видео
+                 li 
+                   a(href="#") Приложения
+
+                .sidebar__title Категории
+                ul.sidebar__category 
+                    li
+                      a.current(href="#") Все статьи и обзоры
+                    li 
+                      a(href="#") Android
+                    li 
+                      a(href="#") iOS
+                    li 
+                      a(href="#") Linux
+                    li 
+                      a(href="#") Mac
+                    li 
+                      a(href="#") Windows
+                    li 
+                      a(href="#") Видео
+                    li 
+                      a(href="#") Приложения
+                .top-block__news
+                    .top-block__title Новости 
+                    .divider 
+                    .top-block__news-card.news-card
+                        .news-card__link 
+                        a(href="#") Skype обзавелся функцией шифрования сообщений
+                        .news-card__date 12 ноября 2018
+                    .divider 
+                    .top-block__news-card.news-card
+                        .news-card__link 
+                        a(href="#") Skype обзавелся функцией шифрования сообщений
+                        .news-card__date 12 ноября 2018
+                    .divider 
+                    .top-block__news-card.news-card
+                        .news-card__link
+                        a(href="#") Skype обзавелся функцией шифрования сообщений
+                        .news-card__date 12 ноября 2018
+                    .divider 
+                    .top-block__news-card.news-card
+                        .news-card__link
+                        a(href="#") Skype обзавелся функцией шифрования сообщений
+                        .news-card__date 12 ноября 2018
+                    .divider
+                    a.top-block__news-all.color-main(href="#") Все новости
+                      svg.separator(width="7px" height="13px")
+                        use(xlink:href="img/sprite.svg#arrow")
+              .article__main 
+                +breadcrumbs('top')
+                  +breadcrumbs-item('Бесплатные программы', '/')
+                  +breadcrumbs-item('Windows', '/')
+                  +breadcrumbs-item('Microsoft')
+                h1 Файл формата png: чем открыть, описание, особенности и преимущества
+
+
+                +breadcrumbs('bottom')
+                  +breadcrumbs-item('Бесплатные программы', '/')
+                  +breadcrumbs-item('Windows', '/')
+                  +breadcrumbs-item('Microsoft')
+
+      .page__footer-wrapper
+        +page-footer()
+          block footer
+            
+
+    block page-bottom
+      script(src='js/bundle.js')

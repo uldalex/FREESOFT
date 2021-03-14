@@ -72,6 +72,7 @@
 
       & > #{$block-name}__link { // stylelint-disable-line  selector-combinator-blacklist
         color: $white;
+        background-color: $color-main;
       }
     }
   }
