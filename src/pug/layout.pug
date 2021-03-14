@@ -39,8 +39,15 @@ html(class='page  no-js', lang='ru')
     .page__inner
       .page__content
         +page-header()
+        h1.no-visible Заголовок страницы для сео
         +main-nav()
         +top-block()
+        +product-slider('Игры для Android', 'product-slider')
+        +product-slider('VPN', 'vpn')
+        +product-slider('Финансы', 'finans')
+        +product-slider('Браузеры', 'browsers')
+        +product-slider('Кодеки', 'codek')
+        +articles('Статьи о приложениях', 'articles')
         
           
       .page__footer-wrapper

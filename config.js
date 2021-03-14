@@ -15,6 +15,7 @@ let config = {
   'addStyleBefore': [
     'src/scss/variables.scss',
     'src/scss/mixins.scss',
+    'node_modules/@splidejs/splide/src/sass/core/splide-core.scss'
   
     
     // 'somePackage/dist/somePackage.css', // для 'node_modules/somePackage/dist/somePackage.css',
