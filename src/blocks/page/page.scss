@@ -450,3 +450,18 @@ width: 100%;
     }
 
 }
+a.footer-sotial-link{
+     
+  &.sotial {
+      fill: #6F6F6F;
+      fill-rule:evenodd;
+      clip-rule: evenodd;
+  }
+
+  &:hover {
+   
+      &.sotial {
+       fill: $color-main;
+      }
+  }
+}
