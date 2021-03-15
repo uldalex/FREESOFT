@@ -1588,7 +1588,7 @@ ol.list-count{
   }
   &:after {
     content:'';
-    background:url('/img/video.svg');
+    background:url('../img/video.svg');
     background-size: contain;
     background-repeat: no-repeat;
     top:45%;
@@ -1647,7 +1647,7 @@ ol.list-count{
 
   &::after {
     content: "";
-    background-image: url("/img/quote.svg");
+    background-image: url("../img/quote.svg");
     width:41px;
     height: 37px;
     position: absolute;
