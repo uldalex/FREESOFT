@@ -87,10 +87,18 @@ if ($(window).width() < 960) {
 	MobileArticleMenu()
 	MobileSort()
 }
-
+//sidebar-content-menu
 $('.contents-list li a').on('click', function(){
 	$('.contents-list li a').removeClass('current');
 	$(this).addClass('current')	
+});
+
+//share-panel
+$('.share-panel-open').on('click', function(){
+	$('.share-panel__list').addClass('open');
+});
+$('.share-panel-close').on('click', function(){
+	$('.share-panel__list').removeClass('open');
 })
 });
 

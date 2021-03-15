@@ -1,7 +1,9 @@
 #  проект FREESOFT  ![Test Status](https://travis-ci.org/nicothin/NTH-start-project.svg?branch=master) [![devDependencies Status](https://david-dm.org/nicothin/NTH-start-project/dev-status.svg)](https://david-dm.org/nicothin/NTH-start-project?type=dev) [![dependencies Status](https://david-dm.org/nicothin/NTH-start-project/status.svg)](https://david-dm.org/nicothin/NTH-start-project)
 
 ## ВЕРСТКА
-- 
+-  [Главная](https://uldalex.github.io/FREESOFT/build/index.html)
+-  [Список](https://uldalex.github.io/FREESOFT/build/listing-article.html)
+-  [Отдельная новость](https://uldalex.github.io/FREESOFT/build/article.html)
 ## Парадигма
 
 - Именование классов по БЭМ, разметка в [pug](https://pugjs.org/), стилизация [Sass](http://sass-lang.com/). См. [как работать с CSS-препроцессорами и БЭМ](http://nicothin.github.io/idiomatic-pre-CSS/)
