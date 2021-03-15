@@ -99,7 +99,9 @@ $('.share-panel-open').on('click', function(){
 });
 $('.share-panel-close').on('click', function(){
 	$('.share-panel__list').removeClass('open');
-})
+});
+
+
 });
 
 
@@ -5942,6 +5944,7 @@ var complete_Splide = /*#__PURE__*/function (_Core) {
 window.Splide = complete_Splide;
 /******/ })()
 ;
+if ($("#actual-article").length){
  new Splide( '#actual-article', {
 	perPage: 2,
 	perMove: 1,
@@ -5953,6 +5956,8 @@ window.Splide = complete_Splide;
 
 	}
 } ).mount();
+}
+if ($("#product-slider").length){
 new Splide( '#product-slider', {
 	perPage: 5,
 	perMove: 1,
@@ -5973,7 +5978,8 @@ new Splide( '#product-slider', {
 
 	}
 } ).mount();
-
+}
+if ($("#vpn").length){
 new Splide( '#vpn', {
 	perPage: 5,
 	perMove: 1,
@@ -5994,6 +6000,8 @@ new Splide( '#vpn', {
 
 	}
 } ).mount();
+}
+if ($("#finans").length){
 new Splide( '#finans', {
 	perPage: 5,
 	perMove: 1,
@@ -6014,7 +6022,8 @@ new Splide( '#finans', {
 
 	}
 } ).mount();
-
+}
+if ($("#browsers").length){
 new Splide( '#browsers', {
 	perPage: 5,
 	perMove: 1,
@@ -6035,6 +6044,8 @@ new Splide( '#browsers', {
 
 	}
 } ).mount();
+}
+if ($("#codek").length){
 new Splide( '#codek', {
 	perPage: 5,
 	perMove: 1,
@@ -6055,7 +6066,8 @@ new Splide( '#codek', {
 
 	}
 } ).mount();
-
+}
+if ($("#articles").length){
 new Splide( '#articles', {
 	perPage: 4,
 	perMove: 1,
@@ -6077,4 +6089,72 @@ new Splide( '#articles', {
 	}
 } ).mount();
 
+}
+if ($("#primary-slider").length){
+// Create and mount the thumbnails slider.
+var secondarySlider = new Splide( '#secondary-slider', {
+	rewind      : true,
+	fixedWidth  : 204,
+	fixedHeight : 114,
+	isNavigation: true,
+	gap         : 12,
+	focus       : 'left',
+	pagination  : true,
+  arrows:false,
+	cover       : true,
+	breakpoints : {
+		'600': {
+			fixedWidth  : 204,
+			fixedHeight : 114,
+		}
+	}
+} ).mount();
 
+// Create the main slider.
+var primarySlider = new Splide( '#primary-slider', {
+	type       : 'fade',
+	heightRatio: 0.5,
+	pagination : false,
+	arrows     : false,
+	cover      : true,
+} );
+
+// Set the thumbnails slider as a sync target and then call mount.
+primarySlider.sync( secondarySlider ).mount();
+}
+if ($("#app-slider").length){
+  new Splide( '#app-slider', {
+    perPage: 3,
+    perMove: 1,
+    type   : 'loop',
+    pagination: false,
+    breakpoints: {
+      '1024': {
+        perPage: 2,
+        gap    : '1rem',
+      },
+      '780': {
+        perPage: 2,
+        gap    : '1rem',
+      },
+          '480': {
+        perPage: 1,
+        gap    : '1rem',
+      },
+  
+    }
+  } ).mount();
+}
+/*!
+ * jQuery Mousewheel 3.1.13
+ *
+ * Copyright 2015 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a:a(jQuery)}(function(a){function b(b){var g=b||window.event,h=i.call(arguments,1),j=0,l=0,m=0,n=0,o=0,p=0;if(b=a.event.fix(g),b.type="mousewheel","detail"in g&&(m=-1*g.detail),"wheelDelta"in g&&(m=g.wheelDelta),"wheelDeltaY"in g&&(m=g.wheelDeltaY),"wheelDeltaX"in g&&(l=-1*g.wheelDeltaX),"axis"in g&&g.axis===g.HORIZONTAL_AXIS&&(l=-1*m,m=0),j=0===m?l:m,"deltaY"in g&&(m=-1*g.deltaY,j=m),"deltaX"in g&&(l=g.deltaX,0===m&&(j=-1*l)),0!==m||0!==l){if(1===g.deltaMode){var q=a.data(this,"mousewheel-line-height");j*=q,m*=q,l*=q}else if(2===g.deltaMode){var r=a.data(this,"mousewheel-page-height");j*=r,m*=r,l*=r}if(n=Math.max(Math.abs(m),Math.abs(l)),(!f||f>n)&&(f=n,d(g,n)&&(f/=40)),d(g,n)&&(j/=40,l/=40,m/=40),j=Math[j>=1?"floor":"ceil"](j/f),l=Math[l>=1?"floor":"ceil"](l/f),m=Math[m>=1?"floor":"ceil"](m/f),k.settings.normalizeOffset&&this.getBoundingClientRect){var s=this.getBoundingClientRect();o=b.clientX-s.left,p=b.clientY-s.top}return b.deltaX=l,b.deltaY=m,b.deltaFactor=f,b.offsetX=o,b.offsetY=p,b.deltaMode=0,h.unshift(b,j,l,m),e&&clearTimeout(e),e=setTimeout(c,200),(a.event.dispatch||a.event.handle).apply(this,h)}}function c(){f=null}function d(a,b){return k.settings.adjustOldDeltas&&"mousewheel"===a.type&&b%120===0}var e,f,g=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],h="onwheel"in document||document.documentMode>=9?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],i=Array.prototype.slice;if(a.event.fixHooks)for(var j=g.length;j;)a.event.fixHooks[g[--j]]=a.event.mouseHooks;var k=a.event.special.mousewheel={version:"3.1.12",setup:function(){if(this.addEventListener)for(var c=h.length;c;)this.addEventListener(h[--c],b,!1);else this.onmousewheel=b;a.data(this,"mousewheel-line-height",k.getLineHeight(this)),a.data(this,"mousewheel-page-height",k.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var c=h.length;c;)this.removeEventListener(h[--c],b,!1);else this.onmousewheel=null;a.removeData(this,"mousewheel-line-height"),a.removeData(this,"mousewheel-page-height")},getLineHeight:function(b){var c=a(b),d=c["offsetParent"in a.fn?"offsetParent":"parent"]();return d.length||(d=a("body")),parseInt(d.css("fontSize"),10)||parseInt(c.css("fontSize"),10)||16},getPageHeight:function(b){return a(b).height()},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});
+
+$('.overflow').mousewheel(function(e, delta) {
+  e.preventDefault();
+  this.scrollLeft -= (delta * 30);
+});
