@@ -382,13 +382,19 @@ pre {
   }
 }
 .btn-circle {
-  background-color: $color-main;
+  text-align: center;
+  display: block;
   color:$white;
   padding: 13px 17px;
-  border-radius: 22.5px;
+  border-radius: 23px;
+  height:45px;
   border:0px;
   min-width:113px;
   transition: all 0.3s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 
   &:hover, &:active, &:focus {
     background-color: $gray-darkest;
@@ -397,6 +403,12 @@ pre {
     cursor: pointer;
     outline: none;
   }
+}
+.btn-main-color {
+background-color: $color-main;
+}
+.btn-green-color {
+  background-color: #63B94D;
 }
 .btn-transparent--circle {
   font-weight: normal;
@@ -1446,6 +1458,28 @@ a.footer-sotial-link{
   &__footer {
     display: flex;
     flex-direction: column;
+    font-size: 14px;
 
+    & a.btn-circle {
+      min-width: 165px;
+    }
+  }
+}
+
+//list-styles
+.list-circle {
+  margin-left:111px;
+
+  & li {
+    margin-bottom:25px;
+    list-style: none;
+
+    &:before {
+      content: "•"; 
+      color: $color-main;
+      display: inline-block;
+      width: 1.2em;
+      margin-left: 1.2em;
+    }
   }
 }
