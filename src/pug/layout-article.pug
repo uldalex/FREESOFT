@@ -44,16 +44,20 @@ html(class='page  no-js', lang='ru')
         +mobile-menu()
         .article__inner 
             .article__row 
+              // сайтбар
               .article__sidebar.sidebar
+                // сайтбар таймер
                 .sidebar__timewrite
                   .sidebar__timer <span>15</span> минут
-                    svg(class="timewrite" width="126px" height="126px")
-                        use(xlink:href="img/sprite.svg#timewrite")
+                    svg.radial-progress(data-percentage="15"  viewBox="0 0 80 80")
+                      circle.incomplete(cx="40" cy="40" r="32")
+                      circle.complete(cx="40" cy="40" r="32" style="stroke-dashoffset: 39.5841px;")
                   .sidebar__timewrite-description время чтения
                 .sidebar__contents
                     .sidebar__contents-title Оглавление статьи
                       svg(class="timewrite" width="17px" height="14px")
                         use(xlink:href="img/sprite.svg#menu-article")
+                // сайтбар оглавление
                 ul.sidebar__contents-list.contents-list
                  li 
                    a.current(href="#") Вступление
@@ -69,7 +73,7 @@ html(class='page  no-js', lang='ru')
                    a(href="#") Видео
                  li 
                    a(href="#") Приложения
-
+                // сайтбар категории
                 .sidebar__title Категории
                 ul.sidebar__category 
                     li
@@ -88,6 +92,7 @@ html(class='page  no-js', lang='ru')
                       a(href="#") Видео
                     li 
                       a(href="#") Приложения
+                // сайтбар блок новостей
                 .top-block__news
                     .top-block__title Новости 
                     .divider 
@@ -114,6 +119,7 @@ html(class='page  no-js', lang='ru')
                     a.top-block__news-all.color-main(href="#") Все новости
                       svg.separator(width="7px" height="13px")
                         use(xlink:href="img/sprite.svg#arrow")
+                // сайтбар фреймы
                 .frame-facebook 
                     .frame-facebook__img
                       a(href="#") 
@@ -126,6 +132,7 @@ html(class='page  no-js', lang='ru')
                       a(href="#")  Станьте первым из друзей, кому это понравилось
                 .frame_vk 
                   img(src='img/frame.png', alt='', width='264', height='258')
+                // сайтбар блок новостей
                 .top-block__news
                     .top-block__title Обновления 
                     .divider 
@@ -143,6 +150,7 @@ html(class='page  no-js', lang='ru')
                         .news-card__link
                         a(href="#") Протестированы и выложены в свободный доступ 10 плагинов
                         .news-card__date 12 ноября 2018
+                // сайтбар блок программ
                 .top-block__news
                     .top-block__title Популярные программы 
                     .divider 
@@ -194,10 +202,12 @@ html(class='page  no-js', lang='ru')
                     a.top-block__news-all.color-main(href="#") Все программы
                       svg.separator(width="7px" height="13px")
                         use(xlink:href="img/sprite.svg#arrow")
+                // сайтбар подписка
                 form.sidebar__form 
                   .sidebar__form-title Хотите получать свежий софт?
                   input(type="mail", placeholder="Email")
                   button.btn-circle.btn-main-color Да!
+                // сайтбар облако тегов
                 .sidebar__tags 
                   .sidebar__form-title Программы по разделам
                   ul.tag-list 
@@ -224,6 +234,7 @@ html(class='page  no-js', lang='ru')
                   a.color-main(href="#") Все программы 
                      svg.separator(width="7px" height="13px")
                         use(xlink:href="img/sprite.svg#arrow")
+                // сайтбар облако тегов
                 .sidebar__tags 
                   .sidebar__form-title Программы по назначению
                   ul.tag-list 
@@ -250,6 +261,7 @@ html(class='page  no-js', lang='ru')
                   a.color-main(href="#") Все программы 
                      svg.separator(width="7px" height="13px")
                         use(xlink:href="img/sprite.svg#arrow")
+                // блок комментариев
                 .sidebar__comments
                   .sidebar__form-title Поcледние комментарии 
                   ul.comment-list
@@ -315,12 +327,15 @@ html(class='page  no-js', lang='ru')
                         .comment-card__content Безусловно, высокое качество позиционных иследов...
                         .comment-card__footer «Формат PNG»
 
-              .article__main 
+              .article__main.article__main--col 
+                //хлебные крошки
                 +breadcrumbs('top')
                   +breadcrumbs-item('Бесплатные программы', '/')
                   +breadcrumbs-item('Windows', '/')
                   +breadcrumbs-item('Microsoft')
+                // Заголовок
                 h1.width-share Файл формата png: чем открыть, описание, особенности и преимущества
+                  // Блок "поделиться в соцсетях"
                   .share-panel 
                     a.share-panel-open(href="#")
                       svg.separator(width="23px" height="26px")
@@ -346,7 +361,9 @@ html(class='page  no-js', lang='ru')
                         a.share-panel-close(href="#")
                           svg.separator(width="23px" height="26px")
                              use(xlink:href="img/sprite.svg#share")
+                // контентная часть
                 .post
+                  // блок подзаголовка-анонс
                   .subtitle 
                     p Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все  втопроизводители четко указывают.
                     .meta-info 
@@ -355,11 +372,14 @@ html(class='page  no-js', lang='ru')
                         svg.meta(width="17px" height="10px")
                              use(xlink:href="img/sprite.svg#eye")
                         span 4 589 просмотров
+                  // текстовой блок
                   p Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.
+                  // текстовой блок
                   p Эти данные должны лечь в основу выбора.
                   p Мы рекомендуем автовладельцам обратить внимание и на количество боковых электродов, материалы и торговую марку.
                   p На свече может быть до четырех боковых электродов. Чем больше электродов, тем дольше прослужит свеча: искра возникает попарно между каждым боковым и одним центральным электродом последовательно. Искра появляется «открытой», поскольку пламя образуется
                   p  не между электродами, а попадает в пространство камеры сгорания, это благоприятно увеличивает мощность и экономит топливо.
+                  // облако тегов в контенте
                   .tags 
                     .tags__title Популярные программы
                     ul.tags__tag-list 
@@ -391,10 +411,13 @@ html(class='page  no-js', lang='ru')
                         a(href="#").btn-transparent--square  FreeWare
                       li 
                         a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                  // разделитель
                   .divider
+                  // h3 в контенте
                   h3 Файл формата png
-
+                  // текстовой блок
                   p Правильный выбор свечей зажигания влияет на устойчивую <a href="#">работу двигателя</a>, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.
+                  // облако тегов в контенте
                   .tags 
                     .tags__title Популярные статьи
                     ul.tags__tag-list 
@@ -414,11 +437,17 @@ html(class='page  no-js', lang='ru')
                         a(href="#").btn-transparent--square  формат PNG и его особенности
                       li 
                         a(href="#").btn-transparent--square  формат PNG и его особенности
+                    // разделитель
                     .divider
+                  // изображение в контенте
                   img.content-img(src='img/user-2.png', alt='', width='852', height='480')
+                  // текстовой блок
                   p Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.
+                  // h3 в контенте
                   h3 Клиенты Сбербанка пожаловались на новый вид мошенничества. Злоумышленники знают даже остаток по карте
+                  // текстовой блок
                   p Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.
+                  // анонс программы
                   .block-anons
                     .anons-card
                       .anons-card__img
@@ -442,30 +471,41 @@ html(class='page  no-js', lang='ru')
                             div <small>By Opera Software</small>
                             .color-grey <small>Get it on Free<span class="color-main">Soft</span></small>
                       .anons-card__footer 
-                        a.btn-circle.btn-green-color(href="#") Скачать  
+                        a.btn-circle.btn-green-color(href="#") Скачать 
+                  // h3 в контенте 
                   h3 Формальность или необходимость
+                  //текстовой блок
                   p Еще один момент. Внедрившись в соединение между сайтом и пользователем, злоумышленник может не только украсть, но и подменить информацию. Это как если бы почтальон открывал письма и переписывал их. Хакеры добавляют на HTTP-страницы вирусы, рекламу порно-сайтов или нелегальных товаров. Пользователь думает, что это и есть ваш сайт. HTTPS защищает от подобных историй.
+                  // список стиль №1
                   ul.list-circle 
                     li в 1995 году, в эпоху развития свободного интернета, резко встал вопрос о проприетарности сложного формата GIF.
                     li был необходим столь же надежный но бесплатный и свободный формат для обмена графическими данными во всемирной паутине.
                     li в это время на международном консорциуме W3C были представлены спецификации PNG 1.0, утвержденные уже в 1996.
+                  // список стиль №2
                   ul.list-minus
                     li в 1995 году, в эпоху развития свободного интернета, резко встал вопрос о проприетарности сложного формата GIF.
                     li был необходим столь же надежный но бесплатный и свободный формат для обмена графическими данными во всемирной паутине.
                     li в это время на международном консорциуме W3C были представлены спецификации PNG 1.0, утвержденные уже в 1996. 
+                  // список стиль №3
                   ol.list-count
                     li в 1995 году, в эпоху развития свободного интернета, резко встал вопрос о проприетарности сложного формата GIF.
                     li был необходим столь же надежный но бесплатный и свободный формат для обмена графическими данными во всемирной паутине.
                     li в это время на международном консорциуме W3C были представлены спецификации PNG 1.0, утвержденные уже в 1996.
-                  
+                  // видео прелоадер
                   .item-responsive.item-16by9
-                     a(href="#")
+                     a.video-preload(href="#")
                        .video-perw
                          img(src='img/video.png', alt='', width='852', height='480')
+                     iframe.video(src="https://www.youtube.com/embed/ypmVk_T3M5g?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="100%" height="100%")
+                  // h3 в контенте
                   h3 Файл формата png
+                  // текстовой блок
                   p Правильный выбор свечей зажигания влияет на устойчивую <a href="#">работу двигателя</a>, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.
+                  // h4 в контенте
                   h4 Файл формата png
+                  // блок-цитата стиль №1
                   .quotes--line Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.
+                  // слайдер с первьюшками
                   .slider 
                     #primary-slider.splide
                       .splide__track
@@ -489,22 +529,25 @@ html(class='page  no-js', lang='ru')
                             img(src='img/slide-3.png', alt='', width='852', height='360')
                           li.splide__slide
                             img(src='img/slide-4.png', alt='', width='852', height='360')
+                  // блок-цитата стиль №2
                   .quotes--simbol Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля. 
+                  // блок изображения стиль №1
                   figure
                     img(src='img/slide-4.png', alt='', width='852', height='480')
-                    figcaption Автор фото: Василий Иванов         
+                    figcaption Автор фото: Василий Иванов 
+                  // двухколоночный блок        
                   .grid.grid--col-2 
                     p Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать. Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топливарасход топлива расход топлива 
                     p скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать. Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость.
+                  //  таблица с ограничением по ширине
                   .overflow
-                    .grid.grid--col-4.tablies.title
+                    .grid-table.grid.grid--col-6.tablies.title
                       .tablies__title Небесное тело
                       .tablies__title Период обращения вокруг своей оси
                       .tablies__title Период обращения вокруг центр. тела
                       .tablies__title Период обращения вокруг центр. тела
                       .tablies__title Период обращения вокруг центр. тела
                       .tablies__title Период обращения вокруг центр. тела
-                    .grid.grid--col-4.tablies
                       p Юпитер
                       p 20 дней
                       p 20 дней
@@ -553,6 +596,7 @@ html(class='page  no-js', lang='ru')
                       p 20 часов
                       p 20 дней
                       p 20 часов
+                  // слайдер популярные программы в контенте
                   .app-slider-box 
                    .title-divider Популярные программы
                    #app-slider.app-slider.splide
@@ -606,12 +650,15 @@ html(class='page  no-js', lang='ru')
                                       svg.separator(width="15px" height="15px")
                                          use(xlink:href="img/sprite.svg#windows")
                                       | 11. 05. 17 <span> (305.7 МБ)</span>
+                  // блок изображения стиль №2
                   figure.alt
                     img(src='img/figure.png', alt='', width='852', height='480')
-                    figcaption Подпись к фото. Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях             
+                    figcaption Подпись к фото. Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях
+                  // блок предупреждения
                   .warning 
                     h4 Важная информация!
                     p Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях 
+                  // блок сравнения программ
                   .grid.grid--col-2 
                     .block-compare.block-plus
                       .block-compare__title
@@ -680,6 +727,493 @@ html(class='page  no-js', lang='ru')
                             svg(width="18px" height="17px")
                               use(xlink:href="img/sprite.svg#like")
                             span 4
+                  //блок анонса одной программы
+                  .soft-anons
+                    h4 Мораль сей басни такова. Ну или название программы
+                    .soft-anons__content Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях 
+                    .soft-anons__footer 
+                      a.btn-circle.btn-transparent-color(href="#") Версии
+                      a.btn-circle.btn-green-color(href="#") Скачать
+                  // блок резюмирующего текста
+                  .warning 
+                    h4 Вывод
+                    p Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях 
+                  // таблица с ограничением по ширине
+                  .overflow
+                    .grid-table.grid.grid--col-6.tablies.title
+                      .tablies__title Программа
+                      .tablies__title Поддерживается Х версией
+                      .tablies__title Поддерживается Y версией
+                      .tablies__title Год обновления программы
+                      .tablies__title Год обновления программы
+                      .tablies__title Год обновления программы
+                      p Юпитер
+                      p.not-ok 
+                      p.ok 
+                      p 2018
+                      p 2021
+                      p 2021
+                      p Марс
+                      p.ok 
+                      p.not-ok 
+                      p 2018
+                      p 2021
+                      p 2021
+                      p Сатурн
+                      p.not-ok  
+                      p.ok 
+                      p 2018
+                      p 2021
+                      p 2021
+                      p Венера
+                      p.ok  
+                      p.not-ok 
+                      p 2018
+                      p 2021
+                      p 2021
+                      p Земля
+                      p.not-ok  
+                      p.ok 
+                      p 2018
+                      p 2021
+                      p 2022
+                      p Луна
+                      p.ok  
+                      p.not-ok 
+                      p 2018
+                      p 2021
+                      p 2022
+                      p Фобос
+                      p.not-ok  
+                      p.ok 
+                      p 2018
+                      p 2021
+                      p 2022
+                      p Облако астероидов
+                      p.ok  
+                      p.not-ok 
+                      p 2018
+                      p 2021
+                      p 2022
+                    
+                  // блок "внимание" стиль №2
+                  .warning--question 
+                    h4 Все еще кипятите?
+                    p Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях 
+                  // блок "внимание" стиль №3
+                  .warning--answer 
+                    h4 Тогда мы идем к вам!
+                    p Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях
+                  // текстовой блок
+                  p Правильный выбор свечей зажигания влияет на устойчивую <a href="#">работу двигателя</a>, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.
+                  // баннер
+                  .content-banner 
+                    h3 Новые программы и приложения<br> по версии FreeSoft
+                    div ТОП <span>10</span>
+                  // сетка карточек программ
+                  .content-soft-rows 
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать 
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать 
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать 
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать 
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать 
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать 
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать 
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать 
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать 
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать 
+                    // видео прелоадер
+                    .product-slider__card--col2
+                      .item-responsive.item-16by10
+                        a.video-preload(href="#")
+                          .video-perw.video-perw__background
+                            p Лучшие программы для безопасности вашего компьютера
+                            
+
+                        iframe.video(src="https://www.youtube.com/embed/ypmVk_T3M5g?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="100%" height="100%")
+                  // текстовой блок
+                  p Правильный выбор свечей зажигания влияет на устойчивую <a href="#">работу двигателя</a>, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.
+                  // баннер
+                  .content-banner 
+                    h3 Новые программы и приложения<br> по версии FreeSoft
+                    div ТОП <span>10</span>
+                  // блок программ списком
+                  .content-soft-list
+                    .product-slider__card-list
+                      .product-slider__card
+                        .product-slider__img 
+                          img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                        .product-slider__buttons 
+                          a.btn-transparent--circle(href="#") Windows
+                          a.btn-transparent--circle(href="#")
+                            span.rate-star
+                              svg.soft-menu__icon(width="11px" height="11px")
+                                  use(xlink:href="img/sprite.svg#star") 
+                            span.rate-value 4.5
+                        a(href="#").product-slider__content Titanium Maximum Security
+                        .product-slider__bottom 
+                            .product-slider__version Версия 11. 05. 17
+                            .product-slider__size (305.7 МБ)
+                        .product-slider__footer
+                          .divider 
+                          a(href="#")
+                            svg.download(width="13px" height="15px")
+                                use(xlink:href="img/sprite.svg#download")
+                            | Скачать
+                      .product-slider__description
+                       h4 Приз зрительских симпатий
+                       p Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                       .product-slider__footer--list
+                         a.btn-circle.btn-transparent-color(href="#") Версии
+                         a.btn-circle.btn-green-color(href="#") Скачать
+                    .product-slider__card-list
+                      .product-slider__card
+                        .product-slider__img 
+                          img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                        .product-slider__buttons 
+                          a.btn-transparent--circle(href="#") Windows
+                          a.btn-transparent--circle(href="#")
+                            span.rate-star
+                              svg.soft-menu__icon(width="11px" height="11px")
+                                  use(xlink:href="img/sprite.svg#star") 
+                            span.rate-value 4.5
+                        a(href="#").product-slider__content Titanium Maximum Security
+                        .product-slider__bottom 
+                            .product-slider__version Версия 11. 05. 17
+                            .product-slider__size (305.7 МБ)
+                        .product-slider__footer
+                          .divider 
+                          a(href="#")
+                            svg.download(width="13px" height="15px")
+                                use(xlink:href="img/sprite.svg#download")
+                            | Скачать
+                      .product-slider__description
+                       h4 Приз зрительских симпатий
+                       p Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                       .product-slider__footer--list
+                         a.btn-circle.btn-transparent-color(href="#") Версии
+                         a.btn-circle.btn-green-color(href="#") Скачать
+                    .product-slider__card-list
+                      .product-slider__card
+                        .product-slider__img 
+                          img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                        .product-slider__buttons 
+                          a.btn-transparent--circle(href="#") Windows
+                          a.btn-transparent--circle(href="#")
+                            span.rate-star
+                              svg.soft-menu__icon(width="11px" height="11px")
+                                  use(xlink:href="img/sprite.svg#star") 
+                            span.rate-value 4.5
+                        a(href="#").product-slider__content Titanium Maximum Security
+                        .product-slider__bottom 
+                            .product-slider__version Версия 11. 05. 17
+                            .product-slider__size (305.7 МБ)
+                        .product-slider__footer
+                          .divider 
+                          a(href="#")
+                            svg.download(width="13px" height="15px")
+                                use(xlink:href="img/sprite.svg#download")
+                            | Скачать
+                      .product-slider__description
+                       h4 Приз зрительских симпатий
+                       p Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                       .product-slider__footer--list
+                         a.btn-circle.btn-transparent-color(href="#") Версии
+                         a.btn-circle.btn-green-color(href="#") Скачать
+                  // пошаговая инструкция
+                  h3 Пошаговая инструкция по ремонту телефона
+                  .timeline
+                    .timeline__container
+                      .timeline-icon 1
+                      .timeline-body
+                        .timeline-title Подготовка к ремонту
+                        p Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                    .timeline__container
+                      .timeline-icon 2
+                      .timeline-body
+                        .timeline-title Выявление неисправности
+                        p Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                    .timeline__container
+                      .timeline-icon 2
+                      .timeline-body
+                        .timeline-title Попытка починить самостоятельно
+                        p Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                    .timeline__container
+                      .timeline-icon ✔
+                      .timeline-body
+                        .timeline-title Отнес в сервисный центр!
+                  //  футер для страницы программы
+                  .post__footer 
+                    .post__footer-header
+                      .post__footer-vote
+                        svg.separator(width="11px" height="11px")
+                              use(xlink:href="img/sprite.svg#star")
+                        .post__footer-count 5.0
+                          span 1 560 оценок
+                      .post__footer-stars
+                        .post__footer-ratings
+                          .star 
+                          .star
+                          .star 
+                          .star
+                          .star
+                      span Оцените программу 
+                      .share-panel 
+                        a.share-panel-open(href="#")
+                          svg.separator(width="23px" height="26px")
+                              use(xlink:href="img/sprite.svg#share")
+                        ul.share-panel__list 
+                          li 
+                            a.vk(href="#")
+                              svg.separator(width="21px" height="12px")
+                                use(xlink:href="img/sprite.svg#vk")
+                          li 
+                            a.google(href="#")
+                              svg.separator(width="18px" height="17px")
+                                use(xlink:href="img/sprite.svg#google") 
+                          li 
+                            a.facebook(href="#")
+                              svg.separator(width="11px" height="20px")
+                                use(xlink:href="img/sprite.svg#fb")
+                          li 
+                            a.twitter(href="#")
+                              svg.separator(width="18px" height="17px")
+                                use(xlink:href="img/sprite.svg#twitter")
+                          li 
+                            a.share-panel-close(href="#")
+                              svg.separator(width="23px" height="26px")
+                                use(xlink:href="img/sprite.svg#share")
+                    .post-footer-center 
+                      .tags 
+                        ul.tags__tag-list 
+                          li 
+                            a(href="#").btn-transparent--square  FreeWare
+                          li 
+                            a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                          li 
+                            a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                          li 
+                            a(href="#").btn-transparent--square  Эффективная работа
+                          li 
+                    .post__footer-bottom
+                      +breadcrumbs('article')
+                        +breadcrumbs-item('Бесплатные программы', '/')
+                        +breadcrumbs-item('Windows', '/')
+                        +breadcrumbs-item('Microsoft') 
+                      .page__footer-vue
+                        svg.articles__vue(width="16px" height="10px")
+                          use(xlink:href="img/sprite.svg#eye")
+                        span <span>4 589 <span> просмотров
+                  // блок комментариев в контенте
+                  .post__block-comments 
+                    div 56 комментариев
+                    a.btn-circle.btn-main-color Читать
+                  // навигация по статьям
+                  .post__block-nav 
+                    p следующая статья
+                    a(href="#")  Как установить программу на Windows 10
+                    svg(width="7px" height="13px")
+                      use(xlink:href="img/sprite.svg#arrow")
       .page__footer-wrapper
         +page-footer()
           block footer

@@ -4,6 +4,7 @@
 -  [Главная](https://uldalex.github.io/FREESOFT/build/index.html)
 -  [Список](https://uldalex.github.io/FREESOFT/build/listing-article.html)
 -  [Отдельная новость](https://uldalex.github.io/FREESOFT/build/article.html)
+-  [Тип новости - картинка-заголовок](https://uldalex.github.io/FREESOFT/build/article-type.html)
 ## Парадигма
 
 - Именование классов по БЭМ, разметка в [pug](https://pugjs.org/), стилизация [Sass](http://sass-lang.com/). См. [как работать с CSS-препроцессорами и БЭМ](http://nicothin.github.io/idiomatic-pre-CSS/)

@@ -19,6 +19,7 @@
   &__card{
     background-color: $white;
     width: 202px;
+    min-width:202px;
     padding:20px 0 0;
     display: flex;
     flex-direction: column;

@@ -1,0 +1,427 @@
+//- Стандартный шаблон страницы
+
+include mixins.pug
+
+doctype html
+html(class='page  no-js', lang='ru')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- Edge и ряд мобильных браузеров слишком умны. Отключим это.
+    meta(name='format-detection', content='telephone=no')
+    meta(name='format-detection', content='date=no')
+    meta(name='format-detection', content='address=no')
+    meta(name='format-detection', content='email=no')
+    meta(content='notranslate', name='google')
+    //- Фавиконки (https://realfavicongenerator.net)
+    //- link(rel='apple-touch-icon', sizes='180x180', href='/img/favicon/apple-touch-icon.png')
+    //- link(rel='icon', type='image/png', sizes='32x32', href='/img/favicon/favicon-32x32.png')
+    //- link(rel='icon', type='image/png', sizes='16x16', href='/img/favicon/favicon-16x16.png')
+    //- link(rel='manifest', href='/img/favicon/site.webmanifest')
+    //- link(rel='mask-icon', href='/img/favicon/safari-pinned-tab.svg', color='#5bbad5')
+    //- meta(name='msapplication-TileColor', content='#5bbad5')
+    //- meta(name='theme-color', content='#000')
+    //- meta(name='msapplication-navbutton-color', content='#000')
+    //- meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+
+    block meta
+      title article type
+
+    block head
+      link(rel='stylesheet', href='css/style.css')
+      script
+        include ../js/head-script.js
+
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+
+    .page__inner
+      .page__content
+        +page-header()
+        h1.no-visible Заголовок страницы для сео
+        +main-nav(90)
+        +mobile-menu()
+        .article__inner 
+            .article__row 
+              // сайтбар
+              .article__sidebar.sidebar
+                // сайтбар таймер
+                .sidebar__timewrite
+                  .sidebar__timer <span>5</span> минут
+                    svg.radial-progress(data-percentage="5"  viewBox="0 0 80 80")
+                      circle.incomplete(cx="40" cy="40" r="32")
+                      circle.complete(cx="40" cy="40" r="32" style="stroke-dashoffset: 39.5841px;")
+                  .sidebar__timewrite-description время чтения
+                .sidebar__contents
+                    .sidebar__contents-title Оглавление статьи
+                      svg(class="timewrite" width="17px" height="14px")
+                        use(xlink:href="img/sprite.svg#menu-article")
+                // сайтбар оглавление
+                ul.sidebar__contents-list.contents-list
+                 li 
+                   a.current(href="#") Вступление
+                 li 
+                   a(href="#") Файл формата Png
+                 li 
+                   a(href="#") В чем преимущества и недостатки
+                 li 
+                   a(href="#") Mac
+                 li 
+                   a(href="#") Windows
+                 li 
+                   a(href="#") Видео
+                 li 
+                   a(href="#") Приложения
+                // сайтбар категории
+                .sidebar__title Категории
+                ul.sidebar__category 
+                    li
+                      a.current(href="#") Все статьи и обзоры
+                    li 
+                      a(href="#") Android
+                    li 
+                      a(href="#") iOS
+                    li 
+                      a(href="#") Linux
+                    li 
+                      a(href="#") Mac
+                    li 
+                      a(href="#") Windows
+                    li 
+                      a(href="#") Видео
+                    li 
+                      a(href="#") Приложения
+                // сайтбар блок новостей
+                .top-block__news
+                    .top-block__title Новости 
+                    .divider 
+                    .top-block__news-card.news-card
+                        .news-card__link 
+                        a(href="#") Skype обзавелся функцией шифрования сообщений
+                        .news-card__date 12 ноября 2018
+                    .divider 
+                    .top-block__news-card.news-card
+                        .news-card__link 
+                        a(href="#") Skype обзавелся функцией шифрования сообщений
+                        .news-card__date 12 ноября 2018
+                    .divider 
+                    .top-block__news-card.news-card
+                        .news-card__link
+                        a(href="#") Skype обзавелся функцией шифрования сообщений
+                        .news-card__date 12 ноября 2018
+                    .divider 
+                    .top-block__news-card.news-card
+                        .news-card__link
+                        a(href="#") Skype обзавелся функцией шифрования сообщений
+                        .news-card__date 12 ноября 2018
+                    .divider
+                    a.top-block__news-all.color-main(href="#") Все новости
+                      svg.separator(width="7px" height="13px")
+                        use(xlink:href="img/sprite.svg#arrow")
+                // сайтбар фреймы
+                .frame-facebook 
+                    .frame-facebook__img
+                      a(href="#") 
+                        img(src='img/fb-frame.png', alt='', width='264', height='143')
+                    .frame-facebook__logo
+                      a(href="/") 
+                        svg.separator(width="49px" height="49px")
+                          use(xlink:href="img/sprite.svg#logo-small")
+                    .frame-facebook__content 
+                      a(href="#")  Станьте первым из друзей, кому это понравилось
+                .frame_vk 
+                  img(src='img/frame.png', alt='', width='264', height='258')
+                // сайтбар блок новостей
+                .top-block__news
+                    .top-block__title Обновления 
+                    .divider 
+                    .top-block__news-card.news-card
+                        .news-card__link 
+                        a(href="#") Добавлено описание программы Sketchfgkn 2.0 и бета версия
+                        .news-card__date 12 ноября 2018
+                    .divider 
+                    .top-block__news-card.news-card
+                        .news-card__link 
+                        a(href="#") Протестированы и выложены в свободный доступ 10 плагинов
+                        .news-card__date 12 ноября 2018
+                    .divider 
+                    .top-block__news-card.news-card
+                        .news-card__link
+                        a(href="#") Протестированы и выложены в свободный доступ 10 плагинов
+                        .news-card__date 12 ноября 2018
+                // сайтбар блок программ
+                .top-block__news
+                    .top-block__title Популярные программы 
+                    .divider 
+                    .top-block__news-card.news-card
+                      .news-card__line
+                        .news-card__img
+                          img(src='img/programm-1.png', alt='', width='44', height='44')
+                        .news-card__content 
+                          .news-card__link                         
+                            a(href="#") Google Chrome
+                          .news-card__date Версия 11. 05. 17 <span> (305.7 МБ)</span>
+                    .divider 
+                    .top-block__news-card.news-card
+                      .news-card__line
+                        .news-card__img
+                          img(src='img/programm-2.png', alt='', width='44', height='44')
+                        .news-card__content 
+                          .news-card__link                         
+                            a(href="#") Google Chrome
+                          .news-card__date Версия 11. 05. 17 <span> (305.7 МБ)</span>
+                    .divider 
+                    .top-block__news-card.news-card
+                      .news-card__line
+                        .news-card__img
+                          img(src='img/programm-3.png', alt='', width='44', height='44')
+                        .news-card__content 
+                          .news-card__link                         
+                            a(href="#") Google Chrome
+                          .news-card__date Версия 11. 05. 17 <span> (305.7 МБ)</span>
+                    .divider 
+                    .top-block__news-card.news-card
+                      .news-card__line
+                        .news-card__img
+                          img(src='img/programm-1.png', alt='', width='44', height='44')
+                        .news-card__content 
+                          .news-card__link                         
+                            a(href="#") Google Chrome
+                          .news-card__date Версия 11. 05. 17 <span> (305.7 МБ)</span>
+                    .divider
+                    .top-block__news-card.news-card
+                      .news-card__line
+                        .news-card__img
+                          img(src='img/programm-2.png', alt='', width='44', height='44')
+                        .news-card__content 
+                          .news-card__link                         
+                            a(href="#") Google Chrome
+                          .news-card__date Версия 11. 05. 17 <span> (305.7 МБ)</span>
+                    .divider                    
+                    a.top-block__news-all.color-main(href="#") Все программы
+                      svg.separator(width="7px" height="13px")
+                        use(xlink:href="img/sprite.svg#arrow")
+                // сайтбар подписка
+                form.sidebar__form 
+                  .sidebar__form-title Хотите получать свежий софт?
+                  input(type="mail", placeholder="Email")
+                  button.btn-circle.btn-main-color Да!
+                // сайтбар облако тегов
+                .sidebar__tags 
+                  .sidebar__form-title Программы по разделам
+                  ul.tag-list 
+                    li 
+                      a(href="#").btn-transparent--square  FreeWare
+                    li 
+                      a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                    li 
+                      a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                    li 
+                      a(href="#").btn-transparent--square  СТИЛЬ ЖИЗНИ
+                    li 
+                      a(href="#").btn-transparent--square  СТИЛЬ ЖИЗНИ
+                    li 
+                      a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                    li 
+                      a(href="#").btn-transparent--square  FreeWare
+                    li 
+                      a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                    li 
+                      a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                    li 
+                      a(href="#").btn-transparent--square  СТИЛЬ ЖИЗНИ
+                  a.color-main(href="#") Все программы 
+                     svg.separator(width="7px" height="13px")
+                        use(xlink:href="img/sprite.svg#arrow")
+                // сайтбар облако тегов
+                .sidebar__tags 
+                  .sidebar__form-title Программы по назначению
+                  ul.tag-list 
+                    li 
+                      a(href="#").btn-transparent--square  FreeWare
+                    li 
+                      a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                    li 
+                      a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                    li 
+                      a(href="#").btn-transparent--square  СТИЛЬ ЖИЗНИ
+                    li 
+                      a(href="#").btn-transparent--square  СТИЛЬ ЖИЗНИ
+                    li 
+                      a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                    li 
+                      a(href="#").btn-transparent--square  FreeWare
+                    li 
+                      a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                    li 
+                      a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                    li 
+                      a(href="#").btn-transparent--square  СТИЛЬ ЖИЗНИ
+                  a.color-main(href="#") Все программы 
+                     svg.separator(width="7px" height="13px")
+                        use(xlink:href="img/sprite.svg#arrow")
+                // блок комментариев
+                .sidebar__comments
+                  .sidebar__form-title Поcледние комментарии 
+                  ul.comment-list
+                    li.comment-list__item 
+                      .divider
+                      .comment-card 
+                        .comment-card__header
+                          .comment-card__img
+                            img(src='img/user-1.jpg', alt='', width='44', height='44')
+                          .comment-card__user-info 
+                            .comment-card__user-name Вениамин
+                            .comment-card__comment-data 29 сентября в 20:42
+                        .comment-card__content Безусловно, высокое качество позиционных иследов...
+                        .comment-card__footer «Формат PNG»
+                      .divider
+                      .comment-card 
+                        .comment-card__header
+                          .comment-card__img
+                            img(src='img/user-2.png', alt='', width='44', height='44')
+                          .comment-card__user-info 
+                            .comment-card__user-name Вениамин
+                            .comment-card__comment-data 29 сентября в 20:42
+                        .comment-card__content Безусловно, высокое качество позиционных иследов...
+                        .comment-card__footer «Формат PNG»
+                      .divider
+                      .comment-card 
+                        .comment-card__header
+                          .comment-card__img
+                            img(src='img/user-3.png', alt='', width='44', height='44')
+                          .comment-card__user-info 
+                            .comment-card__user-name Кристина
+                            .comment-card__comment-data 29 сентября в 20:42
+                        .comment-card__content Безусловно, высокое качество позиционных иследов...
+                        .comment-card__footer «Формат PNG»
+                      .divider
+                      .comment-card 
+                        .comment-card__header
+                          .comment-card__img
+                            img(src='img/user-1.jpg', alt='', width='44', height='44')
+                          .comment-card__user-info 
+                            .comment-card__user-name Кристина
+                            .comment-card__comment-data 29 сентября в 20:42
+                        .comment-card__content Безусловно, высокое качество позиционных иследов...
+                        .comment-card__footer «Формат PNG»
+                      .divider
+                      .comment-card 
+                        .comment-card__header
+                          .comment-card__img
+                            img(src='img/user-2.png', alt='', width='44', height='44')
+                          .comment-card__user-info 
+                            .comment-card__user-name Вениамин
+                            .comment-card__comment-data 29 сентября в 20:42
+                        .comment-card__content Безусловно, высокое качество позиционных иследов...
+                        .comment-card__footer «Формат PNG»
+                      .divider
+                      .comment-card 
+                        .comment-card__header
+                          .comment-card__img
+                            img(src='img/user-3.png', alt='', width='44', height='44')
+                          .comment-card__user-info 
+                            .comment-card__user-name Кристина
+                            .comment-card__comment-data 29 сентября в 20:42
+                        .comment-card__content Безусловно, высокое качество позиционных иследов...
+                        .comment-card__footer «Формат PNG»
+
+              .article__main.article__main--col.article__type-img 
+                //хлебные крошки
+                +breadcrumbs('top')
+                  +breadcrumbs-item('Бесплатные программы', '/')
+                  +breadcrumbs-item('Windows', '/')
+                  +breadcrumbs-item('Microsoft')
+                // Заголовок
+                .item-responsive.item-16by9
+                  .item-responsive__img
+                    img(src="img/post-type.png" alt="" width="852" height="480")
+                    h1.width-share Файл формата png: чем открыть, описание, особенности и преимущества
+                      // Блок "поделиться в соцсетях"
+                      .share-panel 
+                        a.share-panel-open(href="#")
+                          svg.separator(width="23px" height="26px")
+                              use(xlink:href="img/sprite.svg#share")
+                        ul.share-panel__list 
+                          li 
+                            a.vk(href="#")
+                              svg.separator(width="21px" height="12px")
+                                use(xlink:href="img/sprite.svg#vk")
+                          li 
+                            a.google(href="#")
+                              svg.separator(width="18px" height="17px")
+                                use(xlink:href="img/sprite.svg#google") 
+                          li 
+                            a.facebook(href="#")
+                              svg.separator(width="11px" height="20px")
+                                use(xlink:href="img/sprite.svg#fb")
+                          li 
+                            a.twitter(href="#")
+                              svg.separator(width="18px" height="17px")
+                                use(xlink:href="img/sprite.svg#twitter")
+                          li 
+                            a.share-panel-close(href="#")
+                              svg.separator(width="23px" height="26px")
+                                use(xlink:href="img/sprite.svg#share")
+                // контентная часть
+                .post
+                  // блок подзаголовка-анонс
+                  .subtitle 
+                    p Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все  втопроизводители четко указывают.
+                    .meta-info 
+                     .meta-info__data 29 декабря 2018
+                     .meta-info__vue 
+                        svg.meta(width="17px" height="10px")
+                             use(xlink:href="img/sprite.svg#eye")
+                        span 4 589 просмотров
+                  // текстовой блок
+                  p Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.
+                  // текстовой блок
+                  p Эти данные должны лечь в основу выбора.
+                  p Мы рекомендуем автовладельцам обратить внимание и на количество боковых электродов, материалы и торговую марку.
+                  p На свече может быть до четырех боковых электродов. Чем больше электродов, тем дольше прослужит свеча: искра возникает попарно между каждым боковым и одним центральным электродом последовательно. Искра появляется «открытой», поскольку пламя образуется
+                  p  не между электродами, а попадает в пространство камеры сгорания, это благоприятно увеличивает мощность и экономит топливо.
+                  // облако тегов в контенте
+                  .tags 
+                    .tags__title Популярные программы
+                    ul.tags__tag-list 
+                      li 
+                        a(href="#").btn-transparent--square  FreeWare
+                      li 
+                        a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                      li 
+                        a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                      li 
+                        a(href="#").btn-transparent--square  Эффективная работа
+                      li 
+                        a(href="#").btn-transparent--square  СТИЛЬ ЖИЗНИ
+                      li 
+                        a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                      li 
+                        a(href="#").btn-transparent--square  FreeWare
+                      li 
+                        a(href="#").btn-transparent--square  Эффективная работа
+                      li 
+                        a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                      li 
+                        a(href="#").btn-transparent--square  СТИЛЬ ЖИЗНИ
+                      li 
+                        a(href="#").btn-transparent--square  FreeWare
+                      li 
+                        a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                      li 
+                        a(href="#").btn-transparent--square  FreeWare
+                      li 
+                        a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+
+
+
+
+      .page__footer-wrapper
+        +page-footer()
+          block footer
+            
+
+    block page-bottom
+      script(src='js/bundle.js')

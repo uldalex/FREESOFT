@@ -147,10 +147,13 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
       </div>
       <div class="article__inner">
         <div class="article__row">
+          <!-- сайтбар-->
           <div class="article__sidebar sidebar">
+            <!-- сайтбар таймер-->
             <div class="sidebar__timewrite">
-              <div class="sidebar__timer"><span>15</span> минут<svg class="timewrite" width="126px" height="126px">
-                  <use xlink:href="img/sprite.svg#timewrite"></use>
+              <div class="sidebar__timer"><span>15</span> минут<svg class="radial-progress" data-percentage="15" viewBox="0 0 80 80">
+                  <circle class="incomplete" cx="40" cy="40" r="32"></circle>
+                  <circle class="complete" cx="40" cy="40" r="32" style="stroke-dashoffset: 39.5841px;"></circle>
                 </svg></div>
               <div class="sidebar__timewrite-description">время чтения</div>
             </div>
@@ -158,7 +161,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <div class="sidebar__contents-title">Оглавление статьи<svg class="timewrite" width="17px" height="14px">
                   <use xlink:href="img/sprite.svg#menu-article"></use>
                 </svg></div>
-            </div>
+            </div><!-- сайтбар оглавление-->
             <ul class="sidebar__contents-list contents-list">
               <li> <a class="current" href="#">Вступление</a></li>
               <li> <a href="#">Файл формата Png</a></li>
@@ -167,7 +170,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <li> <a href="#">Windows</a></li>
               <li> <a href="#">Видео</a></li>
               <li> <a href="#">Приложения</a></li>
-            </ul>
+            </ul><!-- сайтбар категории-->
             <div class="sidebar__title">Категории</div>
             <ul class="sidebar__category">
               <li><a class="current" href="#">Все статьи и обзоры</a></li>
@@ -178,7 +181,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <li> <a href="#">Windows</a></li>
               <li> <a href="#">Видео</a></li>
               <li> <a href="#">Приложения</a></li>
-            </ul>
+            </ul><!-- сайтбар блок новостей-->
             <div class="top-block__news">
               <div class="top-block__title">Новости </div>
               <div class="divider"> </div>
@@ -204,7 +207,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <div class="divider"></div><a class="top-block__news-all color-main" href="#">Все новости<svg class="separator" width="7px" height="13px">
                   <use xlink:href="img/sprite.svg#arrow"></use>
                 </svg></a>
-            </div>
+            </div><!-- сайтбар фреймы-->
             <div class="frame-facebook">
               <div class="frame-facebook__img"><a href="#"> <img src="img/fb-frame.png" alt="" width="264" height="143"></a></div>
               <div class="frame-facebook__logo"><a href="/"> <svg class="separator" width="49px" height="49px">
@@ -212,7 +215,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                   </svg></a></div>
               <div class="frame-facebook__content"> <a href="#"> Станьте первым из друзей, кому это понравилось</a></div>
             </div>
-            <div class="frame_vk"> <img src="img/frame.png" alt="" width="264" height="258"></div>
+            <div class="frame_vk"> <img src="img/frame.png" alt="" width="264" height="258"></div><!-- сайтбар блок новостей-->
             <div class="top-block__news">
               <div class="top-block__title">Обновления </div>
               <div class="divider"> </div>
@@ -230,7 +233,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 <div class="news-card__link"></div><a href="#">Протестированы и выложены в свободный доступ 10 плагинов</a>
                 <div class="news-card__date">12 ноября 2018</div>
               </div>
-            </div>
+            </div><!-- сайтбар блок программ-->
             <div class="top-block__news">
               <div class="top-block__title">Популярные программы </div>
               <div class="divider"> </div>
@@ -286,10 +289,10 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <div class="divider"> </div><a class="top-block__news-all color-main" href="#">Все программы<svg class="separator" width="7px" height="13px">
                   <use xlink:href="img/sprite.svg#arrow"></use>
                 </svg></a>
-            </div>
+            </div><!-- сайтбар подписка-->
             <form class="sidebar__form">
               <div class="sidebar__form-title">Хотите получать свежий софт?</div><input type="mail" placeholder="Email"><button class="btn-circle btn-main-color">Да!</button>
-            </form>
+            </form><!-- сайтбар облако тегов-->
             <div class="sidebar__tags">
               <div class="sidebar__form-title">Программы по разделам</div>
               <ul class="tag-list">
@@ -306,7 +309,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               </ul><a class="color-main" href="#">Все программы <svg class="separator" width="7px" height="13px">
                   <use xlink:href="img/sprite.svg#arrow"></use>
                 </svg></a>
-            </div>
+            </div><!-- сайтбар облако тегов-->
             <div class="sidebar__tags">
               <div class="sidebar__form-title">Программы по назначению</div>
               <ul class="tag-list">
@@ -323,7 +326,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               </ul><a class="color-main" href="#">Все программы <svg class="separator" width="7px" height="13px">
                   <use xlink:href="img/sprite.svg#arrow"></use>
                 </svg></a>
-            </div>
+            </div><!-- блок комментариев-->
             <div class="sidebar__comments">
               <div class="sidebar__form-title">Поcледние комментарии </div>
               <ul class="comment-list">
@@ -404,13 +407,16 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               </ul>
             </div>
           </div>
-          <div class="article__main">
+          <div class="article__main article__main--col">
+            <!--хлебные крошки-->
             <ul class="breadcrumbs  breadcrumbs--top" aria-label="Breadcrumb" role="navigation">
               <li class="breadcrumbs__item"><a href="/">Бесплатные программы</a></li>
               <li class="breadcrumbs__item"><a href="/">Windows</a></li>
               <li class="breadcrumbs__item"><span>Microsoft</span></li>
-            </ul>
-            <h1 class="width-share">Файл формата png: чем открыть, описание, особенности и преимущества<div class="share-panel"> <a class="share-panel-open" href="#"><svg class="separator" width="23px" height="26px">
+            </ul><!-- Заголовок-->
+            <h1 class="width-share">Файл формата png: чем открыть, описание, особенности и преимущества
+              <!-- Блок "поделиться в соцсетях"-->
+              <div class="share-panel"> <a class="share-panel-open" href="#"><svg class="separator" width="23px" height="26px">
                     <use xlink:href="img/sprite.svg#share"></use>
                   </svg></a>
                 <ul class="share-panel__list">
@@ -431,8 +437,9 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                       </svg></a></li>
                 </ul>
               </div>
-            </h1>
+            </h1><!-- контентная часть-->
             <div class="post">
+              <!-- блок подзаголовка-анонс-->
               <div class="subtitle">
                 <p>Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все втопроизводители четко указывают.</p>
                 <div class="meta-info">
@@ -441,12 +448,12 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                       <use xlink:href="img/sprite.svg#eye"></use>
                     </svg><span>4 589 просмотров</span></div>
                 </div>
-              </div>
-              <p>Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</p>
+              </div><!-- текстовой блок-->
+              <p>Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</p><!-- текстовой блок-->
               <p>Эти данные должны лечь в основу выбора.</p>
               <p>Мы рекомендуем автовладельцам обратить внимание и на количество боковых электродов, материалы и торговую марку.</p>
               <p>На свече может быть до четырех боковых электродов. Чем больше электродов, тем дольше прослужит свеча: искра возникает попарно между каждым боковым и одним центральным электродом последовательно. Искра появляется «открытой», поскольку пламя образуется</p>
-              <p> не между электродами, а попадает в пространство камеры сгорания, это благоприятно увеличивает мощность и экономит топливо.</p>
+              <p> не между электродами, а попадает в пространство камеры сгорания, это благоприятно увеличивает мощность и экономит топливо.</p><!-- облако тегов в контенте-->
               <div class="tags">
                 <div class="tags__title">Популярные программы</div>
                 <ul class="tags__tag-list">
@@ -465,10 +472,10 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                   <li> <a class="btn-transparent--square" href="#"> FreeWare</a></li>
                   <li> <a class="btn-transparent--square" href="#"> МУЛЬТИМЕДИА</a></li>
                 </ul>
-              </div>
-              <div class="divider"></div>
-              <h3>Файл формата png</h3>
-              <p>Правильный выбор свечей зажигания влияет на устойчивую <a href="#">работу двигателя</a>, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</p>
+              </div><!-- разделитель-->
+              <div class="divider"></div><!-- h3 в контенте-->
+              <h3>Файл формата png</h3><!-- текстовой блок-->
+              <p>Правильный выбор свечей зажигания влияет на устойчивую <a href="#">работу двигателя</a>, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</p><!-- облако тегов в контенте-->
               <div class="tags">
                 <div class="tags__title">Популярные статьи</div>
                 <ul class="tags__tag-list">
@@ -480,12 +487,12 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                   <li> <a class="btn-transparent--square" href="#"> как выбрать наушники</a></li>
                   <li> <a class="btn-transparent--square" href="#"> формат PNG и его особенности</a></li>
                   <li> <a class="btn-transparent--square" href="#"> формат PNG и его особенности</a></li>
-                </ul>
+                </ul><!-- разделитель-->
                 <div class="divider"></div>
-              </div><img class="content-img" src="img/user-2.png" alt="" width="852" height="480">
-              <p>Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</p>
-              <h3>Клиенты Сбербанка пожаловались на новый вид мошенничества. Злоумышленники знают даже остаток по карте</h3>
-              <p>Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</p>
+              </div><!-- изображение в контенте--><img class="content-img" src="img/user-2.png" alt="" width="852" height="480"><!-- текстовой блок-->
+              <p>Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</p><!-- h3 в контенте-->
+              <h3>Клиенты Сбербанка пожаловались на новый вид мошенничества. Злоумышленники знают даже остаток по карте</h3><!-- текстовой блок-->
+              <p>Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</p><!-- анонс программы-->
               <div class="block-anons">
                 <div class="anons-card">
                   <div class="anons-card__img"><img src="img/anons.png" alt="" width="90" height="90"></div>
@@ -512,31 +519,32 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                   </div>
                   <div class="anons-card__footer"> <a class="btn-circle btn-green-color" href="#">Скачать </a></div>
                 </div>
-              </div>
+              </div><!-- h3 в контенте -->
               <h3>Формальность или необходимость</h3>
-              <p>Еще один момент. Внедрившись в соединение между сайтом и пользователем, злоумышленник может не только украсть, но и подменить информацию. Это как если бы почтальон открывал письма и переписывал их. Хакеры добавляют на HTTP-страницы вирусы, рекламу порно-сайтов или нелегальных товаров. Пользователь думает, что это и есть ваш сайт. HTTPS защищает от подобных историй.</p>
+              <!--текстовой блок-->
+              <p>Еще один момент. Внедрившись в соединение между сайтом и пользователем, злоумышленник может не только украсть, но и подменить информацию. Это как если бы почтальон открывал письма и переписывал их. Хакеры добавляют на HTTP-страницы вирусы, рекламу порно-сайтов или нелегальных товаров. Пользователь думает, что это и есть ваш сайт. HTTPS защищает от подобных историй.</p><!-- список стиль №1-->
               <ul class="list-circle">
                 <li>в 1995 году, в эпоху развития свободного интернета, резко встал вопрос о проприетарности сложного формата GIF.</li>
                 <li>был необходим столь же надежный но бесплатный и свободный формат для обмена графическими данными во всемирной паутине.</li>
                 <li>в это время на международном консорциуме W3C были представлены спецификации PNG 1.0, утвержденные уже в 1996.</li>
-              </ul>
+              </ul><!-- список стиль №2-->
               <ul class="list-minus">
                 <li>в 1995 году, в эпоху развития свободного интернета, резко встал вопрос о проприетарности сложного формата GIF.</li>
                 <li>был необходим столь же надежный но бесплатный и свободный формат для обмена графическими данными во всемирной паутине.</li>
                 <li>в это время на международном консорциуме W3C были представлены спецификации PNG 1.0, утвержденные уже в 1996. </li>
-              </ul>
+              </ul><!-- список стиль №3-->
               <ol class="list-count">
                 <li>в 1995 году, в эпоху развития свободного интернета, резко встал вопрос о проприетарности сложного формата GIF.</li>
                 <li>был необходим столь же надежный но бесплатный и свободный формат для обмена графическими данными во всемирной паутине.</li>
                 <li>в это время на международном консорциуме W3C были представлены спецификации PNG 1.0, утвержденные уже в 1996.</li>
-              </ol>
-              <div class="item-responsive item-16by9"><a href="#">
+              </ol><!-- видео прелоадер-->
+              <div class="item-responsive item-16by9"><a class="video-preload" href="#">
                   <div class="video-perw"><img src="img/video.png" alt="" width="852" height="480"></div>
-                </a></div>
-              <h3>Файл формата png</h3>
-              <p>Правильный выбор свечей зажигания влияет на устойчивую <a href="#">работу двигателя</a>, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</p>
-              <h4>Файл формата png</h4>
-              <div class="quotes--line">Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</div>
+                </a><iframe class="video" src="https://www.youtube.com/embed/ypmVk_T3M5g?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="100%" height="100%"></iframe></div><!-- h3 в контенте-->
+              <h3>Файл формата png</h3><!-- текстовой блок-->
+              <p>Правильный выбор свечей зажигания влияет на устойчивую <a href="#">работу двигателя</a>, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</p><!-- h4 в контенте-->
+              <h4>Файл формата png</h4><!-- блок-цитата стиль №1-->
+              <div class="quotes--line">Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</div><!-- слайдер с первьюшками-->
               <div class="slider">
                 <div class="splide" id="primary-slider">
                   <div class="splide__track">
@@ -558,25 +566,23 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     </ul>
                   </div>
                 </div>
-              </div>
-              <div class="quotes--simbol">Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля. </div>
+              </div><!-- блок-цитата стиль №2-->
+              <div class="quotes--simbol">Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля. </div><!-- блок изображения стиль №1-->
               <figure><img src="img/slide-4.png" alt="" width="852" height="480">
                 <figcaption>Автор фото: Василий Иванов </figcaption>
-              </figure>
+              </figure><!-- двухколоночный блок        -->
               <div class="grid grid--col-2">
                 <p>Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать. Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топливарасход топлива расход топлива </p>
                 <p>скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать. Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость.</p>
-              </div>
+              </div><!--  таблица с ограничением по ширине-->
               <div class="overflow">
-                <div class="grid grid--col-4 tablies title">
+                <div class="grid-table grid grid--col-6 tablies title">
                   <div class="tablies__title">Небесное тело</div>
                   <div class="tablies__title">Период обращения вокруг своей оси</div>
                   <div class="tablies__title">Период обращения вокруг центр. тела</div>
                   <div class="tablies__title">Период обращения вокруг центр. тела</div>
                   <div class="tablies__title">Период обращения вокруг центр. тела</div>
                   <div class="tablies__title">Период обращения вокруг центр. тела</div>
-                </div>
-                <div class="grid grid--col-4 tablies">
                   <p>Юпитер</p>
                   <p>20 дней</p>
                   <p>20 дней</p>
@@ -626,7 +632,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                   <p>20 дней</p>
                   <p>20 часов</p>
                 </div>
-              </div>
+              </div><!-- слайдер популярные программы в контенте-->
               <div class="app-slider-box">
                 <div class="title-divider">Популярные программы</div>
                 <div class="app-slider splide" id="app-slider">
@@ -687,14 +693,14 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div><!-- блок изображения стиль №2-->
               <figure class="alt"><img src="img/figure.png" alt="" width="852" height="480">
-                <figcaption>Подпись к фото. Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях </figcaption>
-              </figure>
+                <figcaption>Подпись к фото. Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях</figcaption>
+              </figure><!-- блок предупреждения-->
               <div class="warning">
                 <h4>Важная информация!</h4>
                 <p>Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях </p>
-              </div>
+              </div><!-- блок сравнения программ-->
               <div class="grid grid--col-2">
                 <div class="block-compare block-plus">
                   <div class="block-compare__title"><svg class="separator" width="16px" height="16px">
@@ -761,6 +767,391 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     </div>
                   </div>
                 </div>
+              </div>
+              <!--блок анонса одной программы-->
+              <div class="soft-anons">
+                <h4>Мораль сей басни такова. Ну или название программы</h4>
+                <div class="soft-anons__content">Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях </div>
+                <div class="soft-anons__footer"> <a class="btn-circle btn-transparent-color" href="#">Версии</a><a class="btn-circle btn-green-color" href="#">Скачать</a></div>
+              </div><!-- блок резюмирующего текста-->
+              <div class="warning">
+                <h4>Вывод</h4>
+                <p>Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях </p>
+              </div><!-- таблица с ограничением по ширине-->
+              <div class="overflow">
+                <div class="grid-table grid grid--col-6 tablies title">
+                  <div class="tablies__title">Программа</div>
+                  <div class="tablies__title">Поддерживается Х версией</div>
+                  <div class="tablies__title">Поддерживается Y версией</div>
+                  <div class="tablies__title">Год обновления программы</div>
+                  <div class="tablies__title">Год обновления программы</div>
+                  <div class="tablies__title">Год обновления программы</div>
+                  <p>Юпитер</p>
+                  <p class="not-ok"> </p>
+                  <p class="ok"> </p>
+                  <p>2018</p>
+                  <p>2021</p>
+                  <p>2021</p>
+                  <p>Марс</p>
+                  <p class="ok"> </p>
+                  <p class="not-ok"> </p>
+                  <p>2018</p>
+                  <p>2021</p>
+                  <p>2021</p>
+                  <p>Сатурн</p>
+                  <p class="not-ok"> </p>
+                  <p class="ok"> </p>
+                  <p>2018</p>
+                  <p>2021</p>
+                  <p>2021</p>
+                  <p>Венера</p>
+                  <p class="ok"> </p>
+                  <p class="not-ok"> </p>
+                  <p>2018</p>
+                  <p>2021</p>
+                  <p>2021</p>
+                  <p>Земля</p>
+                  <p class="not-ok"> </p>
+                  <p class="ok"> </p>
+                  <p>2018</p>
+                  <p>2021</p>
+                  <p>2022</p>
+                  <p>Луна</p>
+                  <p class="ok"> </p>
+                  <p class="not-ok"> </p>
+                  <p>2018</p>
+                  <p>2021</p>
+                  <p>2022</p>
+                  <p>Фобос</p>
+                  <p class="not-ok"> </p>
+                  <p class="ok"> </p>
+                  <p>2018</p>
+                  <p>2021</p>
+                  <p>2022</p>
+                  <p>Облако астероидов</p>
+                  <p class="ok"> </p>
+                  <p class="not-ok"> </p>
+                  <p>2018</p>
+                  <p>2021</p>
+                  <p>2022</p>
+                </div>
+              </div><!-- блок "внимание" стиль №2-->
+              <div class="warning--question">
+                <h4>Все еще кипятите?</h4>
+                <p>Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях </p>
+              </div><!-- блок "внимание" стиль №3-->
+              <div class="warning--answer">
+                <h4>Тогда мы идем к вам!</h4>
+                <p>Правильный выбор свечей зажигания влияет на устойчивую работу двигателя, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях</p>
+              </div><!-- текстовой блок-->
+              <p>Правильный выбор свечей зажигания влияет на устойчивую <a href="#">работу двигателя</a>, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</p><!-- баннер-->
+              <div class="content-banner">
+                <h3>Новые программы и приложения<br> по версии FreeSoft</h3>
+                <div>ТОП <span>10</span></div>
+              </div><!-- сетка карточек программ-->
+              <div class="content-soft-rows">
+                <div class="product-slider__card">
+                  <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                  <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                  <div class="product-slider__bottom">
+                    <div class="product-slider__version">Версия 11. 05. 17</div>
+                    <div class="product-slider__size">(305.7 МБ)</div>
+                  </div>
+                  <div class="product-slider__footer">
+                    <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                        <use xlink:href="img/sprite.svg#download"></use>
+                      </svg>Скачать </a>
+                  </div>
+                </div>
+                <div class="product-slider__card">
+                  <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                  <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                  <div class="product-slider__bottom">
+                    <div class="product-slider__version">Версия 11. 05. 17</div>
+                    <div class="product-slider__size">(305.7 МБ)</div>
+                  </div>
+                  <div class="product-slider__footer">
+                    <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                        <use xlink:href="img/sprite.svg#download"></use>
+                      </svg>Скачать </a>
+                  </div>
+                </div>
+                <div class="product-slider__card">
+                  <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                  <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                  <div class="product-slider__bottom">
+                    <div class="product-slider__version">Версия 11. 05. 17</div>
+                    <div class="product-slider__size">(305.7 МБ)</div>
+                  </div>
+                  <div class="product-slider__footer">
+                    <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                        <use xlink:href="img/sprite.svg#download"></use>
+                      </svg>Скачать </a>
+                  </div>
+                </div>
+                <div class="product-slider__card">
+                  <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                  <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                  <div class="product-slider__bottom">
+                    <div class="product-slider__version">Версия 11. 05. 17</div>
+                    <div class="product-slider__size">(305.7 МБ)</div>
+                  </div>
+                  <div class="product-slider__footer">
+                    <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                        <use xlink:href="img/sprite.svg#download"></use>
+                      </svg>Скачать </a>
+                  </div>
+                </div>
+                <div class="product-slider__card">
+                  <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                  <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                  <div class="product-slider__bottom">
+                    <div class="product-slider__version">Версия 11. 05. 17</div>
+                    <div class="product-slider__size">(305.7 МБ)</div>
+                  </div>
+                  <div class="product-slider__footer">
+                    <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                        <use xlink:href="img/sprite.svg#download"></use>
+                      </svg>Скачать </a>
+                  </div>
+                </div>
+                <div class="product-slider__card">
+                  <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                  <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                  <div class="product-slider__bottom">
+                    <div class="product-slider__version">Версия 11. 05. 17</div>
+                    <div class="product-slider__size">(305.7 МБ)</div>
+                  </div>
+                  <div class="product-slider__footer">
+                    <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                        <use xlink:href="img/sprite.svg#download"></use>
+                      </svg>Скачать </a>
+                  </div>
+                </div>
+                <div class="product-slider__card">
+                  <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                  <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                  <div class="product-slider__bottom">
+                    <div class="product-slider__version">Версия 11. 05. 17</div>
+                    <div class="product-slider__size">(305.7 МБ)</div>
+                  </div>
+                  <div class="product-slider__footer">
+                    <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                        <use xlink:href="img/sprite.svg#download"></use>
+                      </svg>Скачать </a>
+                  </div>
+                </div>
+                <div class="product-slider__card">
+                  <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                  <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                  <div class="product-slider__bottom">
+                    <div class="product-slider__version">Версия 11. 05. 17</div>
+                    <div class="product-slider__size">(305.7 МБ)</div>
+                  </div>
+                  <div class="product-slider__footer">
+                    <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                        <use xlink:href="img/sprite.svg#download"></use>
+                      </svg>Скачать </a>
+                  </div>
+                </div>
+                <div class="product-slider__card">
+                  <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                  <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                  <div class="product-slider__bottom">
+                    <div class="product-slider__version">Версия 11. 05. 17</div>
+                    <div class="product-slider__size">(305.7 МБ)</div>
+                  </div>
+                  <div class="product-slider__footer">
+                    <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                        <use xlink:href="img/sprite.svg#download"></use>
+                      </svg>Скачать </a>
+                  </div>
+                </div>
+                <div class="product-slider__card">
+                  <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                  <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                  <div class="product-slider__bottom">
+                    <div class="product-slider__version">Версия 11. 05. 17</div>
+                    <div class="product-slider__size">(305.7 МБ)</div>
+                  </div>
+                  <div class="product-slider__footer">
+                    <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                        <use xlink:href="img/sprite.svg#download"></use>
+                      </svg>Скачать </a>
+                  </div>
+                </div><!-- видео прелоадер-->
+                <div class="product-slider__card--col2">
+                  <div class="item-responsive item-16by10"><a class="video-preload" href="#">
+                      <div class="video-perw video-perw__background">
+                        <p>Лучшие программы для безопасности вашего компьютера</p>
+                      </div>
+                    </a><iframe class="video" src="https://www.youtube.com/embed/ypmVk_T3M5g?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" width="100%" height="100%"></iframe></div>
+                </div>
+              </div><!-- текстовой блок-->
+              <p>Правильный выбор свечей зажигания влияет на устойчивую <a href="#">работу двигателя</a>, скорость, разгон и расход топлива. Все автопроизводители четко указывают в инструкциях технические характеристики, которыми должны обладать свечи для той или иной модели автомобиля.</p><!-- баннер-->
+              <div class="content-banner">
+                <h3>Новые программы и приложения<br> по версии FreeSoft</h3>
+                <div>ТОП <span>10</span></div>
+              </div><!-- блок программ списком-->
+              <div class="content-soft-list">
+                <div class="product-slider__card-list">
+                  <div class="product-slider__card">
+                    <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                    <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                    <div class="product-slider__bottom">
+                      <div class="product-slider__version">Версия 11. 05. 17</div>
+                      <div class="product-slider__size">(305.7 МБ)</div>
+                    </div>
+                    <div class="product-slider__footer">
+                      <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                          <use xlink:href="img/sprite.svg#download"></use>
+                        </svg>Скачать</a>
+                    </div>
+                  </div>
+                  <div class="product-slider__description">
+                    <h4>Приз зрительских симпатий</h4>
+                    <p>Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.</p>
+                    <div class="product-slider__footer--list"><a class="btn-circle btn-transparent-color" href="#">Версии</a><a class="btn-circle btn-green-color" href="#">Скачать</a></div>
+                  </div>
+                </div>
+                <div class="product-slider__card-list">
+                  <div class="product-slider__card">
+                    <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                    <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                    <div class="product-slider__bottom">
+                      <div class="product-slider__version">Версия 11. 05. 17</div>
+                      <div class="product-slider__size">(305.7 МБ)</div>
+                    </div>
+                    <div class="product-slider__footer">
+                      <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                          <use xlink:href="img/sprite.svg#download"></use>
+                        </svg>Скачать</a>
+                    </div>
+                  </div>
+                  <div class="product-slider__description">
+                    <h4>Приз зрительских симпатий</h4>
+                    <p>Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.</p>
+                    <div class="product-slider__footer--list"><a class="btn-circle btn-transparent-color" href="#">Версии</a><a class="btn-circle btn-green-color" href="#">Скачать</a></div>
+                  </div>
+                </div>
+                <div class="product-slider__card-list">
+                  <div class="product-slider__card">
+                    <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div>
+                    <div class="product-slider__buttons"> <a class="btn-transparent--circle" href="#">Windows</a><a class="btn-transparent--circle" href="#"><span class="rate-star"><svg class="soft-menu__icon" width="11px" height="11px"><use xlink:href="img/sprite.svg#star"> </use></svg></span><span class="rate-value">4.5</span></a></div><a class="product-slider__content" href="#">Titanium Maximum Security</a>
+                    <div class="product-slider__bottom">
+                      <div class="product-slider__version">Версия 11. 05. 17</div>
+                      <div class="product-slider__size">(305.7 МБ)</div>
+                    </div>
+                    <div class="product-slider__footer">
+                      <div class="divider"> </div><a href="#"><svg class="download" width="13px" height="15px">
+                          <use xlink:href="img/sprite.svg#download"></use>
+                        </svg>Скачать</a>
+                    </div>
+                  </div>
+                  <div class="product-slider__description">
+                    <h4>Приз зрительских симпатий</h4>
+                    <p>Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.</p>
+                    <div class="product-slider__footer--list"><a class="btn-circle btn-transparent-color" href="#">Версии</a><a class="btn-circle btn-green-color" href="#">Скачать</a></div>
+                  </div>
+                </div>
+              </div><!-- пошаговая инструкция-->
+              <h3>Пошаговая инструкция по ремонту телефона</h3>
+              <div class="timeline">
+                <div class="timeline__container">
+                  <div class="timeline-icon">1</div>
+                  <div class="timeline-body">
+                    <div class="timeline-title">Подготовка к ремонту</div>
+                    <p>Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.</p>
+                  </div>
+                </div>
+                <div class="timeline__container">
+                  <div class="timeline-icon">2</div>
+                  <div class="timeline-body">
+                    <div class="timeline-title">Выявление неисправности</div>
+                    <p>Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.</p>
+                  </div>
+                </div>
+                <div class="timeline__container">
+                  <div class="timeline-icon">2</div>
+                  <div class="timeline-body">
+                    <div class="timeline-title">Попытка починить самостоятельно</div>
+                    <p>Задача организации, в особенности же дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.</p>
+                  </div>
+                </div>
+                <div class="timeline__container">
+                  <div class="timeline-icon">✔</div>
+                  <div class="timeline-body">
+                    <div class="timeline-title">Отнес в сервисный центр!</div>
+                  </div>
+                </div>
+              </div><!--  футер для страницы программы-->
+              <div class="post__footer">
+                <div class="post__footer-header">
+                  <div class="post__footer-vote"><svg class="separator" width="11px" height="11px">
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                    <div class="post__footer-count">5.0<span>1 560 оценок</span></div>
+                  </div>
+                  <div class="post__footer-stars">
+                    <div class="post__footer-ratings">
+                      <div class="star"> </div>
+                      <div class="star"></div>
+                      <div class="star"> </div>
+                      <div class="star"></div>
+                      <div class="star"></div>
+                    </div>
+                  </div><span>Оцените программу </span>
+                  <div class="share-panel"> <a class="share-panel-open" href="#"><svg class="separator" width="23px" height="26px">
+                        <use xlink:href="img/sprite.svg#share"></use>
+                      </svg></a>
+                    <ul class="share-panel__list">
+                      <li> <a class="vk" href="#"><svg class="separator" width="21px" height="12px">
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                          </svg></a></li>
+                      <li> <a class="google" href="#"><svg class="separator" width="18px" height="17px">
+                            <use xlink:href="img/sprite.svg#google"> </use>
+                          </svg></a></li>
+                      <li> <a class="facebook" href="#"><svg class="separator" width="11px" height="20px">
+                            <use xlink:href="img/sprite.svg#fb"></use>
+                          </svg></a></li>
+                      <li> <a class="twitter" href="#"><svg class="separator" width="18px" height="17px">
+                            <use xlink:href="img/sprite.svg#twitter"></use>
+                          </svg></a></li>
+                      <li> <a class="share-panel-close" href="#"><svg class="separator" width="23px" height="26px">
+                            <use xlink:href="img/sprite.svg#share"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="post-footer-center">
+                  <div class="tags">
+                    <ul class="tags__tag-list">
+                      <li> <a class="btn-transparent--square" href="#"> FreeWare</a></li>
+                      <li> <a class="btn-transparent--square" href="#"> МУЛЬТИМЕДИА</a></li>
+                      <li> <a class="btn-transparent--square" href="#"> МУЛЬТИМЕДИА</a></li>
+                      <li> <a class="btn-transparent--square" href="#"> Эффективная работа</a></li>
+                      <li> </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="post__footer-bottom">
+                  <ul class="breadcrumbs  breadcrumbs--article" aria-label="Breadcrumb" role="navigation">
+                    <li class="breadcrumbs__item"><a href="/">Бесплатные программы</a></li>
+                    <li class="breadcrumbs__item"><a href="/">Windows</a></li>
+                    <li class="breadcrumbs__item"><span>Microsoft</span></li>
+                  </ul>
+                  <div class="page__footer-vue"><svg class="articles__vue" width="16px" height="10px">
+                      <use xlink:href="img/sprite.svg#eye"></use>
+                    </svg><span><span>4 589 <span> просмотров</span></div>
+                </div>
+              </div><!-- блок комментариев в контенте-->
+              <div class="post__block-comments">
+                <div>56 комментариев</div><a class="btn-circle btn-main-color">Читать</a>
+              </div><!-- навигация по статьям-->
+              <div class="post__block-nav">
+                <p>следующая статья</p><a href="#"> Как установить программу на Windows 10</a><svg width="7px" height="13px">
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
               </div>
             </div>
           </div>
