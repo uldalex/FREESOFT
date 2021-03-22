@@ -6258,6 +6258,30 @@ if ($("#soft-slider-rete").length){
       }
     } ).mount();
     }
+
+    if ($(".one-app-slider").length){
+      new Splide( '.one-app-slider', {
+        perPage: 1,
+        trimSpace: true,
+        fixedHeight: '320px',
+        autoWidth:true,
+        cover  : true,
+        loop: true,
+
+      } ).mount();
+      }
+      if ($(".one-app-slider-1").length){
+        new Splide( '.one-app-slider-1', {
+          perPage: 1,
+          trimSpace: true,
+          fixedHeight: '320px',
+          autoWidth:true,
+          cover  : true,
+          loop: true,
+  
+        } ).mount();
+        }
+
 /*!
  * jQuery Mousewheel 3.1.13
  *
