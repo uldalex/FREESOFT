@@ -6212,8 +6212,8 @@ if ($("#app-slider").length){
     }
   } ).mount();
 }
-if ($("#soft-slider").length){
-  new Splide( '#soft-slider', {
+if ($("#soft-slider-rete").length){
+  new Splide( '#soft-slider-rete', {
     perPage: 5,
     perMove: 1,
     pagination: false,
@@ -6235,6 +6235,29 @@ if ($("#soft-slider").length){
     }
   } ).mount();
   }
+  if ($("#soft-slider").length){
+    new Splide( '#soft-slider', {
+      perPage: 6,
+      perMove: 1,
+      pagination: false,
+      type   : 'loop',
+      breakpoints: {
+        '1024': {
+          perPage: 4,
+          gap    : '1rem',
+        },
+        '780': {
+          perPage: 3,
+          gap    : '1rem',
+        },
+            '480': {
+          perPage: 1,
+          gap    : '1rem',
+        },
+    
+      }
+    } ).mount();
+    }
 /*!
  * jQuery Mousewheel 3.1.13
  *

@@ -81,229 +81,349 @@ html(class='page  no-js', lang='ru')
 
                 .post
                   p Каталог бесплатных программ FreeSoft — это старейший в Рунете каталог и файловый архив программ. На страницах нашего портала вы найдете программы для Windows, Android, iOS, Mac OS, Linux, Windows Phone на различных языках, в том числе и на русском языке. Все файлы программ от официальных поставщиков, и помимо этого проверены антивирусом. Windows Phone на различных языках, в том числе и на русском языке. Все файлы программ от официальных поставщиков, и помимо этого проверены антивирусом.
-                  .post__soft-rating.soft-rating 
-                    .soft-rating__sidebar 
-                      .soft-rating__soft-card
-                        //img(src='img/article-2.png', alt='Logo', width='264', height='190')
-                      // сайтбар оглавление
-                      ul.sidebar__contents-list.contents-list
-                        li 
-                          a.current(href="#") Общий рейтинг
-                        li 
-                          a(href="#") Общие сведения
-                        li 
-                          a(href="#") Функции и возможности
-                        li 
-                          a(href="#") Результаты тестов
-                    .soft-rating__content
+                  section.listing
+                    .post__soft-rating.soft-rating 
+                      .soft-rating__sidebar 
+                        .soft-rating__soft-card
+                          //img(src='img/article-2.png', alt='Logo', width='264', height='190')
+                        // сайтбар оглавление
+                        ul.sidebar__contents-list.contents-list
+                          li 
+                            a.current(href="#") Общий рейтинг
+                          li 
+                            a(href="#") Общие сведения
+                          li 
+                            a(href="#") Функции и возможности
+                          li 
+                            a(href="#") Результаты тестов
+                      .soft-rating__content
+                        #soft-slider-rete.splide.product-splide
+                          .splide__track
+                            ul.splide__list
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать 
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/product-3.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать 
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/programm-2.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/product-2.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать 
+                        .soft-rating__progress-bar.progress-bar 
+                          .progress-bar__item 
+                            .progress-bar__diagramm
+                              span(data-progress="100")
+                            .progress-bar__description
+                              svg.download(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star")
+                              span 4.0
+                          .progress-bar__item 
+                            .progress-bar__diagramm
+                              span(data-progress="80") 
+                            .progress-bar__description
+                              svg.download(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star")
+                              span 3.0
+                          .progress-bar__item 
+                            .progress-bar__diagramm
+                              span(data-progress="20") 
+                            .progress-bar__description
+                              svg.download(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star")
+                              span 3.0
+                          .progress-bar__item 
+                            .progress-bar__diagramm
+                              span(data-progress="60")
+                            .progress-bar__description
+                              svg.download(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star")
+                              span 3.0
+                          .progress-bar__item 
+                            .progress-bar__diagramm
+                              span(data-progress="80") 
+                            .progress-bar__description
+                              svg.download(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star")
+                              span 3.0
+                    .grid-table.grid.title
+                        .tablies__title.tablies Общие сведения
+                        .tablies__title.tablies 
+                        .tablies__title.tablies
+                        .tablies__title.tablies 
+                        .tablies__title.tablies 
+                        .tablies__title.tablies 
+                        p 
+                          strong Лицензия
+                        p Бесплатная
+                        p Бесплатная
+                        p Бесплатная
+                        p Бесплатная
+                        p Бесплатная                     
+                        p 
+                          strong Русский язык
+                        p.ok
+                        p.ok
+                        p.ok
+                        p.ok
+                        p.ok
+                        p 
+                          strong Поддержка
+                        p.ok
+                        p.ok
+                        p.not-ok
+                        p.ok
+                        p.ok
+                    .grid-table.grid.title
+                        .tablies__title.tablies Результаты тестов
+                        .tablies__title.tablies 
+                        .tablies__title.tablies
+                        .tablies__title.tablies 
+                        .tablies__title.tablies 
+                        .tablies__title.tablies 
+                        p 
+                          strong Время загрузки системы&nbsp;с антивирусом
+                        p < 1 мин
+                        p < 1 мин
+                        p < 1 мин
+                        p < 1 мин
+                        p < 1 мин                    
+                        p 
+                          strong Время сканирования системных папок
+                        p < 10 мин
+                        p Бесплатная
+                        p Бесплатная
+                        p Бесплатная
+                        p Пробная
+                        p 
+                          strong Использование процессора
+                        p 20%
+                        p 2.5%
+                        p 2.5%
+                        p 20%
+                        p 20%
+                        p 
+                          strong Использование памяти
+                        p 40 mb
+                        p 40 mb
+                        p 40 mb
+                        p 10 mb
+                        p 2 mb
+                        p 
+                          strong Рейтинг
+                        p 3
+                        p 2
+                        p 6
+                        p 4
+                        p 8
+                    .grid-table.grid.title
+                        .tablies__title.tablies Мнение пользователей
+                        .tablies__title.tablies 
+                        .tablies__title.tablies
+                        .tablies__title.tablies 
+                        .tablies__title.tablies 
+                        .tablies__title.tablies 
+                        p 
+                          strong Надежность
+                        .compare-block
+                            .like.active
+                              span 10
+                            .dislike
+                              span 4
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                        p
+                          strong Скорость работы
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike.active
+                              span 4
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                        p 
+                          strong Общий рейтинг
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                        .compare-block
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                    h3 Нам важно ваше мнение
+                    p Каталог бесплатных программ FreeSoft — это старейший в Рунете каталог и файловый архив программ. На страницах нашего портала вы найдете программы для Windows, Android, iOS, Mac OS, Linux
+                    .soft-rating 
                       #soft-slider.splide.product-splide
-                        .splide__track
-                          ul.splide__list
-                            li.splide__slide.product-slider
-                              .product-slider__card
-                                .product-slider__img 
-                                  img(src='img/product-1.png', alt='Logo', width='79', height='79')
-                                a(href="#").product-slider__content Advanced System Care Ultimate
-                                .product-slider__footer
-                                  a.btn-circle.btn-green-color(href="#")
-                                    svg.download(width="13px" height="15px")
-                                        use(xlink:href="img/sprite.svg#download")
-                                    | Скачать 
-                      .soft-rating__progress-bar.progress-bar 
-                        .progress-bar__item 
-                          .progress-bar__diagramm
-                            span(data-progress="100")
-                          .progress-bar__description
-                            svg.download(width="11px" height="11px")
-                              use(xlink:href="img/sprite.svg#star")
-                            span 4.0
-                        .progress-bar__item 
-                          .progress-bar__diagramm
-                            span(data-progress="80") 
-                          .progress-bar__description
-                            svg.download(width="11px" height="11px")
-                              use(xlink:href="img/sprite.svg#star")
-                            span 3.0
-                        .progress-bar__item 
-                          .progress-bar__diagramm
-                            span(data-progress="20") 
-                          .progress-bar__description
-                            svg.download(width="11px" height="11px")
-                              use(xlink:href="img/sprite.svg#star")
-                            span 3.0
-                        .progress-bar__item 
-                          .progress-bar__diagramm
-                            span(data-progress="60")
-                          .progress-bar__description
-                            svg.download(width="11px" height="11px")
-                              use(xlink:href="img/sprite.svg#star")
-                            span 3.0
-                        .progress-bar__item 
-                          .progress-bar__diagramm
-                            span(data-progress="80") 
-                          .progress-bar__description
-                            svg.download(width="11px" height="11px")
-                              use(xlink:href="img/sprite.svg#star")
-                            span 3.0
-                  .grid-table.grid.grid--col-6.title
-                      .tablies__title.tablies Общие сведения
-                      .tablies__title.tablies 
-                      .tablies__title.tablies
-                      .tablies__title.tablies 
-                      .tablies__title.tablies 
-                      .tablies__title.tablies 
-                      p 
-                        strong Лицензия
-                      p Бесплатная
-                      p Бесплатная
-                      p Бесплатная
-                      p Бесплатная
-                      p Бесплатная                     
-                      p 
-                        strong Русский язык
-                      p.ok
-                      p.ok
-                      p.ok
-                      p.ok
-                      p.ok
-                      p 
-                        strong Поддержка
-                      p.ok
-                      p.ok
-                      p.not-ok
-                      p.ok
-                      p.ok
-                  .grid-table.grid.grid--col-6.title
-                      .tablies__title.tablies Результаты тестов
-                      .tablies__title.tablies 
-                      .tablies__title.tablies
-                      .tablies__title.tablies 
-                      .tablies__title.tablies 
-                      .tablies__title.tablies 
-                      p 
-                        strong Время загрузки системы&nbsp;с антивирусом
-                      p < 1 мин
-                      p < 1 мин
-                      p < 1 мин
-                      p < 1 мин
-                      p < 1 мин                    
-                      p 
-                        strong Время сканирования системных папок
-                      p < 10 мин
-                      p Бесплатная
-                      p Бесплатная
-                      p Бесплатная
-                      p Пробная
-                      p 
-                        strong Использование процессора
-                      p 20%
-                      p 2.5%
-                      p 2.5%
-                      p 20%
-                      p 20%
-                      p 
-                        strong Использование памяти
-                      p 40 mb
-                      p 40 mb
-                      p 40 mb
-                      p 10 mb
-                      p 2 mb
-                      p 
-                        strong Рейтинг
-                      p 3
-                      p 2
-                      p 6
-                      p 4
-                      p 8
-                  .grid-table.grid.grid--col-6.title
-                      .tablies__title.tablies Мнение пользователей
-                      .tablies__title.tablies 
-                      .tablies__title.tablies
-                      .tablies__title.tablies 
-                      .tablies__title.tablies 
-                      .tablies__title.tablies 
-                      p 
-                        strong Надежность
-                      .compare-block
-                          .like.active
-                            span 10
-                          .dislike
-                            span 4
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                      p
-                        strong Скорость работы
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike.active
-                            span 4
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                      p 
-                        strong Общий рейтинг
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                      .compare-block
-                          .like
-                            span 10
-                          .dislike
-                            span 4
-                    
+                            .splide__track
+                              ul.splide__list
+                                li.splide__slide.product-slider
+                                  .product-slider__card
+                                    .product-slider__img 
+                                      img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                                    a(href="#").product-slider__content Advanced System Care Ultimate
+                                    .product-slider__footer
+                                      .compare-block
+                                        .like.like--square 
+                                          span 10
+                                        .dislike.dislike--square
+                                          span 4
+                  
+                  section.app
+                    .divider
+                    .app__content
+                      .post__soft-rating.soft-rating 
+                        .soft-rating__sidebar
+                          img(src='img/app.png', alt='Logo', width='140', height='140')
+                        .soft-rating__content 
+                          h3.width-share Era of Legends Pokémon GO Proffessional
+                            // Блок "поделиться в соцсетях"
+                            .share-panel 
+                              a.share-panel-open(href="#")
+                                svg.separator(width="23px" height="26px")
+                                    use(xlink:href="img/sprite.svg#share")
+                              ul.share-panel__list 
+                                li 
+                                  a.vk(href="#")
+                                    svg.separator(width="21px" height="12px")
+                                      use(xlink:href="img/sprite.svg#vk")
+                                li 
+                                  a.google(href="#")
+                                    svg.separator(width="18px" height="17px")
+                                      use(xlink:href="img/sprite.svg#google") 
+                                li 
+                                  a.facebook(href="#")
+                                    svg.separator(width="11px" height="20px")
+                                      use(xlink:href="img/sprite.svg#fb")
+                                li 
+                                  a.twitter(href="#")
+                                    svg.separator(width="18px" height="17px")
+                                      use(xlink:href="img/sprite.svg#twitter")
+                                li 
+                                  a.share-panel-close(href="#")
+                                    svg.separator(width="23px" height="26px")
+                                      use(xlink:href="img/sprite.svg#share")
+                          .app__meta-info.meta-info
+                            .meta-info
+                              .meta-info__version <span>Версия:</span> 7. 12. 19
+                              .meta-info__download
+                                svg.separator(width="13px" height="15px")
+                                      use(xlink:href="img/sprite.svg#download") 
+                                div 140
+                              .meta-info__votes
+                                svg.separator(width="15px" height="15px")
+                                      use(xlink:href="img/sprite.svg#star")  
+                                div 4.0
+                          .app__buttons
+                            a.btn-circle.btn-transparent-color(href="#") Версия
+                            a.btn-circle.btn-green-color(href="#") Скачать
+                            div
+                              svg.separator(width="15px" height="19px")
+                                      use(xlink:href="img/sprite.svg#ok-alt")
+                              | Проверено
+                              img(src='img/eset.png', alt='Logo', width='41', height='15')
+                          .app__description
+                              p Версия :<span> 7. 12. 19</span>
+                              p Совместимость:<span> Windows 7, Windows Vista, Windows 10</span>
+                              p Стоимость: <span>Бесплатно</span>
+                              p Язык: <span>Русский, Английский</span>
+                              p Обновлено: <span>29. 12. 2018 </span>
+                              p Разработчик: <span> Opera Software</span>
+                              p Размер: <span>305. 7 МБ</span>
+                              p Сайт: <span>www.opera.com </span>
+                          ul.tags__tag-list 
+                            li 
+                              a(href="#").btn-transparent--square  FreeWare
+                            li 
+                              a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                            li 
+                              a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                          p Веб-браузер и пакет прикладных программ для работы в Интернете, выпускаемый компанией Opera Software. Разработан в 1994 году группой исследователей из норвежской компании Telenor. С 1995 года — продукт компании Opera Software, образованной авторами первой версии.
+                          p Веб-браузер и пакет прикладных программ для работы в Интернете, выпускаемый компанией Opera Software. Разработан в 1994 году группой исследователей из норвежской компании Telenor.
+
       .page__footer-wrapper
         +page-footer()
           block footer
