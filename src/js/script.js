@@ -147,10 +147,32 @@ $(function (){
   });
  
 });
+
+//progress
+  $(window).scroll(function(){
+    var toTop = $(".progress-bar").offset().top + (-200)
+    if( $(window).scrollTop() > toTop ){
+      $('.progress-bar__diagramm').each(function(index, value) {
+        curHeight = $(this).find ('span').height(),
+        autoHeight = $(this).find ('span').attr('data-progress') +'px';
+        $(this).find ('span').height(curHeight).animate({height: autoHeight}, 1000);
+      });
+    }
+  });
+
+//like-dislike
+$('.like, .dislike').on('click', function(){
+  var countLike = parseInt($(this).find('span').text());
+  if($(this).hasClass('active')) {
+    $(this).find('span').text(countLike - 1)
+  }
+  else {
+    $(this).find('span').text(countLike + 1)
+  }
+ $(this).toggleClass('active');
+
+})
 });
-
-
-
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
@@ -6190,6 +6212,29 @@ if ($("#app-slider").length){
     }
   } ).mount();
 }
+if ($("#soft-slider").length){
+  new Splide( '#soft-slider', {
+    perPage: 5,
+    perMove: 1,
+    pagination: false,
+    type   : 'loop',
+    breakpoints: {
+      '1024': {
+        perPage: 4,
+        gap    : '1rem',
+      },
+      '780': {
+        perPage: 3,
+        gap    : '1rem',
+      },
+          '480': {
+        perPage: 1,
+        gap    : '1rem',
+      },
+  
+    }
+  } ).mount();
+  }
 /*!
  * jQuery Mousewheel 3.1.13
  *

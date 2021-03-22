@@ -1,0 +1,313 @@
+//- Стандартный шаблон страницы
+
+include mixins.pug
+
+doctype html
+html(class='page  no-js', lang='ru')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- Edge и ряд мобильных браузеров слишком умны. Отключим это.
+    meta(name='format-detection', content='telephone=no')
+    meta(name='format-detection', content='date=no')
+    meta(name='format-detection', content='address=no')
+    meta(name='format-detection', content='email=no')
+    meta(content='notranslate', name='google')
+    //- Фавиконки (https://realfavicongenerator.net)
+    //- link(rel='apple-touch-icon', sizes='180x180', href='/img/favicon/apple-touch-icon.png')
+    //- link(rel='icon', type='image/png', sizes='32x32', href='/img/favicon/favicon-32x32.png')
+    //- link(rel='icon', type='image/png', sizes='16x16', href='/img/favicon/favicon-16x16.png')
+    //- link(rel='manifest', href='/img/favicon/site.webmanifest')
+    //- link(rel='mask-icon', href='/img/favicon/safari-pinned-tab.svg', color='#5bbad5')
+    //- meta(name='msapplication-TileColor', content='#5bbad5')
+    //- meta(name='theme-color', content='#000')
+    //- meta(name='msapplication-navbutton-color', content='#000')
+    //- meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+
+    block meta
+      title listing-article
+
+    block head
+      link(rel='stylesheet', href='css/style.css')
+      script
+        include ../js/head-script.js
+
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+
+    .page__inner
+      .page__content
+        +page-header()
+        h1.no-visible Заголовок страницы для сео
+        +main-nav(90)
+        +mobile-menu()
+        .article__inner 
+            .article__row 
+
+              .article__main 
+                +breadcrumbs('top')
+                  +breadcrumbs-item('Бесплатные программы', '/')
+                  +breadcrumbs-item('Безопасность', '/')
+                  +breadcrumbs-item('Рейтинг антивирусов')
+                h1.width-share Рейтинг бесплатных антивирусов со сравнением
+                  // Блок "поделиться в соцсетях"
+                  .share-panel 
+                    a.share-panel-open(href="#")
+                      svg.separator(width="23px" height="26px")
+                          use(xlink:href="img/sprite.svg#share")
+                    ul.share-panel__list 
+                      li 
+                        a.vk(href="#")
+                          svg.separator(width="21px" height="12px")
+                            use(xlink:href="img/sprite.svg#vk")
+                      li 
+                        a.google(href="#")
+                          svg.separator(width="18px" height="17px")
+                            use(xlink:href="img/sprite.svg#google") 
+                      li 
+                        a.facebook(href="#")
+                          svg.separator(width="11px" height="20px")
+                            use(xlink:href="img/sprite.svg#fb")
+                      li 
+                        a.twitter(href="#")
+                          svg.separator(width="18px" height="17px")
+                            use(xlink:href="img/sprite.svg#twitter")
+                      li 
+                        a.share-panel-close(href="#")
+                          svg.separator(width="23px" height="26px")
+                             use(xlink:href="img/sprite.svg#share")
+                // контентная часть
+
+                .post
+                  p Каталог бесплатных программ FreeSoft — это старейший в Рунете каталог и файловый архив программ. На страницах нашего портала вы найдете программы для Windows, Android, iOS, Mac OS, Linux, Windows Phone на различных языках, в том числе и на русском языке. Все файлы программ от официальных поставщиков, и помимо этого проверены антивирусом. Windows Phone на различных языках, в том числе и на русском языке. Все файлы программ от официальных поставщиков, и помимо этого проверены антивирусом.
+                  .post__soft-rating.soft-rating 
+                    .soft-rating__sidebar 
+                      .soft-rating__soft-card
+                        //img(src='img/article-2.png', alt='Logo', width='264', height='190')
+                      // сайтбар оглавление
+                      ul.sidebar__contents-list.contents-list
+                        li 
+                          a.current(href="#") Общий рейтинг
+                        li 
+                          a(href="#") Общие сведения
+                        li 
+                          a(href="#") Функции и возможности
+                        li 
+                          a(href="#") Результаты тестов
+                    .soft-rating__content
+                      #soft-slider.splide.product-splide
+                        .splide__track
+                          ul.splide__list
+                            li.splide__slide.product-slider
+                              .product-slider__card
+                                .product-slider__img 
+                                  img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                                a(href="#").product-slider__content Advanced System Care Ultimate
+                                .product-slider__footer
+                                  a.btn-circle.btn-green-color(href="#")
+                                    svg.download(width="13px" height="15px")
+                                        use(xlink:href="img/sprite.svg#download")
+                                    | Скачать 
+                      .soft-rating__progress-bar.progress-bar 
+                        .progress-bar__item 
+                          .progress-bar__diagramm
+                            span(data-progress="100")
+                          .progress-bar__description
+                            svg.download(width="11px" height="11px")
+                              use(xlink:href="img/sprite.svg#star")
+                            span 4.0
+                        .progress-bar__item 
+                          .progress-bar__diagramm
+                            span(data-progress="80") 
+                          .progress-bar__description
+                            svg.download(width="11px" height="11px")
+                              use(xlink:href="img/sprite.svg#star")
+                            span 3.0
+                        .progress-bar__item 
+                          .progress-bar__diagramm
+                            span(data-progress="20") 
+                          .progress-bar__description
+                            svg.download(width="11px" height="11px")
+                              use(xlink:href="img/sprite.svg#star")
+                            span 3.0
+                        .progress-bar__item 
+                          .progress-bar__diagramm
+                            span(data-progress="60")
+                          .progress-bar__description
+                            svg.download(width="11px" height="11px")
+                              use(xlink:href="img/sprite.svg#star")
+                            span 3.0
+                        .progress-bar__item 
+                          .progress-bar__diagramm
+                            span(data-progress="80") 
+                          .progress-bar__description
+                            svg.download(width="11px" height="11px")
+                              use(xlink:href="img/sprite.svg#star")
+                            span 3.0
+                  .grid-table.grid.grid--col-6.title
+                      .tablies__title.tablies Общие сведения
+                      .tablies__title.tablies 
+                      .tablies__title.tablies
+                      .tablies__title.tablies 
+                      .tablies__title.tablies 
+                      .tablies__title.tablies 
+                      p 
+                        strong Лицензия
+                      p Бесплатная
+                      p Бесплатная
+                      p Бесплатная
+                      p Бесплатная
+                      p Бесплатная                     
+                      p 
+                        strong Русский язык
+                      p.ok
+                      p.ok
+                      p.ok
+                      p.ok
+                      p.ok
+                      p 
+                        strong Поддержка
+                      p.ok
+                      p.ok
+                      p.not-ok
+                      p.ok
+                      p.ok
+                  .grid-table.grid.grid--col-6.title
+                      .tablies__title.tablies Результаты тестов
+                      .tablies__title.tablies 
+                      .tablies__title.tablies
+                      .tablies__title.tablies 
+                      .tablies__title.tablies 
+                      .tablies__title.tablies 
+                      p 
+                        strong Время загрузки системы&nbsp;с антивирусом
+                      p < 1 мин
+                      p < 1 мин
+                      p < 1 мин
+                      p < 1 мин
+                      p < 1 мин                    
+                      p 
+                        strong Время сканирования системных папок
+                      p < 10 мин
+                      p Бесплатная
+                      p Бесплатная
+                      p Бесплатная
+                      p Пробная
+                      p 
+                        strong Использование процессора
+                      p 20%
+                      p 2.5%
+                      p 2.5%
+                      p 20%
+                      p 20%
+                      p 
+                        strong Использование памяти
+                      p 40 mb
+                      p 40 mb
+                      p 40 mb
+                      p 10 mb
+                      p 2 mb
+                      p 
+                        strong Рейтинг
+                      p 3
+                      p 2
+                      p 6
+                      p 4
+                      p 8
+                  .grid-table.grid.grid--col-6.title
+                      .tablies__title.tablies Мнение пользователей
+                      .tablies__title.tablies 
+                      .tablies__title.tablies
+                      .tablies__title.tablies 
+                      .tablies__title.tablies 
+                      .tablies__title.tablies 
+                      p 
+                        strong Надежность
+                      .compare-block
+                          .like.active
+                            span 10
+                          .dislike
+                            span 4
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                      p
+                        strong Скорость работы
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike.active
+                            span 4
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                      p 
+                        strong Общий рейтинг
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                      .compare-block
+                          .like
+                            span 10
+                          .dislike
+                            span 4
+                    
+      .page__footer-wrapper
+        +page-footer()
+          block footer
+      +to-top()      
+
+    block page-bottom
+      script(src='js/bundle.js')
