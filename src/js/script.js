@@ -88,8 +88,8 @@ if ($(window).width() < 960) {
 	MobileSort()
 }
 //sidebar-content-menu
-$('.contents-list li a').on('click', function(){
-	$('.contents-list li a').removeClass('current');
+$('.contents-list li').on('click', function(){
+	$('.contents-list li').removeClass('current');
 	$(this).addClass('current')	
 });
 
@@ -172,6 +172,15 @@ $('.like, .dislike').on('click', function(){
  $(this).toggleClass('active');
 
 })
+// плавная прокрутка к якорю
+$page = $('html, body');
+$('a[href*="#"]').click(function () {
+  $page.animate({
+    scrollTop: $($.attr(this, 'href'))
+      .offset()
+      .top
+  }, 600);
+});
 });
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
@@ -6225,7 +6234,7 @@ if ($("#soft-slider-rete").length){
       },
       '780': {
         perPage: 4,
-        gap    : '0,5rem',
+        gap    : '0',
         arrows: false,
       },
           '480': {
@@ -6248,8 +6257,8 @@ if ($("#soft-slider-rete").length){
           gap    : '1rem',
         },
         '780': {
-          perPage: 3,
-          gap    : '1rem',
+          perPage: 4,
+          gap    : '0',
         },
             '480': {
           perPage: 1,

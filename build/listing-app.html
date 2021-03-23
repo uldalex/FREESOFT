@@ -153,7 +153,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <li class="breadcrumbs__item"><a href="/">Безопасность</a></li>
               <li class="breadcrumbs__item"><span>Рейтинг антивирусов</span></li>
             </ul>
-            <h1 class="width-share">Рейтинг бесплатных антивирусов со сравнением
+            <h1 class="width-share" id="reiting">Рейтинг бесплатных антивирусов со сравнением
               <!-- Блок "поделиться в соцсетях"-->
               <div class="share-panel"> <a class="share-panel-open" href="#"><svg class="separator" width="23px" height="26px">
                     <use xlink:href="img/sprite.svg#share"></use>
@@ -186,10 +186,10 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                       <!--img(src='img/article-2.png', alt='Logo', width='264', height='190')-->
                     </div><!-- сайтбар оглавление-->
                     <ul class="sidebar__contents-list contents-list">
-                      <li> <a class="current" href="#">Общий рейтинг</a></li>
-                      <li> <a href="#">Общие сведения</a></li>
-                      <li> <a href="#">Функции и возможности</a></li>
-                      <li> <a href="#">Результаты тестов</a></li>
+                      <li> <a class="current" href="#reiting">Общий рейтинг</a></li>
+                      <li> <a href="#general">Общие сведения</a></li>
+                      <li> <a href="#function">Функции и возможности</a></li>
+                      <li><a href="#test">Результаты тестов</a></li>
                     </ul>
                   </div>
                   <div class="soft-rating__content">
@@ -232,12 +232,11 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                       </div>
                     </div>
                     <ul class="contents-list contents-list--mobile">
-                      <li> <a class="current" href="#">Общий рейтинг</a></li>
-                      <li> <a href="#">Общие сведения</a></li>
-                      <li> <a href="#">Функции и возможности</a></li>
-                      <li> <a href="#">Результаты тестов </a></li>
+                      <li class="current"> <a class="current" href="#reiting">Общий рейтинг</a></li>
+                      <li> <a href="#general">Общие сведения</a></li>
+                      <li> <a href="#function">Функции и возможности</a></li>
                     </ul>
-                    <div class="soft-rating__progress-bar progress-bar">
+                    <div class="soft-rating__progress-bar progress-bar" id="general">
                       <div class="progress-bar__item">
                         <div class="progress-bar__diagramm"><span data-progress="100"></span></div>
                         <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
@@ -271,40 +270,34 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     </div>
                   </div>
                 </div>
-                <div class="grid-table grid title">
+                <div class="grid-title">
                   <div class="tablies__title tablies">Общие сведения</div>
-                  <div class="tablies__title tablies"> </div>
-                  <div class="tablies__title tablies"></div>
-                  <div class="tablies__title tablies"> </div>
-                  <div class="tablies__title tablies"> </div>
-                  <div class="tablies__title tablies"> </div>
-                  <p> <strong>Лицензия</strong></p>
-                  <p>Бесплатная</p>
-                  <p>Бесплатная</p>
-                  <p>Бесплатная</p>
-                  <p>Бесплатная</p>
-                  <p>Бесплатная </p>
-                  <p> <strong>Русский язык</strong></p>
-                  <p class="ok"></p>
-                  <p class="ok"></p>
-                  <p class="ok"></p>
-                  <p class="ok"></p>
-                  <p class="ok"></p>
-                  <p> <strong>Поддержка</strong></p>
-                  <p class="ok"></p>
-                  <p class="ok"></p>
-                  <p class="not-ok"></p>
-                  <p class="ok"></p>
-                  <p class="ok"></p>
                 </div>
                 <div class="grid-table grid title">
+                  <p class="left-column left-column-1">Лицензия </p>
+                  <p class="left-column left-column-2">Русский язык</p>
+                  <p class="left-column left-column-3">Поддержка</p>
+                  <p>Бесплатная</p>
+                  <p>Бесплатная</p>
+                  <p>Бесплатная</p>
+                  <p>Бесплатная</p>
+                  <p class="mobile-hidden">Бесплатная </p>
+                  <p><span class="ok"></span></p>
+                  <p><span class="ok"></span></p>
+                  <p><span class="ok"></span></p>
+                  <p class="mobile-hidden"><span class="ok"></span></p>
+                  <p><span class="ok"></span></p>
+                  <p><span class="ok"></span></p>
+                  <p><span class="ok"></span></p>
+                  <p><span class="not-ok"></span></p>
+                  <p><span class="ok"></span></p>
+                  <p class="mobile-hidden"><span class="ok"></span></p>
+                </div>
+                <div class="grid-title" id="test">
                   <div class="tablies__title tablies">Результаты тестов</div>
-                  <div class="tablies__title tablies"> </div>
-                  <div class="tablies__title tablies"></div>
-                  <div class="tablies__title tablies"> </div>
-                  <div class="tablies__title tablies"> </div>
-                  <div class="tablies__title tablies"> </div>
-                  <p> <strong>Время загрузки системы&nbsp;с антивирусом</strong></p>
+                </div>
+                <div class="grid-table grid title">
+                  <p class="left-column left-column-1">Время загрузки системы&nbsp;с антивирусом</p>
                   <p>
                     < 1 мин</p>
                       <p>
@@ -313,42 +306,38 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                             < 1 мин</p>
                               <p>
                                 < 1 мин</p>
-                                  <p>
+                                  <p class="mobile-hidden">
                                     < 1 мин </p>
-                                      <p> <strong>Время сканирования системных папок</strong></p>
-                                      <p>
-                                        < 10 мин</p>
-                                          <p>Бесплатная</p>
-                                          <p>Бесплатная</p>
-                                          <p>Бесплатная</p>
-                                          <p>Пробная</p>
-                                          <p> <strong>Использование процессора</strong></p>
-                                          <p>20%</p>
-                                          <p>2.5%</p>
-                                          <p>2.5%</p>
-                                          <p>20%</p>
-                                          <p>20%</p>
-                                          <p> <strong>Использование памяти</strong></p>
-                                          <p>40 mb</p>
-                                          <p>40 mb</p>
-                                          <p>40 mb</p>
-                                          <p>10 mb</p>
-                                          <p>2 mb</p>
-                                          <p> <strong>Рейтинг</strong></p>
-                                          <p>3</p>
-                                          <p>2</p>
-                                          <p>6</p>
-                                          <p>4</p>
-                                          <p>8</p>
+                                      <p class="left-column left-column-2">Время сканирования системных папок</p>
+                                      <p>Бесплатная</p>
+                                      <p>Бесплатная</p>
+                                      <p>Бесплатная</p>
+                                      <p>Бесплатная</p>
+                                      <p class="mobile-hidden">Пробная</p>
+                                      <p class="left-column left-column-3">Использование процессора</p>
+                                      <p>20%</p>
+                                      <p>2.5%</p>
+                                      <p>2.5%</p>
+                                      <p>20%</p>
+                                      <p class="mobile-hidden">20%</p>
+                                      <p class="left-column left-column-4">Использование памяти</p>
+                                      <p>40 mb</p>
+                                      <p>40 mb</p>
+                                      <p>40 mb</p>
+                                      <p>10 mb</p>
+                                      <p class="mobile-hidden">2 mb</p>
+                                      <p class="left-column left-column-5">Рейтинг</p>
+                                      <p>3</p>
+                                      <p>2</p>
+                                      <p>6</p>
+                                      <p>4</p>
+                                      <p class="mobile-hidden">8</p>
+                </div>
+                <div class="grid-title">
+                  <div class="tablies__title tablies">Мнение пользователей</div>
                 </div>
                 <div class="grid-table grid title">
-                  <div class="tablies__title tablies">Мнение пользователей</div>
-                  <div class="tablies__title tablies"> </div>
-                  <div class="tablies__title tablies"></div>
-                  <div class="tablies__title tablies"> </div>
-                  <div class="tablies__title tablies"> </div>
-                  <div class="tablies__title tablies"> </div>
-                  <p> <strong>Надежность</strong></p>
+                  <p class="left-column left-column-1">Надежность</p>
                   <div class="compare-block">
                     <div class="like active"><span>10</span></div>
                     <div class="dislike"><span>4</span></div>
@@ -365,11 +354,11 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     <div class="like"><span>10</span></div>
                     <div class="dislike"><span>4</span></div>
                   </div>
-                  <div class="compare-block">
+                  <div class="compare-block mobile-hidden">
                     <div class="like"><span>10</span></div>
                     <div class="dislike"><span>4</span></div>
                   </div>
-                  <p><strong>Скорость работы</strong></p>
+                  <p class="left-column left-column-2">Скорость работы</p>
                   <div class="compare-block">
                     <div class="like"><span>10</span></div>
                     <div class="dislike active"><span>4</span></div>
@@ -386,15 +375,11 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     <div class="like"><span>10</span></div>
                     <div class="dislike"><span>4</span></div>
                   </div>
-                  <div class="compare-block">
+                  <div class="compare-block mobile-hidden">
                     <div class="like"><span>10</span></div>
                     <div class="dislike"><span>4</span></div>
                   </div>
-                  <p> <strong>Общий рейтинг</strong></p>
-                  <div class="compare-block">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
+                  <p class="left-column left-column-3">Общий рейтинг</p>
                   <div class="compare-block">
                     <div class="like"><span>10</span></div>
                     <div class="dislike"><span>4</span></div>
@@ -408,11 +393,15 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                     <div class="dislike"><span>4</span></div>
                   </div>
                   <div class="compare-block">
+                    <div class="like"><span>10</span></div>
+                    <div class="dislike"><span>4</span></div>
+                  </div>
+                  <div class="compare-block mobile-hidden">
                     <div class="like"><span>10</span></div>
                     <div class="dislike"><span>4</span></div>
                   </div>
                 </div>
-                <h3>Нам важно ваше мнение</h3>
+                <h3 id="function">Нам важно ваше мнение</h3>
                 <p>Каталог бесплатных программ FreeSoft — это старейший в Рунете каталог и файловый архив программ. На страницах нашего портала вы найдете программы для Windows, Android, iOS, Mac OS, Linux</p>
                 <div class="soft-rating">
                   <div class="splide product-splide" id="soft-slider">

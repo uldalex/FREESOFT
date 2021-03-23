@@ -50,7 +50,7 @@ html(class='page  no-js', lang='ru')
                   +breadcrumbs-item('Бесплатные программы', '/')
                   +breadcrumbs-item('Безопасность', '/')
                   +breadcrumbs-item('Рейтинг антивирусов')
-                h1.width-share Рейтинг бесплатных антивирусов со сравнением
+                h1#reiting.width-share Рейтинг бесплатных антивирусов со сравнением
                   // Блок "поделиться в соцсетях"
                   .share-panel 
                     a.share-panel-open(href="#")
@@ -89,13 +89,13 @@ html(class='page  no-js', lang='ru')
                         // сайтбар оглавление
                         ul.sidebar__contents-list.contents-list
                           li 
-                            a.current(href="#") Общий рейтинг
+                            a.current(href="#reiting") Общий рейтинг
                           li 
-                            a(href="#") Общие сведения
+                            a(href="#general") Общие сведения
                           li 
-                            a(href="#") Функции и возможности
-                          li 
-                            a(href="#") Результаты тестов
+                            a(href="#function") Функции и возможности
+                          li
+                            a(href="#test") Результаты тестов
                       .soft-rating__content
                         #soft-slider-rete.splide.product-splide
                           .splide__track
@@ -141,15 +141,14 @@ html(class='page  no-js', lang='ru')
                                           use(xlink:href="img/sprite.svg#download")
                                       | Скачать
                         ul.contents-list.contents-list--mobile
+                          li.current 
+                            a.current(href="#reiting") Общий рейтинг
                           li 
-                            a.current(href="#") Общий рейтинг
+                            a(href="#general") Общие сведения
                           li 
-                            a(href="#") Общие сведения
-                          li 
-                            a(href="#") Функции и возможности
-                          li 
-                            a(href="#") Результаты тестов 
-                        .soft-rating__progress-bar.progress-bar 
+                            a(href="#function") Функции и возможности
+                         
+                        #general.soft-rating__progress-bar.progress-bar 
                           .progress-bar__item 
                             .progress-bar__diagramm
                               span(data-progress="100")
@@ -185,85 +184,76 @@ html(class='page  no-js', lang='ru')
                               svg.download(width="11px" height="11px")
                                 use(xlink:href="img/sprite.svg#star")
                               span 3.0
+                    .grid-title
+                      .tablies__title.tablies Общие сведения
                     .grid-table.grid.title
-                        .tablies__title.tablies Общие сведения
-                        .tablies__title.tablies 
-                        .tablies__title.tablies
-                        .tablies__title.tablies 
-                        .tablies__title.tablies 
-                        .tablies__title.tablies 
-                        p 
-                          strong Лицензия
+                        p.left-column.left-column-1 Лицензия 
+                        p.left-column.left-column-2 Русский язык
+                        p.left-column.left-column-3 Поддержка
                         p Бесплатная
                         p Бесплатная
                         p Бесплатная
                         p Бесплатная
-                        p Бесплатная                     
-                        p 
-                          strong Русский язык
-                        p.ok
-                        p.ok
-                        p.ok
-                        p.ok
-                        p.ok
-                        p 
-                          strong Поддержка
-                        p.ok
-                        p.ok
-                        p.not-ok
-                        p.ok
-                        p.ok
+                        p.mobile-hidden Бесплатная                     
+                       
+                        p
+                          span.ok
+                        p
+                          span.ok
+                        p
+                          span.ok
+                        p.mobile-hidden
+                          span.ok
+                        p
+                          span.ok
+                        
+                        p
+                          span.ok
+                        p
+                          span.ok
+                        p
+                          span.not-ok
+                        p
+                          span.ok
+                        p.mobile-hidden
+                          span.ok
+                    #test.grid-title
+                      .tablies__title.tablies Результаты тестов
                     .grid-table.grid.title
-                        .tablies__title.tablies Результаты тестов
-                        .tablies__title.tablies 
-                        .tablies__title.tablies
-                        .tablies__title.tablies 
-                        .tablies__title.tablies 
-                        .tablies__title.tablies 
-                        p 
-                          strong Время загрузки системы&nbsp;с антивирусом
+                        p.left-column.left-column-1 Время загрузки системы&nbsp;с антивирусом
                         p < 1 мин
                         p < 1 мин
                         p < 1 мин
                         p < 1 мин
-                        p < 1 мин                    
-                        p 
-                          strong Время сканирования системных папок
-                        p < 10 мин
+                        p.mobile-hidden < 1 мин                    
+                        p.left-column.left-column-2 Время сканирования системных папок
                         p Бесплатная
                         p Бесплатная
                         p Бесплатная
-                        p Пробная
-                        p 
-                          strong Использование процессора
+                        p Бесплатная
+                        p.mobile-hidden Пробная
+                        p.left-column.left-column-3 Использование процессора
                         p 20%
                         p 2.5%
                         p 2.5%
                         p 20%
-                        p 20%
-                        p 
-                          strong Использование памяти
+                        p.mobile-hidden 20%
+                        p.left-column.left-column-4 Использование памяти
                         p 40 mb
                         p 40 mb
                         p 40 mb
                         p 10 mb
-                        p 2 mb
-                        p 
-                          strong Рейтинг
+                        p.mobile-hidden 2 mb
+                        p.left-column.left-column-5 Рейтинг
                         p 3
                         p 2
                         p 6
                         p 4
-                        p 8
+                        p.mobile-hidden 8
+                    .grid-title
+                      .tablies__title.tablies Мнение пользователей
                     .grid-table.grid.title
-                        .tablies__title.tablies Мнение пользователей
-                        .tablies__title.tablies 
-                        .tablies__title.tablies
-                        .tablies__title.tablies 
-                        .tablies__title.tablies 
-                        .tablies__title.tablies 
-                        p 
-                          strong Надежность
+                        p.left-column.left-column-1 Надежность
                         .compare-block
                             .like.active
                               span 10
@@ -284,13 +274,12 @@ html(class='page  no-js', lang='ru')
                               span 10
                             .dislike
                               span 4
-                        .compare-block
+                        .compare-block.mobile-hidden
                             .like
                               span 10
                             .dislike
                               span 4
-                        p
-                          strong Скорость работы
+                        p.left-column.left-column-2 Скорость работы
                         .compare-block
                             .like
                               span 10
@@ -311,18 +300,12 @@ html(class='page  no-js', lang='ru')
                               span 10
                             .dislike
                               span 4
-                        .compare-block
+                        .compare-block.mobile-hidden
                             .like
                               span 10
                             .dislike
                               span 4
-                        p 
-                          strong Общий рейтинг
-                        .compare-block
-                            .like
-                              span 10
-                            .dislike
-                              span 4
+                        p.left-column.left-column-3 Общий рейтинг
                         .compare-block
                             .like
                               span 10
@@ -343,7 +326,12 @@ html(class='page  no-js', lang='ru')
                               span 10
                             .dislike
                               span 4
-                    h3 Нам важно ваше мнение
+                        .compare-block.mobile-hidden
+                            .like
+                              span 10
+                            .dislike
+                              span 4
+                    h3#function Нам важно ваше мнение
                     p Каталог бесплатных программ FreeSoft — это старейший в Рунете каталог и файловый архив программ. На страницах нашего портала вы найдете программы для Windows, Android, iOS, Mac OS, Linux
                     .soft-rating 
                       #soft-slider.splide.product-splide
