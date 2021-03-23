@@ -6238,8 +6238,8 @@ if ($("#soft-slider-rete").length){
         arrows: false,
       },
           '480': {
-        perPage: 1,
-        gap    : '1rem',
+        perPage: 2,
+        gap    : '0',
       },
   
     }
@@ -6261,8 +6261,8 @@ if ($("#soft-slider-rete").length){
           gap    : '0',
         },
             '480': {
-          perPage: 1,
-          gap    : '1rem',
+          perPage: 0,
+          gap    : '0',
         },
     
       }

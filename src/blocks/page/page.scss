@@ -1454,6 +1454,12 @@ a.footer-sotial-link{
         fill:#BABABA;
       }
     }
+    @media(max-width:480px) {
+      & div {
+        margin-right:0;
+      }
+
+    }
   }
   & h3 {
     font-weight: 600;
@@ -1569,6 +1575,7 @@ a.footer-sotial-link{
           padding-left:0;
         }
       }
+     
 
       &-ratings {
         margin-left:0px;
@@ -1658,6 +1665,11 @@ a.footer-sotial-link{
     margin-right:20px;
    }
    }
+   @media (max-width:480px){
+    & h3 {
+      font-size:20px;
+    }
+  }
 }
 
 //tags
@@ -3083,6 +3095,39 @@ section.listing {
      
     }
   }
+    @media (max-width: 480px){
+    
+      & .grid-table {
+        & p {
+          font-size:14px;
+          font-weight:400;
+          margin-left:0;
+          margin-right:0;
+          padding:60px 0 20px;
+        }
+    }
+    & .left-column{
+      width:150px;
+    }
+    & .like, .like.active {
+      margin-right:10px;
+    }
+    & .like, .like.active, .dislike, .dislike.active {
+      width:28px;
+      background-size:50%;
+      font-size: 11px;
+    }
+  }
+  @media (max-width: 320px){
+    
+    & .grid-table {
+      & p {
+        font-size:12px!important;
+
+      }
+  }
+  
+}
 }
 .app {
 padding-bottom:100px;
@@ -3218,7 +3263,18 @@ padding-bottom:100px;
     }
 
  }
+  @media (max-width: 480px) {
+    &__buttons {
+     flex-direction:column;
 
+     & a {
+       margin-bottom:20px;
+     }
+    }
+    &__description {
+      grid-template-columns:100%;
+    }
+  }
 }
 .soft-rating {
   display: flex;
@@ -3434,6 +3490,12 @@ padding-bottom:100px;
     .splide__arrows {
       display:none;
     }
+  }
+  @media (max-width:480px) {
+    & .product-slider {
+      padding: 0 10px;
+    }
+
   }
 }
 
