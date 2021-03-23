@@ -6224,8 +6224,9 @@ if ($("#soft-slider-rete").length){
         gap    : '1rem',
       },
       '780': {
-        perPage: 3,
-        gap    : '1rem',
+        perPage: 4,
+        gap    : '0,5rem',
+        arrows: false,
       },
           '480': {
         perPage: 1,
