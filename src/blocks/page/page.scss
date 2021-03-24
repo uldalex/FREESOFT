@@ -2471,7 +2471,10 @@ figure {
 }
 @media(max-width:480px){
   .app-slider-box {
+    
+    & .title-divider {
     margin:0 20px;
+    }
 
     & .app-card {
       max-width:100%;
