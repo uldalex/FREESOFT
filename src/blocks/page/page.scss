@@ -630,7 +630,7 @@ a.footer-sotial-link{
     & .articles__card {
       width: 100vw;
       max-width: 100%;
-      margin: 0;
+      margin: 4px 0;
     }
     & .articles__img {
       width: 100vw;
@@ -1939,6 +1939,12 @@ ol.list-count{
     left: 50px;
     right: 50px;
     color: #ffffff;
+
+    @media(max-width:480px) {
+      left:0;
+      right:0;
+      padding-right:0;
+    }
 }
 }
 .item-21by9 {
@@ -2910,8 +2916,15 @@ figure {
      & .product-slider__img {
        min-width:80px;
        width:80px;
+       height:80px;
        margin-left:0px;
        padding: 0;
+
+       & img {
+         width: 100%;
+         height:100%;
+         object-fit: cover;
+       }
      }
      & .product-slider__buttons{
        width:auto;
@@ -3374,6 +3387,7 @@ padding-bottom:100px;
       text-align: center;
       margin-top:23px;
       margin-bottom:25px;
+      color: #000;3513
     }
 
     .product-slider__footer {
