@@ -6225,31 +6225,7 @@ if ($("#app-slider").length){
     }
   } ).mount();
 }
-if ($("#soft-slider-rete").length){
-  var reteSlider = new Splide( '#soft-slider-rete', {
-    perPage: 5,
-    perMove: 1,
-    pagination: false,
-    type   : 'loop',
-    breakpoints: {
-      '1024': {
-        perPage: 4,
-        gap    : '1rem',
-      },
-      '780': {
-        perPage: 4,
-        gap    : '0',
-        arrows: false,
-      },
-          '480': {
-        perPage: 2,
-        gap    : '0',
-      },
-  
-    }
-  } );
-  reteSlider.sync( reteSlider1 ).mount();
-  }
+
 
   if ($("#soft-slider-progress-bar").length){
     var reteSlider1 = new Splide( '#soft-slider-progress-bar', {
@@ -6271,7 +6247,7 @@ if ($("#soft-slider-rete").length){
         },
     
       }
-    } ); reteSlider1.sync( reteSlider ).mount();
+    } ).mount();
     }
     if ($("#soft-slider-table").length){
       var reteSlider2 = new Splide( '#soft-slider-table', {
@@ -6296,8 +6272,7 @@ if ($("#soft-slider-rete").length){
           },
       
         }
-      } );
-      reteSlider2.sync( reteSlider1 ).mount();
+      } ).mount();
       }
       if ($("#soft-slider-table-1").length){
         var reteSlider3 = new Splide( '#soft-slider-table-1', {
@@ -6322,8 +6297,7 @@ if ($("#soft-slider-rete").length){
             },
         
           }
-        } );
-        reteSlider3.sync( reteSlider1 ).mount();
+        } ).mount();
         }
         if ($("#soft-slider-table-2").length){
           var reteSlider4 = new Splide( '#soft-slider-table-2', {
@@ -6348,9 +6322,34 @@ if ($("#soft-slider-rete").length){
               },
           
             }
-          } );
-          reteSlider4.sync( reteSlider1 ).mount();
-          }
+          } ).mount();
+}
+
+if ($("#soft-slider-rete").length){
+  var reteSlider = new Splide( '#soft-slider-rete', {
+    perPage: 5,
+    perMove: 1,
+    pagination: false,
+    type   : 'loop',
+    breakpoints: {
+      '1024': {
+        perPage: 4,
+        gap    : '1rem',
+      },
+      '780': {
+        perPage: 4,
+        gap    : '0',
+        arrows: false,
+      },
+          '480': {
+        perPage: 2,
+        gap    : '0',
+      },
+  
+    }
+  } ).mount();
+  
+  }
 
   if ($("#soft-slider").length){
     new Splide( '#soft-slider', {
