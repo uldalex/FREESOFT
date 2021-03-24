@@ -6232,7 +6232,7 @@ if ($("#app-slider").length){
       perPage: 5,
       perMove: 1,
       pagination: false,
-      type   : 'loop',
+      type   :  'slide',
       arrows: false,
       breakpoints: {
         '1024': {
@@ -6247,14 +6247,14 @@ if ($("#app-slider").length){
         },
     
       }
-    } ).mount();
+    } )
     }
     if ($("#soft-slider-table").length){
       var reteSlider2 = new Splide( '#soft-slider-table', {
         perPage: 5,
         perMove: 1,
         pagination: false,
-        type   : 'loop',
+        type   :  'slide',
         arrows: false,
         breakpoints: {
           '1024': {
@@ -6279,7 +6279,7 @@ if ($("#app-slider").length){
           perPage: 5,
           perMove: 1,
           pagination: false,
-          type   : 'loop',
+          type   :  'slide',
           arrows: false,
           breakpoints: {
             '1024': {
@@ -6304,7 +6304,7 @@ if ($("#app-slider").length){
             perPage: 5,
             perMove: 1,
             pagination: false,
-            type   : 'loop',
+            type   :  'slide',
             arrows: false,
             breakpoints: {
               '1024': {
@@ -6330,7 +6330,7 @@ if ($("#soft-slider-rete").length){
     perPage: 5,
     perMove: 1,
     pagination: false,
-    type   : 'loop',
+    type   : 'slide',
     breakpoints: {
       '1024': {
         perPage: 4,
@@ -6347,7 +6347,13 @@ if ($("#soft-slider-rete").length){
       },
   
     }
-  } ).mount();
+  } ); 
+
+  reteSlider.sync( reteSlider1, reteSlider2, reteSlider3, reteSlider4).mount();
+  reteSlider1.sync( reteSlider, reteSlider2, reteSlider3, reteSlider4).mount();
+  reteSlider2.sync( reteSlider, reteSlider1, reteSlider3, reteSlider4 ).mount();
+  reteSlider3.sync( reteSlider, reteSlider1, reteSlider2, reteSlider4).mount();
+  reteSlider4.sync( reteSlider, reteSlider1, reteSlider2, reteSlider3).mount();
   
   }
 
