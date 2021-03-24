@@ -186,10 +186,10 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                       <!--img(src='img/article-2.png', alt='Logo', width='264', height='190')-->
                     </div><!-- сайтбар оглавление-->
                     <ul class="sidebar__contents-list contents-list">
-                      <li> <a class="current" href="#reiting">Общий рейтинг</a></li>
-                      <li> <a href="#general">Общие сведения</a></li>
-                      <li> <a href="#function">Функции и возможности</a></li>
-                      <li><a href="#test">Результаты тестов</a></li>
+                      <li class="current" data-number="1"> <span>Общий рейтинг</span></li>
+                      <li data-number="2"> <span>Общие сведения</span></li>
+                      <li data-number="3"> <span>Функции и возможности</span></li>
+                      <li data-number="4"><span>Результаты тестов</span></li>
                     </ul>
                   </div>
                   <div class="soft-rating__content">
@@ -228,177 +228,355 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                                   </svg>Скачать</a></div>
                             </div>
                           </li>
+                          <li class="splide__slide product-slider">
+                            <div class="product-slider__card">
+                              <div class="product-slider__img"> <img src="img/product-2.png" alt="Logo" width="79" height="79"></div><a class="product-slider__content" href="#">Advanced System Care Ultimate</a>
+                              <div class="product-slider__footer"><a class="btn-circle btn-green-color" href="#"><svg class="download" width="13px" height="15px">
+                                    <use xlink:href="img/sprite.svg#download"></use>
+                                  </svg>Скачать</a></div>
+                            </div>
+                          </li>
                         </ul>
                       </div>
                     </div>
                     <ul class="contents-list contents-list--mobile">
-                      <li class="current"> <a class="current" href="#reiting">Общий рейтинг</a></li>
-                      <li> <a href="#general">Общие сведения</a></li>
-                      <li> <a href="#function">Функции и возможности</a></li>
+                      <li class="current" data-number="1"> <span>Общий рейтинг</span></li>
+                      <li data-number="2"> <span>Общие сведения</span></li>
+                      <li data-number="3"> <span>Функции и возможности</span></li>
                     </ul>
                     <div class="soft-rating__progress-bar progress-bar" id="general">
-                      <div class="progress-bar__item">
-                        <div class="progress-bar__diagramm"><span data-progress="100"></span></div>
-                        <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
-                            <use xlink:href="img/sprite.svg#star"></use>
-                          </svg><span>4.0</span></div>
-                      </div>
-                      <div class="progress-bar__item">
-                        <div class="progress-bar__diagramm"><span data-progress="80"> </span></div>
-                        <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
-                            <use xlink:href="img/sprite.svg#star"></use>
-                          </svg><span>3.0</span></div>
-                      </div>
-                      <div class="progress-bar__item">
-                        <div class="progress-bar__diagramm"><span data-progress="20"> </span></div>
-                        <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
-                            <use xlink:href="img/sprite.svg#star"></use>
-                          </svg><span>3.0</span></div>
-                      </div>
-                      <div class="progress-bar__item">
-                        <div class="progress-bar__diagramm"><span data-progress="60"></span></div>
-                        <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
-                            <use xlink:href="img/sprite.svg#star"></use>
-                          </svg><span>3.0</span></div>
-                      </div>
-                      <div class="progress-bar__item">
-                        <div class="progress-bar__diagramm"><span data-progress="80"> </span></div>
-                        <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
-                            <use xlink:href="img/sprite.svg#star"></use>
-                          </svg><span>3.0</span></div>
+                      <div class="splide product-splide" id="soft-slider-progress-bar">
+                        <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1" data-number="1">
+                                <div class="progress-bar__diagramm"><span data-progress="100"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>4.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden" data-number="2">
+                                <div class="progress-bar__diagramm"><span data-progress="10"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.5</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden" data-number="3">
+                                <div class="progress-bar__diagramm"><span data-progress="40"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden" data-number="4">
+                                <div class="progress-bar__diagramm"><span data-progress="20"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.8</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1">
+                                <div class="progress-bar__diagramm"><span data-progress="30"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.2</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="100"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>5.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="60"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>4.1</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="10"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>0.5</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1">
+                                <div class="progress-bar__diagramm"><span data-progress="20"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>3.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="100"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>5.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="50"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.5</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="10"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.5</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item">
+                                <div class="progress-bar__diagramm"><span data-progress="60"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>3.0</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1">
+                                <div class="progress-bar__diagramm"><span data-progress="20"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>3.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="100"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>5.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="90"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>4.8</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="50"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.5</span></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="grid-title">
                   <div class="tablies__title tablies">Общие сведения</div>
+                  <div class="soft-rating">
+                    <div class="soft-rating__sidebar">
+                      <!-- таблица оглавление-->
+                      <ul class="reting-list reiting_table">
+                        <li> <span>Лицензия</span></li>
+                        <li> <span>Русский язык</span></li>
+                        <li> <span>Поддержка</span></li>
+                      </ul>
+                    </div>
+                    <div class="soft-rating__content">
+                      <div class="splide product-splide soft-slider-table" id="soft-slider-table">
+                        <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide product-slider">
+                              <p>Бесплатная</p>
+                              <p>Бесплатная</p>
+                              <p>Бесплатная</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>Бесплатная</p>
+                              <p>Пробная</p>
+                              <p>Бесплатная</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="grid-table grid title">
-                  <p class="left-column left-column-1">Лицензия </p>
-                  <p class="left-column left-column-2">Русский язык</p>
-                  <p class="left-column left-column-3">Поддержка</p>
-                  <p>Бесплатная</p>
-                  <p>Бесплатная</p>
-                  <p>Бесплатная</p>
-                  <p>Бесплатная</p>
-                  <p class="mobile-hidden">Бесплатная </p>
-                  <p><span class="ok"></span></p>
-                  <p><span class="ok"></span></p>
-                  <p><span class="ok"></span></p>
-                  <p class="mobile-hidden"><span class="ok"></span></p>
-                  <p><span class="ok"></span></p>
-                  <p><span class="ok"></span></p>
-                  <p><span class="ok"></span></p>
-                  <p><span class="not-ok"></span></p>
-                  <p><span class="ok"></span></p>
-                  <p class="mobile-hidden"><span class="ok"></span></p>
-                </div>
-                <div class="grid-title" id="test">
+                <div class="grid-title">
                   <div class="tablies__title tablies">Результаты тестов</div>
-                </div>
-                <div class="grid-table grid title">
-                  <p class="left-column left-column-1">Время загрузки системы&nbsp;с антивирусом</p>
-                  <p>
-                    < 1 мин</p>
-                      <p>
-                        < 1 мин</p>
-                          <p>
-                            < 1 мин</p>
+                  <div class="soft-rating">
+                    <div class="soft-rating__sidebar">
+                      <!-- таблица оглавление-->
+                      <ul class="reting-list reiting_table">
+                        <li class="big"> <span>Время загрузки системы с антивирусом</span></li>
+                        <li class="big"> <span>Время сканирования системных папок</span></li>
+                        <li class="big"> <span>Использование процессора</span></li>
+                        <li> <span>Использование памяти</span></li>
+                        <li> <span>Рейтинг</span></li>
+                      </ul>
+                    </div>
+                    <div class="soft-rating__content">
+                      <div class="splide product-splide soft-slider-table" id="soft-slider-table-1">
+                        <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide product-slider">
                               <p>
                                 < 1 мин</p>
-                                  <p class="mobile-hidden">
-                                    < 1 мин </p>
-                                      <p class="left-column left-column-2">Время сканирования системных папок</p>
-                                      <p>Бесплатная</p>
-                                      <p>Бесплатная</p>
-                                      <p>Бесплатная</p>
-                                      <p>Бесплатная</p>
-                                      <p class="mobile-hidden">Пробная</p>
-                                      <p class="left-column left-column-3">Использование процессора</p>
-                                      <p>20%</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p> 2.5%</p>
+                                      <p>
+                                        < 1 мин</p>
+                                          <p>4</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
                                       <p>2.5%</p>
-                                      <p>2.5%</p>
-                                      <p>20%</p>
-                                      <p class="mobile-hidden">20%</p>
-                                      <p class="left-column left-column-4">Использование памяти</p>
-                                      <p>40 mb</p>
-                                      <p>40 mb</p>
-                                      <p>40 mb</p>
-                                      <p>10 mb</p>
-                                      <p class="mobile-hidden">2 mb</p>
-                                      <p class="left-column left-column-5">Рейтинг</p>
-                                      <p>3</p>
-                                      <p>2</p>
-                                      <p>6</p>
-                                      <p>4</p>
-                                      <p class="mobile-hidden">8</p>
+                                      <p>
+                                        < 10 мин</p>
+                                          <p>5</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p> 2.5%</p>
+                                      <p> 20%</p>
+                                      <p> 2</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p> 2.5%</p>
+                                      <p> 40 mb</p>
+                                      <p> 3</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p> 2.5%</p>
+                                      <p> 40 mb</p>
+                                      <p> 5</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="grid-title">
                   <div class="tablies__title tablies">Мнение пользователей</div>
-                </div>
-                <div class="grid-table grid title">
-                  <p class="left-column left-column-1">Надежность</p>
-                  <div class="compare-block">
-                    <div class="like active"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <div class="compare-block">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <div class="compare-block">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <div class="compare-block">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <div class="compare-block mobile-hidden">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <p class="left-column left-column-2">Скорость работы</p>
-                  <div class="compare-block">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike active"><span>4</span></div>
-                  </div>
-                  <div class="compare-block">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <div class="compare-block">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <div class="compare-block">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <div class="compare-block mobile-hidden">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <p class="left-column left-column-3">Общий рейтинг</p>
-                  <div class="compare-block">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <div class="compare-block">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <div class="compare-block">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <div class="compare-block">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
-                  </div>
-                  <div class="compare-block mobile-hidden">
-                    <div class="like"><span>10</span></div>
-                    <div class="dislike"><span>4</span></div>
+                  <div class="soft-rating">
+                    <div class="soft-rating__sidebar">
+                      <!-- таблица оглавление-->
+                      <ul class="reting-list reiting_table">
+                        <li> <span>Надежность</span></li>
+                        <li> <span>Скорость работы</span></li>
+                        <li> <span>Общий рейтинг</span></li>
+                      </ul>
+                    </div>
+                    <div class="soft-rating__content">
+                      <div class="splide product-splide soft-slider-table" id="soft-slider-table-2">
+                        <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide product-slider">
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <h3 id="function">Нам важно ваше мнение</h3>

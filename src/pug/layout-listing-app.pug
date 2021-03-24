@@ -88,14 +88,14 @@ html(class='page  no-js', lang='ru')
                           //img(src='img/article-2.png', alt='Logo', width='264', height='190')
                         // сайтбар оглавление
                         ul.sidebar__contents-list.contents-list
-                          li 
-                            a.current(href="#reiting") Общий рейтинг
-                          li 
-                            a(href="#general") Общие сведения
-                          li 
-                            a(href="#function") Функции и возможности
-                          li
-                            a(href="#test") Результаты тестов
+                          li.current(data-number="1")  
+                            span Общий рейтинг
+                          li(data-number="2")  
+                             span Общие сведения
+                          li(data-number="3")  
+                             span Функции и возможности
+                          li(data-number="4")
+                             span Результаты тестов
                       .soft-rating__content
                         #soft-slider-rete.splide.product-splide
                           .splide__track
@@ -140,197 +140,358 @@ html(class='page  no-js', lang='ru')
                                       svg.download(width="13px" height="15px")
                                           use(xlink:href="img/sprite.svg#download")
                                       | Скачать
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/product-2.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать
                         ul.contents-list.contents-list--mobile
-                          li.current 
-                            a.current(href="#reiting") Общий рейтинг
-                          li 
-                            a(href="#general") Общие сведения
-                          li 
-                            a(href="#function") Функции и возможности
+                          li.current(data-number="1") 
+                             span Общий рейтинг
+                          li(data-number="2")  
+                             span Общие сведения
+                          li(data-number="3")  
+                             span Функции и возможности
                          
                         #general.soft-rating__progress-bar.progress-bar 
-                          .progress-bar__item 
-                            .progress-bar__diagramm
-                              span(data-progress="100")
-                            .progress-bar__description
-                              svg.download(width="11px" height="11px")
-                                use(xlink:href="img/sprite.svg#star")
-                              span 4.0
-                          .progress-bar__item 
-                            .progress-bar__diagramm
-                              span(data-progress="80") 
-                            .progress-bar__description
-                              svg.download(width="11px" height="11px")
-                                use(xlink:href="img/sprite.svg#star")
-                              span 3.0
-                          .progress-bar__item 
-                            .progress-bar__diagramm
-                              span(data-progress="20") 
-                            .progress-bar__description
-                              svg.download(width="11px" height="11px")
-                                use(xlink:href="img/sprite.svg#star")
-                              span 3.0
-                          .progress-bar__item 
-                            .progress-bar__diagramm
-                              span(data-progress="60")
-                            .progress-bar__description
-                              svg.download(width="11px" height="11px")
-                                use(xlink:href="img/sprite.svg#star")
-                              span 3.0
-                          .progress-bar__item 
-                            .progress-bar__diagramm
-                              span(data-progress="80") 
-                            .progress-bar__description
-                              svg.download(width="11px" height="11px")
-                                use(xlink:href="img/sprite.svg#star")
-                              span 3.0
+                          #soft-slider-progress-bar.splide.product-splide
+                            .splide__track
+                              ul.splide__list
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1(data-number="1") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="100")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 4.0
+                                  .progress-bar__item.progress-bar__item-2.hidden(data-number="2") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="10")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.5
+                                  .progress-bar__item.progress-bar__item-3.hidden(data-number="3") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="40")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.0
+                                  .progress-bar__item.progress-bar__item-4.hidden(data-number="4") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="20")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.8
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1 
+                                    .progress-bar__diagramm
+                                      span(data-progress="30") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.2
+                                  .progress-bar__item.progress-bar__item-2.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="100") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 5.0
+                                  .progress-bar__item.progress-bar__item-3.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="60") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 4.1
+                                  .progress-bar__item.progress-bar__item-4.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="10") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 0.5
+                                  
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1  
+                                    .progress-bar__diagramm
+                                      span(data-progress="20") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 3.0
+                                  .progress-bar__item.progress-bar__item-2.hidden  
+                                    .progress-bar__diagramm
+                                      span(data-progress="100") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 5.0
+                                  .progress-bar__item.progress-bar__item-3.hidden  
+                                    .progress-bar__diagramm
+                                      span(data-progress="50") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.5
+                                  .progress-bar__item.progress-bar__item-4.hidden  
+                                    .progress-bar__diagramm
+                                      span(data-progress="10") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.5
+                                li.splide__slide.product-slider
+                                  .progress-bar__item 
+                                    .progress-bar__diagramm
+                                      span(data-progress="60")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 3.0
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1
+                                    .progress-bar__diagramm
+                                      span(data-progress="20") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 3.0
+                                  .progress-bar__item.progress-bar__item-2.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="100") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 5.0
+                                  .progress-bar__item.progress-bar__item-3.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="90") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 4.8
+                                  .progress-bar__item.progress-bar__item-4.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="50") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.5
                     .grid-title
                       .tablies__title.tablies Общие сведения
-                    .grid-table.grid.title
-                        p.left-column.left-column-1 Лицензия 
-                        p.left-column.left-column-2 Русский язык
-                        p.left-column.left-column-3 Поддержка
-                        p Бесплатная
-                        p Бесплатная
-                        p Бесплатная
-                        p Бесплатная
-                        p.mobile-hidden Бесплатная                     
-                       
-                        p
-                          span.ok
-                        p
-                          span.ok
-                        p
-                          span.ok
-                        p.mobile-hidden
-                          span.ok
-                        p
-                          span.ok
-                        
-                        p
-                          span.ok
-                        p
-                          span.ok
-                        p
-                          span.not-ok
-                        p
-                          span.ok
-                        p.mobile-hidden
-                          span.ok
-                    #test.grid-title
+                      .soft-rating
+                        .soft-rating__sidebar 
+                          // таблица оглавление
+                          ul.reting-list.reiting_table
+                            li 
+                              span Лицензия
+                            li 
+                              span Русский язык
+                            li 
+                             span Поддержка
+                        .soft-rating__content
+                          #soft-slider-table.splide.product-splide.soft-slider-table
+                            .splide__track
+                              ul.splide__list
+                                li.splide__slide.product-slider
+                                  p Бесплатная
+                                  p Бесплатная
+                                  p Бесплатная
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                  p 
+                                    span.ok
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                  p 
+                                    span.ok
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                  p 
+                                    span.ok
+                                li.splide__slide.product-slider
+                                  p Бесплатная
+                                  p Пробная
+                                  p Бесплатная
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                  p 
+                                    span.ok
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                  p 
+                                    span.ok
+                    .grid-title
                       .tablies__title.tablies Результаты тестов
-                    .grid-table.grid.title
-                        p.left-column.left-column-1 Время загрузки системы&nbsp;с антивирусом
-                        p < 1 мин
-                        p < 1 мин
-                        p < 1 мин
-                        p < 1 мин
-                        p.mobile-hidden < 1 мин                    
-                        p.left-column.left-column-2 Время сканирования системных папок
-                        p Бесплатная
-                        p Бесплатная
-                        p Бесплатная
-                        p Бесплатная
-                        p.mobile-hidden Пробная
-                        p.left-column.left-column-3 Использование процессора
-                        p 20%
-                        p 2.5%
-                        p 2.5%
-                        p 20%
-                        p.mobile-hidden 20%
-                        p.left-column.left-column-4 Использование памяти
-                        p 40 mb
-                        p 40 mb
-                        p 40 mb
-                        p 10 mb
-                        p.mobile-hidden 2 mb
-                        p.left-column.left-column-5 Рейтинг
-                        p 3
-                        p 2
-                        p 6
-                        p 4
-                        p.mobile-hidden 8
+                      .soft-rating
+                        .soft-rating__sidebar 
+                          // таблица оглавление
+                          ul.reting-list.reiting_table
+                            li.big 
+                              span Время загрузки системы с антивирусом
+                            li.big 
+                              span Время сканирования системных папок
+                            li.big 
+                              span Использование процессора
+                            li 
+                              span Использование памяти
+                            li 
+                              span Рейтинг
+                        .soft-rating__content
+                          #soft-slider-table-1.splide.product-splide.soft-slider-table
+                            .splide__track
+                              ul.splide__list
+                                li.splide__slide.product-slider
+                                  p < 1 мин
+                                  p < 10 мин
+                                  p  2.5%
+                                  p < 1 мин
+                                  p 4
+                                li.splide__slide.product-slider
+                                  p < 1 мин
+                                  p < 10 мин
+                                  p 2.5%
+                                  p < 10 мин
+                                  p 5
+                                 
+                                li.splide__slide.product-slider
+                                  p  < 1 мин
+                                  p  < 10 мин
+                                  p  2.5%
+                                  p  20%
+                                  p  2
+                                li.splide__slide.product-slider
+                                 p  < 1 мин
+                                 p  < 10 мин
+                                 p  2.5%
+                                 p  40 mb
+                                 p  3
+                                li.splide__slide.product-slider
+                                 p  < 1 мин
+                                 p  < 10 мин
+                                 p  2.5%
+                                 p  40 mb
+                                 p  5
+
                     .grid-title
                       .tablies__title.tablies Мнение пользователей
-                    .grid-table.grid.title
-                        p.left-column.left-column-1 Надежность
-                        .compare-block
-                            .like.active
-                              span 10
-                            .dislike
-                              span 4
-                        .compare-block
-                            .like
-                              span 10
-                            .dislike
-                              span 4
-                        .compare-block
-                            .like
-                              span 10
-                            .dislike
-                              span 4
-                        .compare-block
-                            .like
-                              span 10
-                            .dislike
-                              span 4
-                        .compare-block.mobile-hidden
-                            .like
-                              span 10
-                            .dislike
-                              span 4
-                        p.left-column.left-column-2 Скорость работы
-                        .compare-block
-                            .like
-                              span 10
-                            .dislike.active
-                              span 4
-                        .compare-block
-                            .like
-                              span 10
-                            .dislike
-                              span 4
-                        .compare-block
-                            .like
-                              span 10
-                            .dislike
-                              span 4
-                        .compare-block
-                            .like
-                              span 10
-                            .dislike
-                              span 4
-                        .compare-block.mobile-hidden
-                            .like
-                              span 10
-                            .dislike
-                              span 4
-                        p.left-column.left-column-3 Общий рейтинг
-                        .compare-block
-                            .like
-                              span 10
-                            .dislike
-                              span 4
-                        .compare-block
-                            .like
-                              span 10
-                            .dislike
-                              span 4
-                        .compare-block
-                            .like
-                              span 10
-                            .dislike
-                              span 4
-                        .compare-block
-                            .like
-                              span 10
-                            .dislike
-                              span 4
-                        .compare-block.mobile-hidden
-                            .like
-                              span 10
-                            .dislike
-                              span 4
+                      .soft-rating
+                        .soft-rating__sidebar 
+                          // таблица оглавление
+                          ul.reting-list.reiting_table
+                            li 
+                              span Надежность
+                            li 
+                              span Скорость работы
+                            li 
+                             span Общий рейтинг
+                        .soft-rating__content
+                          #soft-slider-table-2.splide.product-splide.soft-slider-table
+                            .splide__track
+                              ul.splide__list
+                                li.splide__slide.product-slider
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                li.splide__slide.product-slider
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                li.splide__slide.product-slider
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                li.splide__slide.product-slider
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
                     h3#function Нам важно ваше мнение
                     p Каталог бесплатных программ FreeSoft — это старейший в Рунете каталог и файловый архив программ. На страницах нашего портала вы найдете программы для Windows, Android, iOS, Mac OS, Linux
                     .soft-rating 
