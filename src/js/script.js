@@ -6369,21 +6369,21 @@ reteSlider1.on( 'move', function () {
  });
  reteSlider2.on( 'move', function () {
   reteSlider.go(reteSlider2.index );
-  reteSlider2.go(reteSlider2.index );
+  reteSlider1.go(reteSlider2.index );
   reteSlider3.go(reteSlider2.index );
   reteSlider4.go(reteSlider2.index );
  });
  reteSlider3.on( 'move', function () {
   reteSlider.go(reteSlider3.index );
+  reteSlider1.go(reteSlider3.index );
   reteSlider2.go(reteSlider3.index );
-  reteSlider3.go(reteSlider3.index );
   reteSlider4.go(reteSlider3.index );
  });
  reteSlider4.on( 'move', function () {
   reteSlider.go(reteSlider4.index );
+  reteSlider1.go(reteSlider4.index );
   reteSlider2.go(reteSlider4.index );
   reteSlider3.go(reteSlider4.index );
-  reteSlider4.go(reteSlider4.index );
  });
   }
 
