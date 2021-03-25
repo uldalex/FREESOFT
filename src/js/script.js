@@ -6232,7 +6232,8 @@ if ($("#app-slider").length){
       perPage: 5,
       perMove: 1,
       pagination: false,
-      type   :  'slide',
+      type   : 'slidr',
+      rewind: true,
       arrows: false,
       breakpoints: {
         '1024': {
@@ -6254,7 +6255,8 @@ if ($("#app-slider").length){
         perPage: 5,
         perMove: 1,
         pagination: false,
-        type   :  'slide',
+        type   : 'slidr',
+        rewind: true,
         arrows: false,
         breakpoints: {
           '1024': {
@@ -6279,7 +6281,8 @@ if ($("#app-slider").length){
           perPage: 5,
           perMove: 1,
           pagination: false,
-          type   :  'slide',
+          type   : 'slidr',
+          rewind: true,
           arrows: false,
           breakpoints: {
             '1024': {
@@ -6304,7 +6307,8 @@ if ($("#app-slider").length){
             perPage: 5,
             perMove: 1,
             pagination: false,
-            type   :  'slide',
+            type   : 'slidr',
+            rewind: true,
             arrows: false,
             breakpoints: {
               '1024': {
@@ -6330,7 +6334,8 @@ if ($("#soft-slider-rete").length){
     perPage: 5,
     perMove: 1,
     pagination: false,
-    type   : 'slide',
+    type   : 'slidr',
+    rewind: true,
     breakpoints: {
       '1024': {
         perPage: 4,
@@ -6360,6 +6365,7 @@ reteSlider.on( 'move', function () {
   reteSlider2.go(reteSlider.index );
   reteSlider3.go(reteSlider.index );
   reteSlider4.go(reteSlider.index );
+
  });
 reteSlider1.on( 'move', function () {
   reteSlider.go(reteSlider1.index );
