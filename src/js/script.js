@@ -6253,7 +6253,7 @@ if ($("#app-slider").length){
     if ($("#soft-slider-table").length){
       var reteSlider2 = new Splide( '#soft-slider-table', {
         perPage: 5,
-        perMove: 1,
+        perMove:5,
         pagination: false,
         type   : 'slidr',
         rewind: true,
@@ -6279,7 +6279,7 @@ if ($("#app-slider").length){
       if ($("#soft-slider-table-1").length){
         var reteSlider3 = new Splide( '#soft-slider-table-1', {
           perPage: 5,
-          perMove: 1,
+          perMove: 5,
           pagination: false,
           type   : 'slidr',
           rewind: true,
@@ -6374,7 +6374,7 @@ reteSlider1.on( 'move', function () {
   reteSlider4.go(reteSlider1.index );
  });
  reteSlider2.on( 'move', function () {
-  reteSlider.go(reteSlider2.index );
+  reteSlider.go(reteSlider2.index);
   reteSlider1.go(reteSlider2.index );
   reteSlider3.go(reteSlider2.index );
   reteSlider4.go(reteSlider2.index );
