@@ -1,0 +1,1079 @@
+//- Стандартный шаблон страницы
+
+include mixins.pug
+
+doctype html
+html(class='page  no-js', lang='ru')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- Edge и ряд мобильных браузеров слишком умны. Отключим это.
+    meta(name='format-detection', content='telephone=no')
+    meta(name='format-detection', content='date=no')
+    meta(name='format-detection', content='address=no')
+    meta(name='format-detection', content='email=no')
+    meta(content='notranslate', name='google')
+    //- Фавиконки (https://realfavicongenerator.net)
+    //- link(rel='apple-touch-icon', sizes='180x180', href='/img/favicon/apple-touch-icon.png')
+    //- link(rel='icon', type='image/png', sizes='32x32', href='/img/favicon/favicon-32x32.png')
+    //- link(rel='icon', type='image/png', sizes='16x16', href='/img/favicon/favicon-16x16.png')
+    //- link(rel='manifest', href='/img/favicon/site.webmanifest')
+    //- link(rel='mask-icon', href='/img/favicon/safari-pinned-tab.svg', color='#5bbad5')
+    //- meta(name='msapplication-TileColor', content='#5bbad5')
+    //- meta(name='theme-color', content='#000')
+    //- meta(name='msapplication-navbutton-color', content='#000')
+    //- meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+
+    block meta
+      title listing-article
+
+    block head
+      link(rel='stylesheet', href='css/style.css')
+      script
+        include ../js/head-script.js
+
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+
+    .page__inner
+      .page__content
+        +page-header()
+        h1.no-visible Заголовок страницы для сео
+        +main-nav(90)
+        +mobile-menu()
+        .article__inner 
+            .article__row 
+
+              .article__main 
+                +breadcrumbs('top')
+                  +breadcrumbs-item('Бесплатные программы', '/')
+                  +breadcrumbs-item('Безопасность', '/')
+                  +breadcrumbs-item('Рейтинг антивирусов')
+                h1#reiting.width-share Рейтинг бесплатных антивирусов со сравнением
+                  // Блок "поделиться в соцсетях"
+                  .share-panel 
+                    a.share-panel-open(href="#")
+                      svg.separator(width="23px" height="26px")
+                          use(xlink:href="img/sprite.svg#share")
+                    ul.share-panel__list 
+                      li 
+                        a.vk(href="#")
+                          svg.separator(width="21px" height="12px")
+                            use(xlink:href="img/sprite.svg#vk")
+                      li 
+                        a.google(href="#")
+                          svg.separator(width="18px" height="17px")
+                            use(xlink:href="img/sprite.svg#google") 
+                      li 
+                        a.facebook(href="#")
+                          svg.separator(width="11px" height="20px")
+                            use(xlink:href="img/sprite.svg#fb")
+                      li 
+                        a.twitter(href="#")
+                          svg.separator(width="18px" height="17px")
+                            use(xlink:href="img/sprite.svg#twitter")
+                      li 
+                        a.share-panel-close(href="#")
+                          svg.separator(width="23px" height="26px")
+                             use(xlink:href="img/sprite.svg#share")
+                // контентная часть
+
+                .post
+                  p Каталог бесплатных программ FreeSoft — это старейший в Рунете каталог и файловый архив программ. На страницах нашего портала вы найдете программы для Windows, Android, iOS, Mac OS, Linux, Windows Phone на различных языках, в том числе и на русском языке. Все файлы программ от официальных поставщиков, и помимо этого проверены антивирусом. Windows Phone на различных языках, в том числе и на русском языке. Все файлы программ от официальных поставщиков, и помимо этого проверены антивирусом.
+                  section.listing
+                    .post__soft-rating.soft-rating 
+                      .soft-rating__sidebar 
+                        .soft-rating__soft-card
+                          //img(src='img/article-2.png', alt='Logo', width='264', height='190')
+                        // сайтбар оглавление
+                        ul.sidebar__contents-list.contents-list
+                          li.current(data-number="1")  
+                            span Общий рейтинг
+                          li(data-number="2")  
+                             span Общие сведения
+                          li(data-number="3")  
+                             span Функции и возможности
+                          li(data-number="4")
+                             span Результаты тестов
+                      .soft-rating__content
+                        #soft-slider-rete.splide.product-splide
+                          .splide__track
+                            ul.splide__list
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать 
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/product-3.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать 
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/programm-2.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/product-2.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/product-2.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать 
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/product-3.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать 
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/programm-2.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/product-2.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать
+                              li.splide__slide.product-slider
+                                .product-slider__card
+                                  .product-slider__img 
+                                    img(src='img/product-2.png', alt='Logo', width='79', height='79')
+                                  a(href="#").product-slider__content Advanced System Care Ultimate
+                                  .product-slider__footer
+                                    a.btn-circle.btn-green-color(href="#")
+                                      svg.download(width="13px" height="15px")
+                                          use(xlink:href="img/sprite.svg#download")
+                                      | Скачать
+                        ul.contents-list.contents-list--mobile
+                          li.current(data-number="1") 
+                             span Общий рейтинг
+                          li(data-number="2")  
+                             span Общие сведения
+                          li(data-number="3")  
+                             span Функции и возможности
+                         
+                        #general.soft-rating__progress-bar.progress-bar 
+                          #soft-slider-progress-bar.splide.product-splide
+                            .splide__track
+                              ul.splide__list
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1(data-number="1") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="100")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 4.0
+                                  .progress-bar__item.progress-bar__item-2.hidden(data-number="2") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="10")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.5
+                                  .progress-bar__item.progress-bar__item-3.hidden(data-number="3") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="40")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.0
+                                  .progress-bar__item.progress-bar__item-4.hidden(data-number="4") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="20")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.8
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1 
+                                    .progress-bar__diagramm
+                                      span(data-progress="30") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.2
+                                  .progress-bar__item.progress-bar__item-2.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="100") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 5.0
+                                  .progress-bar__item.progress-bar__item-3.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="60") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 4.1
+                                  .progress-bar__item.progress-bar__item-4.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="10") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 0.5
+                                  
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1  
+                                    .progress-bar__diagramm
+                                      span(data-progress="20") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 3.0
+                                  .progress-bar__item.progress-bar__item-2.hidden  
+                                    .progress-bar__diagramm
+                                      span(data-progress="100") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 5.0
+                                  .progress-bar__item.progress-bar__item-3.hidden  
+                                    .progress-bar__diagramm
+                                      span(data-progress="50") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.5
+                                  .progress-bar__item.progress-bar__item-4.hidden  
+                                    .progress-bar__diagramm
+                                      span(data-progress="10") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.5
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1
+                                    .progress-bar__diagramm
+                                      span(data-progress="20") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 3.0
+                                  .progress-bar__item.progress-bar__item-2.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="100") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 5.0
+                                  .progress-bar__item.progress-bar__item-3.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="90") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 4.8
+                                  .progress-bar__item.progress-bar__item-4.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="50") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.5
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1(data-number="1") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="100")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 4.0
+                                  .progress-bar__item.progress-bar__item-2.hidden(data-number="2") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="10")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.5
+                                  .progress-bar__item.progress-bar__item-3.hidden(data-number="3") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="40")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.0
+                                  .progress-bar__item.progress-bar__item-4.hidden(data-number="4") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="20")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.8
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1(data-number="1") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="100")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 4.0
+                                  .progress-bar__item.progress-bar__item-2.hidden(data-number="2") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="10")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.5
+                                  .progress-bar__item.progress-bar__item-3.hidden(data-number="3") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="40")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.0
+                                  .progress-bar__item.progress-bar__item-4.hidden(data-number="4") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="20")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.8
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1 
+                                    .progress-bar__diagramm
+                                      span(data-progress="30") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.2
+                                  .progress-bar__item.progress-bar__item-2.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="100") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 5.0
+                                  .progress-bar__item.progress-bar__item-3.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="60") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 4.1
+                                  .progress-bar__item.progress-bar__item-4.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="10") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 0.5
+                                  
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1  
+                                    .progress-bar__diagramm
+                                      span(data-progress="20") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 3.0
+                                  .progress-bar__item.progress-bar__item-2.hidden  
+                                    .progress-bar__diagramm
+                                      span(data-progress="100") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 5.0
+                                  .progress-bar__item.progress-bar__item-3.hidden  
+                                    .progress-bar__diagramm
+                                      span(data-progress="50") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.5
+                                  .progress-bar__item.progress-bar__item-4.hidden  
+                                    .progress-bar__diagramm
+                                      span(data-progress="10") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.5
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1
+                                    .progress-bar__diagramm
+                                      span(data-progress="20") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 3.0
+                                  .progress-bar__item.progress-bar__item-2.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="100") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 5.0
+                                  .progress-bar__item.progress-bar__item-3.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="90") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 4.8
+                                  .progress-bar__item.progress-bar__item-4.hidden 
+                                    .progress-bar__diagramm
+                                      span(data-progress="50") 
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.5
+                                li.splide__slide.product-slider
+                                  .progress-bar__item.progress-bar__item-1(data-number="1") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="100")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 4.0
+                                  .progress-bar__item.progress-bar__item-2.hidden(data-number="2") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="10")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.5
+                                  .progress-bar__item.progress-bar__item-3.hidden(data-number="3") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="40")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 2.0
+                                  .progress-bar__item.progress-bar__item-4.hidden(data-number="4") 
+                                    .progress-bar__diagramm
+                                      span(data-progress="20")
+                                    .progress-bar__description
+                                      svg.download(width="11px" height="11px")
+                                        use(xlink:href="img/sprite.svg#star")
+                                      span 1.8
+                    .grid-title
+                      .tablies__title.tablies Общие сведения
+                      .soft-rating
+                        .soft-rating__sidebar 
+                          // таблица оглавление
+                          ul.reting-list.reiting_table
+                            li 
+                              span Лицензия
+                            li 
+                              span Русский язык
+                            li 
+                             span Поддержка
+                        .soft-rating__content
+                          #soft-slider-table.splide.product-splide.soft-slider-table
+                            .splide__track
+                              ul.splide__list
+                                li.splide__slide.product-slider
+                                  p Бесплатная
+                                  p Бесплатная
+                                  p Бесплатная
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                  p 
+                                    span.ok
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                  p 
+                                    span.ok
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                  p 
+                                    span.ok
+                                li.splide__slide.product-slider
+                                  p Бесплатная
+                                  p Бесплатная
+                                  p Бесплатная
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                  p 
+                                    span.ok
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                  p 
+                                    span.ok
+                                li.splide__slide.product-slider
+                                  p 
+                                    span.ok
+                                  p 
+                                    span.not-ok
+                                  p 
+                                    span.ok
+                    .grid-title
+                      .tablies__title.tablies Результаты тестов
+                      .soft-rating
+                        .soft-rating__sidebar 
+                          // таблица оглавление
+                          ul.reting-list.reiting_table
+                            li.big 
+                              span Время загрузки системы с антивирусом
+                            li.big 
+                              span Время сканирования системных папок
+                            li.big 
+                              span Использование процессора
+                            li 
+                              span Использование памяти
+                            li 
+                              span Рейтинг
+                        .soft-rating__content
+                          #soft-slider-table-1.splide.product-splide.soft-slider-table
+                            .splide__track
+                              ul.splide__list
+                                li.splide__slide.product-slider
+                                  p < 1 мин
+                                  p < 10 мин
+                                  p  2.5%
+                                  p < 1 мин
+                                  p 4
+                                li.splide__slide.product-slider
+                                  p < 1 мин
+                                  p < 10 мин
+                                  p 2.5%
+                                  p < 10 мин
+                                  p 5
+                                 
+                                li.splide__slide.product-slider
+                                  p  < 1 мин
+                                  p  < 10 мин
+                                  p  2.5%
+                                  p  20%
+                                  p  2
+                                li.splide__slide.product-slider
+                                 p  < 1 мин
+                                 p  < 10 мин
+                                 p  2.5%
+                                 p  40 mb
+                                 p  3
+                                li.splide__slide.product-slider
+                                 p  < 1 мин
+                                 p  < 10 мин
+                                 p  2.5%
+                                 p  40 mb
+                                 p  5
+                                li.splide__slide.product-slider
+                                  p < 1 мин
+                                  p < 10 мин
+                                  p  2.5%
+                                  p < 1 мин
+                                  p 4
+                                li.splide__slide.product-slider
+                                  p < 1 мин
+                                  p < 10 мин
+                                  p 2.5%
+                                  p < 10 мин
+                                  p 5
+                                 
+                                li.splide__slide.product-slider
+                                  p  < 1 мин
+                                  p  < 10 мин
+                                  p  2.5%
+                                  p  20%
+                                  p  2
+                                li.splide__slide.product-slider
+                                 p  < 1 мин
+                                 p  < 10 мин
+                                 p  2.5%
+                                 p  40 mb
+                                 p  3
+                                li.splide__slide.product-slider
+                                 p  < 1 мин
+                                 p  < 10 мин
+                                 p  2.5%
+                                 p  40 mb
+                                 p  5
+
+                    .grid-title
+                      .tablies__title.tablies Мнение пользователей
+                      .soft-rating
+                        .soft-rating__sidebar 
+                          // таблица оглавление
+                          ul.reting-list.reiting_table
+                            li 
+                              span Надежность
+                            li 
+                              span Скорость работы
+                            li 
+                             span Общий рейтинг
+                        .soft-rating__content
+                          #soft-slider-table-2.splide.product-splide.soft-slider-table
+                            .splide__track
+                              ul.splide__list
+                                li.splide__slide.product-slider
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                li.splide__slide.product-slider
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                li.splide__slide.product-slider
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                li.splide__slide.product-slider
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                li.splide__slide.product-slider
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                li.splide__slide.product-slider
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                li.splide__slide.product-slider
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                li.splide__slide.product-slider
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                                  .compare-block
+                                    .like.active
+                                      span 10
+                                    .dislike
+                                      span 4
+                    h3#function Нам важно ваше мнение
+                    p Каталог бесплатных программ FreeSoft — это старейший в Рунете каталог и файловый архив программ. На страницах нашего портала вы найдете программы для Windows, Android, iOS, Mac OS, Linux
+                    .soft-rating 
+                      #soft-slider.splide.product-splide
+                            .splide__track
+                              ul.splide__list
+                                li.splide__slide.product-slider
+                                  .product-slider__card
+                                    .product-slider__img 
+                                      img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                                    a(href="#").product-slider__content Advanced System Care Ultimate
+                                    .product-slider__footer
+                                      .compare-block
+                                        .like.like--square 
+                                          span 10
+                                        .dislike.dislike--square
+                                          span 4
+                  
+                  section.app
+                    .divider
+                    .app__content
+                      .post__soft-rating.soft-rating 
+                        .soft-rating__sidebar
+                          img(src='img/app.png', alt='Logo', width='140', height='140')
+                        .soft-rating__content 
+                          h3.width-share Era of Legends Pokémon GO Proffessional
+                            // Блок "поделиться в соцсетях"
+                            .share-panel 
+                              a.share-panel-open(href="#")
+                                svg.separator(width="23px" height="26px")
+                                    use(xlink:href="img/sprite.svg#share")
+                              ul.share-panel__list 
+                                li 
+                                  a.vk(href="#")
+                                    svg.separator(width="21px" height="12px")
+                                      use(xlink:href="img/sprite.svg#vk")
+                                li 
+                                  a.google(href="#")
+                                    svg.separator(width="18px" height="17px")
+                                      use(xlink:href="img/sprite.svg#google") 
+                                li 
+                                  a.facebook(href="#")
+                                    svg.separator(width="11px" height="20px")
+                                      use(xlink:href="img/sprite.svg#fb")
+                                li 
+                                  a.twitter(href="#")
+                                    svg.separator(width="18px" height="17px")
+                                      use(xlink:href="img/sprite.svg#twitter")
+                                li 
+                                  a.share-panel-close(href="#")
+                                    svg.separator(width="23px" height="26px")
+                                      use(xlink:href="img/sprite.svg#share")
+                          .app__meta-info.meta-info
+                            .meta-info
+                              .meta-info__version <span>Версия:</span> 7. 12. 19
+                              .meta-info__download
+                                svg.separator(width="13px" height="15px")
+                                      use(xlink:href="img/sprite.svg#download") 
+                                div 140
+                              .meta-info__votes
+                                svg.separator(width="15px" height="15px")
+                                      use(xlink:href="img/sprite.svg#star")  
+                                div 4.0
+                          .app__buttons
+                            a.btn-circle.btn-transparent-color(href="#") Версия
+                            a.btn-circle.btn-green-color(href="#") Скачать
+                            div
+                              svg.separator(width="15px" height="19px")
+                                      use(xlink:href="img/sprite.svg#ok-alt")
+                              | Проверено
+                              img(src='img/eset.png', alt='Logo', width='41', height='15')
+                          .app__description
+                              p Версия :<span> 7. 12. 19</span>
+                              p Совместимость:<span> Windows 7, Windows Vista, Windows 10</span>
+                              p Стоимость: <span>Бесплатно</span>
+                              p Язык: <span>Русский, Английский</span>
+                              p Обновлено: <span>29. 12. 2018 </span>
+                              p Разработчик: <span> Opera Software</span>
+                              p Размер: <span>305. 7 МБ</span>
+                              p Сайт: <span>www.opera.com </span>
+                          ul.tags__tag-list 
+                            li 
+                              a(href="#").btn-transparent--square  FreeWare
+                            li 
+                              a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                            li 
+                              a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                          p Веб-браузер и пакет прикладных программ для работы в Интернете, выпускаемый компанией Opera Software. Разработан в 1994 году группой исследователей из норвежской компании Telenor. С 1995 года — продукт компании Opera Software, образованной авторами первой версии.
+                          p Веб-браузер и пакет прикладных программ для работы в Интернете, выпускаемый компанией Opera Software. Разработан в 1994 году группой исследователей из норвежской компании Telenor.
+                          a.color-main.read-more(href="#") Полный обзор
+                          .one-app-slider.splide.product-splide
+                            .splide__track
+                              ul.splide__list
+                                li.splide__slide.product-slider(style="width: 569px")
+                                   img(src='img/app1.png', alt='Logo', width='569', height='320')
+                                li.splide__slide.product-slider(style="width: 174px")
+                                   img(src='img/app2.png', alt='Logo', width='174', height='320')
+                                li.splide__slide.product-slider(style="width: 174px")
+                                   img(src='img/app3.png', alt='Logo', width='174', height='320')
+                                li.splide__slide.product-slider(style="width: 569px")
+                                   img(src='img/app1.png', alt='Logo', width='569', height='320')
+                                li.splide__slide.product-slider(style="width: 174px")
+                                   img(src='img/app2.png', alt='Logo', width='174', height='320')
+                                li.splide__slide.product-slider(style="width: 174px")
+                                   img(src='img/app3.png', alt='Logo', width='174', height='320')
+                  section.app
+                    .divider
+                    .app__content
+                      .post__soft-rating.soft-rating 
+                        .soft-rating__sidebar
+                          img(src='img/product-2.png', alt='Logo', width='140', height='140')
+                        .soft-rating__content 
+                          h3.width-share Era of Legends Pokémon GO Proffessional
+                            // Блок "поделиться в соцсетях"
+                            .share-panel 
+                              a.share-panel-open(href="#")
+                                svg.separator(width="23px" height="26px")
+                                    use(xlink:href="img/sprite.svg#share")
+                              ul.share-panel__list 
+                                li 
+                                  a.vk(href="#")
+                                    svg.separator(width="21px" height="12px")
+                                      use(xlink:href="img/sprite.svg#vk")
+                                li 
+                                  a.google(href="#")
+                                    svg.separator(width="18px" height="17px")
+                                      use(xlink:href="img/sprite.svg#google") 
+                                li 
+                                  a.facebook(href="#")
+                                    svg.separator(width="11px" height="20px")
+                                      use(xlink:href="img/sprite.svg#fb")
+                                li 
+                                  a.twitter(href="#")
+                                    svg.separator(width="18px" height="17px")
+                                      use(xlink:href="img/sprite.svg#twitter")
+                                li 
+                                  a.share-panel-close(href="#")
+                                    svg.separator(width="23px" height="26px")
+                                      use(xlink:href="img/sprite.svg#share")
+                          .app__meta-info.meta-info
+                            .meta-info
+                              .meta-info__version <span>Версия:</span> 7. 12. 19
+                              .meta-info__download
+                                svg.separator(width="13px" height="15px")
+                                      use(xlink:href="img/sprite.svg#download") 
+                                div 140
+                              .meta-info__votes
+                                svg.separator(width="15px" height="15px")
+                                      use(xlink:href="img/sprite.svg#star")  
+                                div 4.0
+                          .app__buttons
+                            a.btn-circle.btn-transparent-color(href="#") Версия
+                            a.btn-circle.btn-green-color(href="#") Скачать
+                            div
+                              svg.separator(width="15px" height="19px")
+                                      use(xlink:href="img/sprite.svg#ok-alt")
+                              | Проверено
+                              img(src='img/eset.png', alt='Logo', width='41', height='15')
+                          .app__description
+                              p Версия :<span> 7. 12. 19</span>
+                              p Совместимость:<span> Windows 7, Windows Vista, Windows 10</span>
+                              p Стоимость: <span>Бесплатно</span>
+                              p Язык: <span>Русский, Английский</span>
+                              p Обновлено: <span>29. 12. 2018 </span>
+                              p Разработчик: <span> Opera Software</span>
+                              p Размер: <span>305. 7 МБ</span>
+                              p Сайт: <span>www.opera.com </span>
+                          ul.tags__tag-list 
+                            li 
+                              a(href="#").btn-transparent--square  FreeWare
+                            li 
+                              a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                            li 
+                              a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                          p Веб-браузер и пакет прикладных программ для работы в Интернете, выпускаемый компанией Opera Software. Разработан в 1994 году группой исследователей из норвежской компании Telenor. С 1995 года — продукт компании Opera Software, образованной авторами первой версии.
+                          p Веб-браузер и пакет прикладных программ для работы в Интернете, выпускаемый компанией Opera Software. Разработан в 1994 году группой исследователей из норвежской компании Telenor.
+                          a.color-main.read-more(href="#") Полный обзор
+                          .one-app-slider-1.one-app-slider--last.splide.product-splide
+                            .splide__track
+                              ul.splide__list
+                                li.splide__slide.product-slider(style="width: 569px")
+                                   img(src='img/app1.png', alt='Logo', width='569', height='320')
+                                li.splide__slide.product-slider(style="width: 174px")
+                                   img(src='img/app2.png', alt='Logo', width='174', height='320')
+                                li.splide__slide.product-slider(style="width: 174px")
+                                   img(src='img/app3.png', alt='Logo', width='174', height='320')
+                                li.splide__slide.product-slider(style="width: 569px")
+                                   img(src='img/app1.png', alt='Logo', width='569', height='320')
+                                li.splide__slide.product-slider(style="width: 174px")
+                                   img(src='img/app2.png', alt='Logo', width='174', height='320')
+                                li.splide__slide.product-slider(style="width: 174px")
+                                   img(src='img/app3.png', alt='Logo', width='174', height='320')
+                    .divider
+                  //  футер для страницы программы
+                  .post__footer.post-app__footer 
+                   
+                    .post__footer-header
+                      .post__footer-vote
+                        svg.separator(width="11px" height="11px")
+                              use(xlink:href="img/sprite.svg#star")
+                        .post__footer-count 5.0
+                          span 1 560 оценок
+                      .post__footer-stars
+                        .post__footer-ratings
+                          .star 
+                          .star
+                          .star 
+                          .star
+                          .star
+                      span Оцените программу 
+                      .share-panel 
+                        a.share-panel-open(href="#")
+                          svg.separator(width="23px" height="26px")
+                              use(xlink:href="img/sprite.svg#share")
+                        ul.share-panel__list 
+                          li 
+                            a.vk(href="#")
+                              svg.separator(width="21px" height="12px")
+                                use(xlink:href="img/sprite.svg#vk")
+                          li 
+                            a.google(href="#")
+                              svg.separator(width="18px" height="17px")
+                                use(xlink:href="img/sprite.svg#google") 
+                          li 
+                            a.facebook(href="#")
+                              svg.separator(width="11px" height="20px")
+                                use(xlink:href="img/sprite.svg#fb")
+                          li 
+                            a.twitter(href="#")
+                              svg.separator(width="18px" height="17px")
+                                use(xlink:href="img/sprite.svg#twitter")
+                          li 
+                            a.share-panel-close(href="#")
+                              svg.separator(width="23px" height="26px")
+                                use(xlink:href="img/sprite.svg#share")
+                    .post-footer-center 
+                      .tags 
+                        ul.tags__tag-list 
+                          li 
+                            a(href="#").btn-transparent--square  FreeWare
+                          li 
+                            a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                          li 
+                            a(href="#").btn-transparent--square  МУЛЬТИМЕДИА
+                          li 
+                            a(href="#").btn-transparent--square  Эффективная работа
+                          li 
+                    .post__footer-bottom
+                  // блок комментариев в контенте
+                  .post__block-comments 
+                    div 56 комментариев
+                    a.btn-circle.btn-main-color Читать
+                  // навигация по статьям
+                  .post__block-nav 
+                    p следующая статья
+                    a(href="#")  Как установить программу на Windows 10
+                    svg(width="7px" height="13px")
+                      use(xlink:href="img/sprite.svg#arrow")
+
+      .page__footer-wrapper
+        +page-footer()
+          block footer
+      +to-top()      
+
+    block page-bottom
+      script(src='js/bundle.js')
